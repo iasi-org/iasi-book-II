@@ -1,0 +1,64 @@
+project:
+  type: book
+
+  resources:
+    - LICENSES/*.txt
+    
+profile:
+  group:
+    - [html, pdf]
+
+metadata-files:
+  - _book-structure.yml
+
+lang: es
+
+book:
+  title: "Ingeniería asistida por sistemas inteligentes"
+  author: "Javier G. Grandez"
+  output-file: "iasi"
+  
+  downloads:
+     - pdf
+
+  announcement:
+    dismissable: false
+    content: "![](/resources/images/ants.png){.iasi-ants-image}"
+    type: light
+    position: above-navbar
+
+  page-footer:
+    left: "© 2026 Javier G. Grandez"
+    right:
+      - text: "Licencias"
+        href: 903-licenses.qmd
+  navbar:
+    title: "IASI"
+    background: primary
+    pinned: true
+
+    left:
+      - text: "Inicio"
+        href: index.qmd
+
+  search:
+    location: navbar
+    type: overlay
+
+copyright:
+  holder: "Javier G. Grandez"
+  year: 2026
+
+license: "CC BY"
+
+filters:
+  - iasi-plantuml
+
+filter-options:
+  plantuml:
+    enabled: true
+    server: http://javier:1025
+    cache: true
+    styles:
+      - resources/plantuml/iasi.puml
+      

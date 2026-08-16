@@ -1,0 +1,20 @@
+project:
+  output-dir: _outputs/pdf
+
+format:
+  pdf:
+    documentclass: scrreprt
+    papersize: a4
+    toc: true
+    number-sections: true
+    colorlinks: true
+    linkcolor: black
+    urlcolor: blue
+    citecolor: blue      
+
+    template-partials:
+      - resources/pdf/before-body.tex
+
+    include-in-header:
+      text: |
+        \usepackage{eso-pic}

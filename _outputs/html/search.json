@@ -2,12 +2,81 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Ingeniería asistida por sistemas inteligentes",
+    "title": "Labs",
     "section": "",
-    "text": "1 De la experiencia al método\nEste volumen forma parte de la colección IASI.\nTodavía no estamos trabajando en él.",
+    "text": "Esta sección reúne los laboratorios prácticos disponibles.\n\n\n\nLab\nTítulo\nDescripción\n\n\n\n\nLAB-001\nPrompts, contexto y sesiones\nExperimenta cómo influyen el contexto de la conversación y los cambios de sesión al trabajar con un Sistema Inteligente.",
     "crumbs": [
-      "Inicio",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Del conocimiento a la ingeniería</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Labs</span>"
+    ]
+  },
+  {
+    "objectID": "labs/01-prompts/index.html",
+    "href": "labs/01-prompts/index.html",
+    "title": "2  Qué vamos a hacer",
+    "section": "",
+    "text": "2.1 Qué necesitas\nEn este primer laboratorio no vamos a estudiar cómo funciona internamente un Sistema Inteligente.\nVamos a utilizarlo.\nLa propuesta es sencilla: hacer unas pruebas, cambiar pequeñas cosas entre una interacción y la siguiente y observar qué ocurre. No buscamos una respuesta concreta ni demostrar una teoría. Queremos empezar a desarrollar una habilidad que será importante durante todo el recorrido: observar cómo se comporta un Sistema Inteligente mientras trabajamos con él.\nVamos a trabajar con una misma idea de varias formas.\nPrimero repetiremos una petición. Después introduciremos contexto antes de repetirla. Más adelante daremos al sistema una información que solo existe dentro de una conversación y comprobaremos qué sucede cuando cambiamos de sesión.\nNo hace falta intentar explicar todavía por qué ocurre cada cosa.\nPrimero, prueba.\nDespués, observa.\nSolo necesitas acceso a un Sistema Inteligente con interfaz conversacional.\nPuede ser ChatGPT, Claude, Gemini, Copilot Chat u otro sistema similar.\nNecesitas poder:\nNo necesitas instalar nada ni escribir código.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>index.html</span>"
+    ]
+  },
+  {
+    "objectID": "labs/01-prompts/index.html#qué-necesitas",
+    "href": "labs/01-prompts/index.html#qué-necesitas",
+    "title": "2  Qué vamos a hacer",
+    "section": "",
+    "text": "mantener una conversación con varios mensajes;\nabrir una conversación nueva;\nvolver a una conversación anterior.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>index.html</span>"
+    ]
+  },
+  {
+    "objectID": "labs/01-prompts/index.html#qué-aprenderás",
+    "href": "labs/01-prompts/index.html#qué-aprenderás",
+    "title": "2  Qué vamos a hacer",
+    "section": "2.2 Qué aprenderás",
+    "text": "2.2 Qué aprenderás\nAl terminar el laboratorio habrás experimentado directamente que una interacción con un Sistema Inteligente no depende únicamente del texto que acabas de escribir.\nVerás que lo ocurrido anteriormente en una conversación puede influir en las respuestas posteriores y que abrir una nueva conversación cambia las condiciones de partida.\nTodavía no vamos a entrar en conceptos técnicos. Ese lenguaje vendrá después.\nPor ahora nos interesa una sola cosa: empezar a distinguir entre lo que escribes ahora y el contexto en el que lo escribes.\nEmpezar el laboratorio →",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>index.html</span>"
+    ]
+  },
+  {
+    "objectID": "labs/01-prompts/index.html#observa",
+    "href": "labs/01-prompts/index.html#observa",
+    "title": "2  Qué vamos a hacer",
+    "section": "3.1 Observa",
+    "text": "3.1 Observa\nCompara las dos respuestas.\nNo busques todavía una explicación. Limítate a mirar.\n¿Son idénticas?\n¿La estructura es la misma?\n¿Utiliza los mismos ejemplos?\n¿Da exactamente la misma cantidad de información?\nPuede que las diferencias sean pequeñas. Puede que sean muy visibles. También puede ocurrir que, en tu prueba concreta, las respuestas sean bastante parecidas.\nTodo eso sirve.\nLo importante en este primer paso es comprobar qué ocurre cuando repetimos exactamente la misma petición.\nCuando hayas terminado, continúa sin cerrar las conversaciones si quieres conservarlas para comparar después.\n← Volver al inicio · Siguiente: cambia el contexto →",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>index.html</span>"
+    ]
+  },
+  {
+    "objectID": "labs/01-prompts/index.html#observa-1",
+    "href": "labs/01-prompts/index.html#observa-1",
+    "title": "2  Qué vamos a hacer",
+    "section": "4.1 Observa",
+    "text": "4.1 Observa\nCompara la primera respuesta con la tercera.\nLa petición es la misma.\nPero entre ambas ha ocurrido algo.\nFíjate en si la segunda respuesta sobre bases de datos relacionales incorpora alguna idea, comparación, vocabulario o enfoque que tenga relación con la conversación intermedia.\nNo importa si el efecto es grande o pequeño.\nTampoco pasa nada si en tu caso concreto apenas percibes cambios.\nPrueba de nuevo con otro tema si quieres.\nLa cuestión no es conseguir un resultado predeterminado. Estamos explorando el comportamiento del sistema.\nAntes de continuar, piensa simplemente en esta pregunta:\n¿La última petición llega realmente en las mismas condiciones que la primera?\n← Anterior: repite · Siguiente: cambia de sesión →",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>index.html</span>"
+    ]
+  },
+  {
+    "objectID": "labs/01-prompts/index.html#observa-2",
+    "href": "labs/01-prompts/index.html#observa-2",
+    "title": "2  Qué vamos a hacer",
+    "section": "5.1 Observa",
+    "text": "5.1 Observa\nCompara las respuestas.\n¿Qué información estaba disponible en la primera conversación?\n¿Qué ocurre en la segunda?\nSi tu plataforma dispone de algún mecanismo de memoria persistente, proyecto compartido, instrucciones globales u otra forma de conservar contexto entre conversaciones, el resultado puede ser diferente. Eso también forma parte del experimento.\nNo buscamos demostrar que todos los sistemas olvidan siempre todo al abrir una nueva conversación.\nBuscamos descubrir algo más útil: no podemos asumir que una nueva sesión dispone automáticamente del contexto de trabajo que existía en la anterior.\nHaz una última prueba si quieres.\nCierra la interfaz y vuelve a abrir la conversación original, no una conversación nueva.\nPregunta otra vez:\n\n¿Qué es Proyecto Faro?\n\nCompara lo que ocurre al volver a una conversación existente con lo que ocurre al empezar otra desde cero.\n← Anterior: cambia el contexto · Siguiente: observa →",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>index.html</span>"
+    ]
+  },
+  {
+    "objectID": "labs/01-prompts/index.html#una-primera-conclusión",
+    "href": "labs/01-prompts/index.html#una-primera-conclusión",
+    "title": "2  Qué vamos a hacer",
+    "section": "6.1 Una primera conclusión",
+    "text": "6.1 Una primera conclusión\nCuando hablamos de utilizar Sistemas Inteligentes es fácil concentrarse en los prompts.\nPero un prompt no aparece aislado.\nSe produce dentro de un contexto.\nY ese contexto puede cambiar.\nPuede crecer mientras avanza una conversación, puede contener información que nosotros mismos hemos proporcionado y puede no estar disponible cuando empezamos una sesión diferente.\nEn los próximos laboratorios iremos poniendo nombre a estos fenómenos y veremos qué mecanismos existen para trabajar con ellos de forma más consciente.\nPor ahora basta con haberlos visto ocurrir.\n← Anterior: cambia de sesión · Volver al inicio del Lab",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>index.html</span>"
     ]
   }
 ]

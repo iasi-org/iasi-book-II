@@ -1,0 +1,47 @@
+# Paso 2 — Cambia el contexto
+
+Ahora vamos a hacer una prueba ligeramente distinta.
+
+Abre una conversación nueva.
+
+Haz una petición sencilla. Puedes reutilizar la del paso anterior o elegir otra.
+
+Por ejemplo:
+
+> Explica qué es una base de datos relacional.
+
+Lee la respuesta.
+
+Ahora introduce una segunda petición relacionada, pero distinta. Por ejemplo:
+
+> ¿En qué se diferencia de una base de datos documental?
+
+Lee también esa respuesta.
+
+Y ahora vuelve a escribir **exactamente la primera petición**:
+
+> Explica qué es una base de datos relacional.
+
+## Observa
+
+Compara la primera respuesta con la tercera.
+
+La petición es la misma.
+
+Pero entre ambas ha ocurrido algo.
+
+Fíjate en si la segunda respuesta sobre bases de datos relacionales incorpora alguna idea, comparación, vocabulario o enfoque que tenga relación con la conversación intermedia.
+
+No importa si el efecto es grande o pequeño.
+
+Tampoco pasa nada si en tu caso concreto apenas percibes cambios.
+
+Prueba de nuevo con otro tema si quieres.
+
+La cuestión no es conseguir un resultado predeterminado. Estamos explorando el comportamiento del sistema.
+
+Antes de continuar, piensa simplemente en esta pregunta:
+
+**¿La última petición llega realmente en las mismas condiciones que la primera?**
+
+[← Anterior: repite](01-repite.qmd) · [Siguiente: cambia de sesión →](03-cambia-de-sesion.qmd)

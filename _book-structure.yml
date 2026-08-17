@@ -1,3 +1,4 @@
 book:
   chapters:
     - "index.qmd"
+    - "labs/01-prompts/index.qmd"

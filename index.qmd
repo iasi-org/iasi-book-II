@@ -1,10 +1,118 @@
 ---
-title: "Del conocimiento a la ingeniería"
-subtitle: "Volumen II · De la experiencia al método"
+title: "Labs"
+number-sections: false
 ---
 
-# De la experiencia al método
+Esta sección reúne los laboratorios prácticos disponibles.
 
-Este volumen forma parte de la colección IASI.
+```{r}
+#| echo: false
+#| results: asis
 
-Todavía no estamos trabajando en él.
+library(yaml)
+library(kableExtra)
+
+get_labs = function(config = "_iasi.yml") {
+  iasi = yaml::read_yaml(config)
+  content_dir = iasi$publication$`content-dir`
+
+  if (is.null(content_dir) || !nzchar(content_dir)) {
+    stop("Missing publication.content-dir in ", config)
+  }
+
+  if (!dir.exists(content_dir)) {
+    stop("Content directory does not exist: ", content_dir)
+  }
+
+  entries = list.files(content_dir, full.names = FALSE)
+
+  folders = entries[
+    dir.exists(file.path(content_dir, entries)) &
+      grepl("^[0-9]+-", entries)
+  ]
+
+  if (length(folders) == 0) {
+    return(data.frame(
+      lab = character(),
+      title = character(),
+      description = character(),
+      stringsAsFactors = FALSE
+    ))
+  }
+
+  labs = lapply(folders, function(folder) {
+    number = as.integer(sub("^([0-9]+)-.*$", "\\1", folder))
+    metadata_path = file.path(content_dir, folder, "front-matter.yml")
+
+    if (!file.exists(metadata_path)) {
+      stop("Lab folder contains no front-matter.yml: ", folder)
+    }
+
+    metadata = yaml::read_yaml(metadata_path)
+    title = metadata$title
+    description = metadata$description
+
+    if (is.null(title) || !nzchar(as.character(title))) {
+      stop("Missing 'title' in ", metadata_path)
+    }
+
+    if (is.null(description) || !nzchar(as.character(description))) {
+      stop("Missing 'description' in ", metadata_path)
+    }
+
+    link = file.path(content_dir, folder, "index.qmd")
+    link = gsub("\\\\", "/", link)
+
+    format = if (knitr::is_latex_output()) "latex" else "html"
+
+    list(
+      number = number,
+      lab = paste0("LAB-", sprintf("%03d", number)),
+      title = kableExtra::cell_spec(
+        as.character(title),
+        format = format,
+        link = link
+      ),
+      description = as.character(description)
+    )
+  })
+
+  numbers = vapply(labs, `[[`, integer(1), "number")
+
+  if (anyDuplicated(numbers)) {
+    duplicated_numbers = unique(numbers[duplicated(numbers)])
+    stop("Duplicated lab numbers: ", paste(duplicated_numbers, collapse = ", "))
+  }
+
+  labs = labs[order(numbers)]
+
+  data.frame(
+    lab = vapply(labs, `[[`, character(1), "lab"),
+    title = vapply(labs, `[[`, character(1), "title"),
+    description = vapply(labs, `[[`, character(1), "description"),
+    stringsAsFactors = FALSE
+  )
+}
+
+labs = get_labs()
+
+if (nrow(labs) == 0) {
+  cat("Actualmente no hay laboratorios disponibles.")
+} else {
+  labs |>
+    kableExtra::kbl(
+      col.names = c("Lab", "Título", "Descripción"),
+      align = c("l", "l", "l"),
+      escape = FALSE,
+      booktabs = knitr::is_latex_output()
+    ) |>
+    kableExtra::kable_styling(
+      full_width = !knitr::is_latex_output(),
+      position = "left"
+    ) |>
+    kableExtra::column_spec(1, bold = TRUE, width = "2.5cm") |>
+    kableExtra::column_spec(2, width = "5cm") |>
+    kableExtra::column_spec(3, width = "9cm")
+}
+```
+

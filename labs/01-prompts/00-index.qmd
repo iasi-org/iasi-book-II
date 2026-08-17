@@ -1,0 +1,43 @@
+En este primer laboratorio no vamos a estudiar cómo funciona internamente un Sistema Inteligente.
+
+Vamos a utilizarlo.
+
+La propuesta es sencilla: hacer unas pruebas, cambiar pequeñas cosas entre una interacción y la siguiente y observar qué ocurre. No buscamos una respuesta concreta ni demostrar una teoría. Queremos empezar a desarrollar una habilidad que será importante durante todo el recorrido: observar cómo se comporta un Sistema Inteligente mientras trabajamos con él.
+
+## Qué vamos a hacer
+
+Vamos a trabajar con una misma idea de varias formas.
+
+Primero repetiremos una petición. Después introduciremos contexto antes de repetirla. Más adelante daremos al sistema una información que solo existe dentro de una conversación y comprobaremos qué sucede cuando cambiamos de sesión.
+
+No hace falta intentar explicar todavía por qué ocurre cada cosa.
+
+Primero, prueba.
+
+Después, observa.
+
+## Qué necesitas
+
+Solo necesitas acceso a un Sistema Inteligente con interfaz conversacional.
+
+Puede ser ChatGPT, Claude, Gemini, Copilot Chat u otro sistema similar.
+
+Necesitas poder:
+
+- mantener una conversación con varios mensajes;
+- abrir una conversación nueva;
+- volver a una conversación anterior.
+
+No necesitas instalar nada ni escribir código.
+
+## Qué aprenderás
+
+Al terminar el laboratorio habrás experimentado directamente que una interacción con un Sistema Inteligente no depende únicamente del texto que acabas de escribir.
+
+Verás que lo ocurrido anteriormente en una conversación puede influir en las respuestas posteriores y que abrir una nueva conversación cambia las condiciones de partida.
+
+Todavía no vamos a entrar en conceptos técnicos. Ese lenguaje vendrá después.
+
+Por ahora nos interesa una sola cosa: empezar a distinguir entre **lo que escribes ahora** y **el contexto en el que lo escribes**.
+
+[Empezar el laboratorio →](01-repite.qmd)

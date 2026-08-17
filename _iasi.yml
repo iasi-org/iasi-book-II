@@ -1,4 +1,4 @@
 publication:
-  strategy: structured
-  content-dir: chapters
-  numbered: true
+  strategy: regular
+  content-dir: labs
+  numbered: false

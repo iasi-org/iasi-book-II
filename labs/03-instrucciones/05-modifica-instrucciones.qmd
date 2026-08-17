@@ -1,0 +1,51 @@
+# Paso 5 — Modifica las instrucciones
+
+Abre `instructions.md`.
+
+Añade:
+
+> Todas las respuestas deben terminar con una sección llamada `Información no definida`.
+
+Guarda el fichero.
+
+Inicia una nueva sesión privada.
+
+Proporciona de nuevo `context.md` e `instructions.md`.
+
+Pregunta:
+
+> Resume el proyecto Faro.
+
+## Observa
+
+El contexto sigue siendo exactamente el mismo.
+
+Lo que hemos cambiado son las instrucciones.
+
+Comprueba qué parte de la respuesta cambia.
+
+Ahora elimina esa regla y añade otra:
+
+> Cuando propongas una nueva funcionalidad, no la presentes nunca como una capacidad existente.
+
+Repite alguna petición anterior.
+
+## Experimenta
+
+Introduce reglas de formato.
+
+Reglas sobre precisión.
+
+Reglas sobre fuentes.
+
+Reglas sobre incertidumbre.
+
+Reglas sobre lenguaje.
+
+Haz instrucciones contradictorias.
+
+Haz una instrucción demasiado vaga.
+
+Haz otra excesivamente específica.
+
+Observa cuáles funcionan bien y cuáles producen resultados inesperados.

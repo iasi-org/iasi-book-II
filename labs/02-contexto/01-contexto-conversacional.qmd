@@ -1,0 +1,57 @@
+# Paso 1 — Construye contexto en una conversación
+
+Abre una nueva navegación privada.
+
+Escribe:
+
+> Estamos trabajando en un proyecto llamado Faro.
+>
+> Faro es una aplicación para gestionar bibliotecas municipales.
+>
+> Los usuarios pueden buscar libros, reservarlos y consultar sus préstamos.
+>
+> Faro no vende libros.
+>
+> Cuando hablamos de "usuario" nos referimos al lector de la biblioteca.
+
+Después pregunta:
+
+> Propón tres funcionalidades nuevas para Faro.
+
+Ahora pregunta:
+
+> ¿Faro vende libros?
+
+Y después:
+
+> ¿Quién es el usuario de Faro?
+
+## Observa
+
+Las últimas preguntas son muy breves.
+
+Sin embargo, el Sistema Inteligente dispone de información que apareció antes en la conversación.
+
+La sesión ha ido acumulando contexto.
+
+Ahora introduce algo nuevo:
+
+> A partir de ahora, cuando hablemos de una sede nos referiremos a una biblioteca municipal concreta.
+
+Después pregunta:
+
+> ¿Qué significa "sede" en Faro?
+
+Comprueba si el sistema utiliza la definición que acabas de introducir.
+
+## Experimenta
+
+Añade nuevos conceptos.
+
+Corrige alguno.
+
+Introduce una decisión.
+
+Haz una pregunta que dependa de algo dicho varios mensajes antes.
+
+Observa cómo, a medida que avanza la conversación, el sistema parece ir **aprendiendo a trabajar dentro del contexto que estáis construyendo juntos**.

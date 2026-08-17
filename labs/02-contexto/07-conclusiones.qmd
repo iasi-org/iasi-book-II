@@ -1,0 +1,65 @@
+# Paso 7 — Conclusiones
+
+Durante una sesión, el Sistema Inteligente puede ir adaptando sus respuestas a la información, decisiones, conceptos y significados que vamos introduciendo.
+
+En un sentido práctico, **va aprendiendo a trabajar con nosotros dentro de esa sesión**.
+
+Eso no significa necesariamente que el modelo se esté entrenando o modificando internamente.
+
+Significa que el contexto disponible durante la interacción va creciendo y condicionando las respuestas posteriores.
+
+Cuando iniciamos una nueva sesión, no podemos asumir que todo ese aprendizaje práctico seguirá disponible.
+
+Parte puede conservarse mediante otros mecanismos.
+
+Parte puede desaparecer.
+
+Y, sobre todo, no debemos depender de que una nueva sesión reconstruya por sí sola todo lo que habíamos establecido antes.
+
+Al externalizar parte de ese conocimiento en `context.md`, dejamos de depender exclusivamente de lo que una conversación recuerde o conserve.
+
+El contexto pasa de ser algo acumulado incidentalmente durante una sesión a convertirse en algo que podemos:
+
+- conservar;
+- revisar;
+- modificar;
+- reutilizar;
+- comparar;
+- delimitar;
+- controlar.
+
+## Sigue experimentando
+
+Crea otro contexto.
+
+Hazlo mínimo.
+
+Hazlo enorme.
+
+Divídelo en varios ficheros.
+
+Prueba el mismo contexto con distintos Sistemas Inteligentes.
+
+Introduce contradicciones.
+
+Elimina información importante.
+
+Añade información irrelevante.
+
+Comprueba qué ocurre.
+
+## Una pregunta para el siguiente laboratorio
+
+Durante todo este laboratorio hemos repetido instrucciones como:
+
+> utiliza este fichero como contexto;
+
+> no inventes información que no esté definida;
+
+> si hay conflicto, da prioridad a esta fuente.
+
+Hemos externalizado el contexto.
+
+Pero seguimos escribiendo una y otra vez **las reglas sobre cómo queremos que el Sistema Inteligente trabaje con ese contexto**.
+
+¿Podemos externalizar también esas reglas?

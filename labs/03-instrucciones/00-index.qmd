@@ -1,0 +1,55 @@
+En el laboratorio anterior conseguimos sacar parte del conocimiento sobre Faro fuera de la conversación.
+
+Creamos `context.md` y pudimos reutilizarlo en sesiones nuevas.
+
+Pero apareció otro problema.
+
+Cada vez que proporcionábamos el contexto teníamos que volver a escribir reglas como:
+
+> utiliza este fichero como contexto;
+
+> no inventes información que no esté definida;
+
+> da prioridad a esta fuente si existe un conflicto.
+
+Esas reglas no describen Faro.
+
+Describen **cómo queremos que el Sistema Inteligente trabaje**.
+
+En este laboratorio vamos a separar ambas cosas.
+
+## Qué vamos a hacer
+
+Trabajaremos con dos ficheros:
+
+- `context.md`, que describe el proyecto Faro;
+- `instructions.md`, que describe cómo queremos trabajar con ese contexto.
+
+Vamos a:
+
+- repetir una tarea sin instrucciones explícitas;
+- añadir instrucciones dentro del prompt;
+- mover esas instrucciones a un fichero;
+- reutilizarlas en sesiones nuevas;
+- modificarlas y observar el efecto;
+- crear conflictos entre instrucciones;
+- experimentar con nuestras propias reglas.
+
+## Qué necesitas
+
+Necesitas:
+
+- un navegador con modo privado o de incógnito;
+- acceso a un Sistema Inteligente que permita proporcionar ficheros;
+- un editor de texto;
+- los ficheros `context.md` e `instructions.md` incluidos en el laboratorio.
+
+## Qué aprenderás
+
+Al terminar habrás experimentado una separación muy sencilla:
+
+**el contexto describe aquello sobre lo que estamos trabajando.**
+
+**las instrucciones describen cómo queremos trabajar con ello.**
+
+Primero vamos a comprobar qué diferencia produce esa separación.

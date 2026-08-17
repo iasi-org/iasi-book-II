@@ -1,0 +1,41 @@
+En el laboratorio anterior observamos que una interacción con un Sistema Inteligente no depende únicamente del último mensaje.
+
+La conversación va acumulando información y esa información puede influir en las respuestas posteriores.
+
+Ahora vamos a experimentar con ese fenómeno de forma deliberada.
+
+Trabajaremos con un proyecto ficticio llamado **Faro** y veremos qué ocurre cuando el contexto vive dentro de una conversación, cuando lo sacamos a un fichero y cuando cambiamos ese fichero.
+
+## Qué vamos a hacer
+
+Vamos a:
+
+- construir contexto dentro de una conversación;
+- comprobar qué ocurre al cambiar de sesión;
+- externalizar ese contexto en un fichero;
+- utilizarlo en una sesión nueva;
+- preguntar por información definida y no definida;
+- modificar el contexto;
+- crear conflictos entre distintas fuentes;
+- experimentar con nuestras propias variantes.
+
+No buscamos obtener respuestas predeterminadas.
+
+Buscamos observar cómo cambia el comportamiento del Sistema Inteligente cuando cambia el contexto disponible.
+
+## Qué necesitas
+
+Necesitas:
+
+- un navegador con modo privado o de incógnito;
+- acceso a un Sistema Inteligente con interfaz conversacional;
+- poder proporcionar un fichero Markdown a la conversación;
+- un editor de texto para modificar `context.md`.
+
+El laboratorio incluye un fichero `context.md` inicial.
+
+## Qué aprenderás
+
+Al terminar habrás experimentado que el contexto puede existir dentro de una conversación, pero también puede convertirse en un artefacto explícito que podemos conservar, revisar, modificar, reutilizar y controlar.
+
+Primero vamos a comprobarlo.

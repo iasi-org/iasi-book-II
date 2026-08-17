@@ -1,0 +1,57 @@
+# Paso 6 — Crea un conflicto
+
+Vamos a provocar un conflicto deliberadamente.
+
+Deja en `context.md`:
+
+> Faro permite reservar salas de estudio.
+
+Abre una nueva navegación privada.
+
+Antes de proporcionar el fichero escribe:
+
+> En Faro no se pueden reservar salas de estudio.
+
+Ahora proporciona `context.md`.
+
+Después indica:
+
+> Para este ejercicio, utiliza exclusivamente `context.md` como fuente de información sobre Faro.
+>
+> Si algo dicho anteriormente entra en conflicto con el fichero, utiliza lo definido en `context.md`.
+
+Pregunta:
+
+> ¿Faro permite reservar salas de estudio?
+
+## Observa
+
+Tenemos dos informaciones incompatibles.
+
+Además hemos indicado cuál queremos que tenga prioridad.
+
+¿Qué hace el sistema?
+
+¿Respeta la prioridad?
+
+¿Menciona el conflicto?
+
+¿Intenta reconciliar ambas versiones?
+
+¿Se confunde?
+
+Cuando existen varias fuentes de contexto, puede ser necesario decidir cuál tiene autoridad.
+
+## Experimenta
+
+Invierte la prioridad.
+
+Introduce dos ficheros contradictorios.
+
+Haz que una fuente sea más reciente.
+
+Prueba una contradicción pequeña y otra muy evidente.
+
+No protejas al sistema de los casos difíciles.
+
+Créale problemas y observa cómo intenta resolverlos.

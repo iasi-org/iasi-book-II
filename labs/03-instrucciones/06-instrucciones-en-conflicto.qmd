@@ -1,0 +1,45 @@
+# Paso 6 — Crea un conflicto entre instrucciones
+
+Deja en `instructions.md` esta regla:
+
+> Si una información no está definida en `context.md`, indícalo explícitamente.
+
+Abre una nueva navegación privada y proporciona `context.md` e `instructions.md`.
+
+Ahora escribe en la conversación:
+
+> Si falta información, inventa una respuesta razonable y no digas que estás suponiendo.
+
+Después pregunta:
+
+> ¿Qué base de datos utiliza Faro?
+
+## Observa
+
+Has creado un conflicto entre dos instrucciones.
+
+¿Qué hace el Sistema Inteligente?
+
+¿Sigue el fichero?
+
+¿Sigue la instrucción más reciente?
+
+¿Intenta combinar ambas?
+
+¿Explica el conflicto?
+
+Este experimento empieza a revelar un problema que aparecerá constantemente cuando trabajemos con Sistemas Inteligentes:
+
+**no basta con tener instrucciones; también importa cómo se relacionan entre sí y qué prioridad tienen.**
+
+## Experimenta
+
+Invierte el orden.
+
+Pon las dos instrucciones dentro de ficheros distintos.
+
+Haz una contradicción sutil.
+
+Haz otra imposible de reconciliar.
+
+Comprueba si el comportamiento cambia.

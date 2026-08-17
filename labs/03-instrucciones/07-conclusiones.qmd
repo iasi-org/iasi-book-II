@@ -1,0 +1,57 @@
+# Paso 7 — Conclusiones
+
+En el laboratorio anterior externalizamos el conocimiento sobre Faro.
+
+En este hemos externalizado otra cosa distinta: **las reglas sobre cómo queremos que el Sistema Inteligente trabaje**.
+
+La separación empieza a ser visible:
+
+`context.md` responde principalmente a preguntas como:
+
+> ¿qué es Faro?
+
+> ¿qué sabemos sobre Faro?
+
+> ¿qué decisiones o restricciones están definidas?
+
+`instructions.md` responde a preguntas diferentes:
+
+> ¿cómo debe utilizarse esa información?
+
+> ¿qué debe hacer cuando falta algo?
+
+> ¿cómo debe distinguir hechos de propuestas?
+
+> ¿cómo queremos que presente sus respuestas?
+
+El contexto y las instrucciones pueden viajar juntos entre sesiones, pero cumplen funciones diferentes.
+
+Y ambos pueden convertirse en artefactos explícitos, revisables y versionables.
+
+## Sigue experimentando
+
+Prueba las mismas instrucciones con otro contexto.
+
+Prueba el mismo contexto con instrucciones diferentes.
+
+Crea instrucciones generales y otras específicas para una tarea.
+
+Haz que varias reglas entren en conflicto.
+
+Simplifícalas hasta quedarte con lo imprescindible.
+
+Comprueba qué instrucciones necesitas repetir realmente y cuáles pueden establecerse una sola vez.
+
+## Lo que empieza a aparecer
+
+Ya no estamos trabajando únicamente con un prompt.
+
+Tenemos:
+
+- una petición concreta;
+- un contexto;
+- unas instrucciones.
+
+La interacción empieza a adquirir estructura.
+
+Y cuanto más estable hacemos esa estructura, menos dependemos de reconstruir manualmente en cada conversación la forma en que queremos trabajar.

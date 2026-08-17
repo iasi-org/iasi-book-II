@@ -1,0 +1,32 @@
+# Paso 4 — Reutiliza las instrucciones
+
+Cierra completamente la navegación privada.
+
+Abre otra nueva.
+
+Vuelve a proporcionar:
+
+- `context.md`;
+- `instructions.md`.
+
+Haz una petición distinta:
+
+> Escribe una breve propuesta para añadir reserva de salas de estudio a Faro.
+
+Después pregunta:
+
+> ¿La reserva de salas ya forma parte de Faro?
+
+## Observa
+
+Las instrucciones son las mismas.
+
+La tarea ha cambiado.
+
+Comprueba si el Sistema Inteligente sigue distinguiendo entre:
+
+- lo que el contexto establece como hecho;
+- lo que estás proponiendo como cambio;
+- lo que todavía no está definido.
+
+Las instrucciones empiezan a funcionar como una forma reutilizable de establecer **cómo queremos trabajar**, independientemente de la tarea concreta.

@@ -1,0 +1,57 @@
+# Paso 2 — Añade instrucciones al prompt
+
+Cierra la navegación privada anterior y abre una nueva.
+
+Proporciona otra vez `context.md`.
+
+Ahora escribe:
+
+> Utiliza `context.md` como única fuente de hechos sobre Faro.
+>
+> Si una información no está definida, dilo explícitamente.
+>
+> Distingue claramente entre hechos del contexto, inferencias y propuestas.
+>
+> No inventes características del proyecto.
+
+Después pregunta:
+
+> ¿Faro permite reservar salas de estudio?
+
+Y:
+
+> Propón tres mejoras para Faro.
+
+## Observa
+
+El contexto no ha cambiado.
+
+Las preguntas tampoco.
+
+Lo que hemos cambiado son las reglas sobre cómo queremos que el sistema trabaje con ese contexto.
+
+Compara con el paso anterior.
+
+¿Distingue mejor entre hechos y propuestas?
+
+¿Reconoce con más claridad lo que no está definido?
+
+¿Cambia la estructura de la respuesta?
+
+## Experimenta
+
+Cambia una instrucción.
+
+Elimina otra.
+
+Añade:
+
+> Responde de forma muy breve.
+
+O:
+
+> Justifica siempre qué parte de `context.md` utilizas.
+
+Prueba tus propias reglas.
+
+Observa cuánto cambia el resultado sin tocar el contexto.

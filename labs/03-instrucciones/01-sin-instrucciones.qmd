@@ -1,0 +1,33 @@
+# Paso 1 — Contexto sin reglas de trabajo
+
+Abre una nueva navegación privada.
+
+Proporciona únicamente `context.md`.
+
+Pregunta:
+
+> ¿Faro permite reservar salas de estudio?
+
+Después:
+
+> Propón tres mejoras para Faro.
+
+## Observa
+
+No hemos indicado cómo debe comportarse el Sistema Inteligente cuando falta información.
+
+Tampoco hemos indicado si debe distinguir hechos de propuestas.
+
+Observa qué hace.
+
+¿Infiere?
+
+¿Propone?
+
+¿Aclara qué está definido y qué no?
+
+¿Presenta alguna posibilidad como si fuera un hecho?
+
+No buscamos decidir todavía si la respuesta es buena o mala.
+
+Queremos establecer un punto de comparación.

@@ -1,0 +1,59 @@
+# Paso 2 — La misma necesidad, distintos prompts
+
+Ahora vamos a cambiar deliberadamente una cosa.
+
+Seguiremos intentando resolver la misma necesidad:
+
+> Entender qué es una base de datos relacional.
+
+Abre una nueva navegación privada y escribe:
+
+> Explica qué es una base de datos relacional.
+
+Guarda la respuesta.
+
+Cierra completamente esa navegación privada y abre otra.
+
+Ahora escribe:
+
+> Explica qué es una base de datos relacional usando una biblioteca como analogía.
+
+## Observa
+
+La necesidad de fondo es la misma.
+
+Lo que hemos cambiado es la forma de expresarla.
+
+Compara las respuestas.
+
+¿Explican el mismo concepto?
+
+¿Qué cambia en la estructura?
+
+¿Qué ejemplos aparecen?
+
+¿Qué parte de la segunda respuesta parece consecuencia directa de la instrucción añadida?
+
+No estamos intentando averiguar qué prompt es mejor.
+
+Estamos observando cómo una misma necesidad puede producir respuestas distintas cuando cambiamos la información que incluimos en el prompt.
+
+## Experimenta
+
+Ahora hazlo a tu manera.
+
+Mantén la misma pregunta y cambia alguna condición del prompt.
+
+Por ejemplo, puedes pedir:
+
+- una explicación muy breve;
+- una explicación para una persona sin conocimientos técnicos;
+- una explicación basada en una analogía diferente;
+- una explicación con un ejemplo;
+- una comparación con otro concepto.
+
+O inventa tú otra variante.
+
+Haz varios intentos.
+
+Observa qué cambia y qué permanece.

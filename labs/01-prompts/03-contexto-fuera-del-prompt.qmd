@@ -1,0 +1,65 @@
+# Paso 3 — Saca información fuera del prompt
+
+Hasta ahora hemos colocado toda la información dentro del propio prompt.
+
+Vamos a cambiar eso.
+
+Cierra la navegación privada anterior y abre una nueva.
+
+Primero escribe:
+
+> Durante esta conversación, cuando expliques conceptos técnicos utiliza una biblioteca como analogía siempre que resulte posible.
+
+Espera la respuesta del sistema.
+
+Después escribe únicamente:
+
+> Explica qué es una base de datos relacional.
+
+## Observa
+
+Compara esta respuesta con la obtenida en el paso anterior cuando escribiste:
+
+> Explica qué es una base de datos relacional usando una biblioteca como analogía.
+
+La necesidad es la misma.
+
+La instrucción sobre la biblioteca también existe en ambos casos.
+
+Pero ahora esa instrucción **no aparece en el último prompt**.
+
+Ha aparecido antes, dentro de la conversación.
+
+¿La respuesta sigue utilizando la analogía?
+
+¿Se parece a la obtenida anteriormente?
+
+¿Hasta qué punto parece influir algo que ya no está escrito en la petición actual?
+
+No necesitamos que las respuestas sean idénticas.
+
+Nos interesa comprobar que el último mensaje no es necesariamente toda la información que participa en la interacción.
+
+## Experimenta
+
+Cambia la instrucción inicial.
+
+Por ejemplo:
+
+> Durante esta conversación, responde siempre con ejemplos relacionados con cocina.
+
+Después haz varias preguntas breves.
+
+O establece otra regla que se te ocurra.
+
+Comprueba cuánto tiempo parece mantenerse.
+
+Cámbiala a mitad de la conversación.
+
+Contradícela.
+
+Haz una excepción.
+
+No hay un resultado que tengas que conseguir.
+
+Prueba y observa.

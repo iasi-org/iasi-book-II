@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Qué vamos a hacer</title>
+<title>3&nbsp; Qué vamos a hacer</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../labs/02-contexto/index.html" rel="next">
-<link href="../../index.html" rel="prev">
+<link href="../../labs/03-instrucciones/index.html" rel="next">
+<link href="../../labs/01-prompts/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../labs/01-prompts/index.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">index.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../labs/02-contexto/index.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">index.html</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,13 +114,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../labs/01-prompts/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../labs/01-prompts/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../labs/02-contexto/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../labs/02-contexto/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
   </div>
 </li>
@@ -140,32 +140,41 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#qué-necesitas" id="toc-qué-necesitas" class="nav-link active" data-scroll-target="#qué-necesitas"><span class="header-section-number">2.1</span> Qué necesitas</a></li>
-  <li><a href="#qué-aprenderás" id="toc-qué-aprenderás" class="nav-link" data-scroll-target="#qué-aprenderás"><span class="header-section-number">2.2</span> Qué aprenderás</a></li>
-  <li><a href="#paso-1-repite" id="toc-paso-1-repite" class="nav-link" data-scroll-target="#paso-1-repite"><span class="header-section-number">3</span> Paso 1 — Repite</a>
+  <li><a href="#qué-necesitas" id="toc-qué-necesitas" class="nav-link active" data-scroll-target="#qué-necesitas"><span class="header-section-number">3.1</span> Qué necesitas</a></li>
+  <li><a href="#qué-aprenderás" id="toc-qué-aprenderás" class="nav-link" data-scroll-target="#qué-aprenderás"><span class="header-section-number">3.2</span> Qué aprenderás</a></li>
+  <li><a href="#paso-1-construye-contexto-en-una-conversación" id="toc-paso-1-construye-contexto-en-una-conversación" class="nav-link" data-scroll-target="#paso-1-construye-contexto-en-una-conversación"><span class="header-section-number">4</span> Paso 1 — Construye contexto en una conversación</a>
   <ul class="collapse">
-  <li><a href="#observa" id="toc-observa" class="nav-link" data-scroll-target="#observa"><span class="header-section-number">3.1</span> Observa</a></li>
-  <li><a href="#experimenta" id="toc-experimenta" class="nav-link" data-scroll-target="#experimenta"><span class="header-section-number">3.2</span> Experimenta</a></li>
+  <li><a href="#observa" id="toc-observa" class="nav-link" data-scroll-target="#observa"><span class="header-section-number">4.1</span> Observa</a></li>
+  <li><a href="#experimenta" id="toc-experimenta" class="nav-link" data-scroll-target="#experimenta"><span class="header-section-number">4.2</span> Experimenta</a></li>
   </ul></li>
-  <li><a href="#paso-2-la-misma-necesidad-distintos-prompts" id="toc-paso-2-la-misma-necesidad-distintos-prompts" class="nav-link" data-scroll-target="#paso-2-la-misma-necesidad-distintos-prompts"><span class="header-section-number">4</span> Paso 2 — La misma necesidad, distintos prompts</a>
+  <li><a href="#paso-2-cambia-de-sesión" id="toc-paso-2-cambia-de-sesión" class="nav-link" data-scroll-target="#paso-2-cambia-de-sesión"><span class="header-section-number">5</span> Paso 2 — Cambia de sesión</a>
   <ul class="collapse">
-  <li><a href="#observa-1" id="toc-observa-1" class="nav-link" data-scroll-target="#observa-1"><span class="header-section-number">4.1</span> Observa</a></li>
-  <li><a href="#experimenta-1" id="toc-experimenta-1" class="nav-link" data-scroll-target="#experimenta-1"><span class="header-section-number">4.2</span> Experimenta</a></li>
+  <li><a href="#observa-1" id="toc-observa-1" class="nav-link" data-scroll-target="#observa-1"><span class="header-section-number">5.1</span> Observa</a></li>
+  <li><a href="#experimenta-1" id="toc-experimenta-1" class="nav-link" data-scroll-target="#experimenta-1"><span class="header-section-number">5.2</span> Experimenta</a></li>
   </ul></li>
-  <li><a href="#paso-3-saca-información-fuera-del-prompt" id="toc-paso-3-saca-información-fuera-del-prompt" class="nav-link" data-scroll-target="#paso-3-saca-información-fuera-del-prompt"><span class="header-section-number">5</span> Paso 3 — Saca información fuera del prompt</a>
+  <li><a href="#paso-3-saca-el-contexto-de-la-conversación" id="toc-paso-3-saca-el-contexto-de-la-conversación" class="nav-link" data-scroll-target="#paso-3-saca-el-contexto-de-la-conversación"><span class="header-section-number">6</span> Paso 3 — Saca el contexto de la conversación</a>
   <ul class="collapse">
-  <li><a href="#observa-2" id="toc-observa-2" class="nav-link" data-scroll-target="#observa-2"><span class="header-section-number">5.1</span> Observa</a></li>
-  <li><a href="#experimenta-2" id="toc-experimenta-2" class="nav-link" data-scroll-target="#experimenta-2"><span class="header-section-number">5.2</span> Experimenta</a></li>
+  <li><a href="#observa-2" id="toc-observa-2" class="nav-link" data-scroll-target="#observa-2"><span class="header-section-number">6.1</span> Observa</a></li>
   </ul></li>
-  <li><a href="#paso-4-cambia-de-sesión" id="toc-paso-4-cambia-de-sesión" class="nav-link" data-scroll-target="#paso-4-cambia-de-sesión"><span class="header-section-number">6</span> Paso 4 — Cambia de sesión</a>
+  <li><a href="#paso-4-delimita-el-contexto" id="toc-paso-4-delimita-el-contexto" class="nav-link" data-scroll-target="#paso-4-delimita-el-contexto"><span class="header-section-number">7</span> Paso 4 — Delimita el contexto</a>
   <ul class="collapse">
-  <li><a href="#observa-3" id="toc-observa-3" class="nav-link" data-scroll-target="#observa-3"><span class="header-section-number">6.1</span> Observa</a></li>
-  <li><a href="#experimenta-3" id="toc-experimenta-3" class="nav-link" data-scroll-target="#experimenta-3"><span class="header-section-number">6.2</span> Experimenta</a></li>
+  <li><a href="#observa-3" id="toc-observa-3" class="nav-link" data-scroll-target="#observa-3"><span class="header-section-number">7.1</span> Observa</a></li>
+  <li><a href="#experimenta-2" id="toc-experimenta-2" class="nav-link" data-scroll-target="#experimenta-2"><span class="header-section-number">7.2</span> Experimenta</a></li>
   </ul></li>
-  <li><a href="#paso-5-observa" id="toc-paso-5-observa" class="nav-link" data-scroll-target="#paso-5-observa"><span class="header-section-number">7</span> Paso 5 — Observa</a>
+  <li><a href="#paso-5-modifica-el-contexto" id="toc-paso-5-modifica-el-contexto" class="nav-link" data-scroll-target="#paso-5-modifica-el-contexto"><span class="header-section-number">8</span> Paso 5 — Modifica el contexto</a>
   <ul class="collapse">
-  <li><a href="#algunas-preguntas" id="toc-algunas-preguntas" class="nav-link" data-scroll-target="#algunas-preguntas"><span class="header-section-number">7.1</span> Algunas preguntas</a></li>
-  <li><a href="#sigue-experimentando" id="toc-sigue-experimentando" class="nav-link" data-scroll-target="#sigue-experimentando"><span class="header-section-number">7.2</span> Sigue experimentando</a></li>
+  <li><a href="#observa-4" id="toc-observa-4" class="nav-link" data-scroll-target="#observa-4"><span class="header-section-number">8.1</span> Observa</a></li>
+  <li><a href="#experimenta-3" id="toc-experimenta-3" class="nav-link" data-scroll-target="#experimenta-3"><span class="header-section-number">8.2</span> Experimenta</a></li>
+  </ul></li>
+  <li><a href="#paso-6-crea-un-conflicto" id="toc-paso-6-crea-un-conflicto" class="nav-link" data-scroll-target="#paso-6-crea-un-conflicto"><span class="header-section-number">9</span> Paso 6 — Crea un conflicto</a>
+  <ul class="collapse">
+  <li><a href="#observa-5" id="toc-observa-5" class="nav-link" data-scroll-target="#observa-5"><span class="header-section-number">9.1</span> Observa</a></li>
+  <li><a href="#experimenta-4" id="toc-experimenta-4" class="nav-link" data-scroll-target="#experimenta-4"><span class="header-section-number">9.2</span> Experimenta</a></li>
+  </ul></li>
+  <li><a href="#paso-7-conclusiones" id="toc-paso-7-conclusiones" class="nav-link" data-scroll-target="#paso-7-conclusiones"><span class="header-section-number">10</span> Paso 7 — Conclusiones</a>
+  <ul class="collapse">
+  <li><a href="#sigue-experimentando" id="toc-sigue-experimentando" class="nav-link" data-scroll-target="#sigue-experimentando"><span class="header-section-number">10.1</span> Sigue experimentando</a></li>
+  <li><a href="#una-pregunta-para-el-siguiente-laboratorio" id="toc-una-pregunta-para-el-siguiente-laboratorio" class="nav-link" data-scroll-target="#una-pregunta-para-el-siguiente-laboratorio"><span class="header-section-number">10.2</span> Una pregunta para el siguiente laboratorio</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -180,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Qué vamos a hacer</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Qué vamos a hacer</span></h1>
 </div>
 
 
@@ -198,244 +207,325 @@ ul.task-list li input[type="checkbox"] {
 
 
 <!-- Generated by iasi.quarto. Do not edit. -->
-<p>En este primer laboratorio no vamos a estudiar cómo funciona internamente un Sistema Inteligente.</p>
-<p>Vamos a utilizarlo.</p>
-<p>La idea es hacer pruebas muy sencillas, observar qué ocurre y empezar a desarrollar intuición sobre cómo se comporta un Sistema Inteligente cuando cambian las condiciones de una interacción.</p>
-<p>No buscamos demostrar que tenga que aparecer una respuesta concreta. De hecho, en algunas pruebas puede que no observes ninguna diferencia apreciable.</p>
-<p>Eso también es un resultado.</p>
-<p>Para reducir el contexto previo, utilizaremos navegaciones privadas o de incógnito y, cuando queramos empezar desde cero, cerraremos completamente la sesión privada antes de abrir otra.</p>
-<p>Durante el laboratorio vamos a:</p>
+<p>En el laboratorio anterior observamos que una interacción con un Sistema Inteligente no depende únicamente del último mensaje.</p>
+<p>La conversación va acumulando información y esa información puede influir en las respuestas posteriores.</p>
+<p>Ahora vamos a experimentar con ese fenómeno de forma deliberada.</p>
+<p>Trabajaremos con un proyecto ficticio llamado <strong>Faro</strong> y veremos qué ocurre cuando el contexto vive dentro de una conversación, cuando lo sacamos a un fichero y cuando cambiamos ese fichero.</p>
+<p>Vamos a:</p>
 <ul>
-<li>repetir exactamente la misma petición en dos sesiones separadas;</li>
-<li>expresar una misma necesidad mediante prompts diferentes;</li>
-<li>sacar parte de la información fuera del prompt y colocarla en el contexto de la conversación;</li>
-<li>cambiar de sesión y observar qué ocurre con ese contexto;</li>
-<li>realizar nuestras propias variaciones sobre los experimentos.</li>
+<li>construir contexto dentro de una conversación;</li>
+<li>comprobar qué ocurre al cambiar de sesión;</li>
+<li>externalizar ese contexto en un fichero;</li>
+<li>utilizarlo en una sesión nueva;</li>
+<li>preguntar por información definida y no definida;</li>
+<li>modificar el contexto;</li>
+<li>crear conflictos entre distintas fuentes;</li>
+<li>experimentar con nuestras propias variantes.</li>
 </ul>
-<p>No hace falta intentar explicar todavía por qué sucede cada cosa.</p>
-<p>Primero vamos a probar.</p>
-<section id="qué-necesitas" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="qué-necesitas"><span class="header-section-number">2.1</span> Qué necesitas</h2>
-<p>Solo necesitas:</p>
+<p>No buscamos obtener respuestas predeterminadas.</p>
+<p>Buscamos observar cómo cambia el comportamiento del Sistema Inteligente cuando cambia el contexto disponible.</p>
+<section id="qué-necesitas" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="qué-necesitas"><span class="header-section-number">3.1</span> Qué necesitas</h2>
+<p>Necesitas:</p>
 <ul>
 <li>un navegador con modo privado o de incógnito;</li>
 <li>acceso a un Sistema Inteligente con interfaz conversacional;</li>
-<li>poder cerrar completamente una sesión privada y abrir otra nueva.</li>
+<li>poder proporcionar un fichero Markdown a la conversación;</li>
+<li>un editor de texto para modificar <code>context.md</code>.</li>
 </ul>
-<p>No necesitas instalar nada ni escribir código.</p>
+<p>El laboratorio incluye un fichero <code>context.md</code> inicial.</p>
 </section>
-<section id="qué-aprenderás" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="qué-aprenderás"><span class="header-section-number">2.2</span> Qué aprenderás</h2>
-<p>Al terminar el laboratorio habrás experimentado que una interacción con un Sistema Inteligente no depende únicamente de la última frase que escribes.</p>
-<p>También habrás empezado a distinguir entre la necesidad que quieres resolver, el prompt con el que la expresas, el contexto acumulado durante una conversación y la sesión en la que todo ello ocurre.</p>
-<p>Pero el objetivo principal no es memorizar esos conceptos.</p>
-<p>Es empezar a experimentar.</p>
+<section id="qué-aprenderás" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="qué-aprenderás"><span class="header-section-number">3.2</span> Qué aprenderás</h2>
+<p>Al terminar habrás experimentado que el contexto puede existir dentro de una conversación, pero también puede convertirse en un artefacto explícito que podemos conservar, revisar, modificar, reutilizar y controlar.</p>
+<p>Primero vamos a comprobarlo.</p>
 </section>
-<section id="paso-1-repite" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Paso 1 — Repite</h1>
-<p>Vamos a empezar sin cambiar nada.</p>
-<p>Abre una <strong>nueva navegación privada</strong> y escribe:</p>
-<blockquote class="blockquote">
-<p>Explica qué es una base de datos relacional.</p>
-</blockquote>
-<p>Lee la respuesta y consérvala para poder compararla después.</p>
-<p>Ahora cierra completamente esa navegación privada.</p>
-<p>Abre una <strong>nueva navegación privada</strong> y escribe exactamente lo mismo:</p>
-<blockquote class="blockquote">
-<p>Explica qué es una base de datos relacional.</p>
-</blockquote>
-<section id="observa" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="observa"><span class="header-section-number">3.1</span> Observa</h2>
-<p>Compara ambas respuestas.</p>
-<p>Pueden ser diferentes.</p>
-<p>Pueden ser muy parecidas.</p>
-<p>Pueden incluso ser idénticas.</p>
-<p>No esperamos un resultado concreto.</p>
-<p>Fíjate simplemente en lo que ha ocurrido.</p>
-<p>¿Mantienen la misma estructura?</p>
-<p>¿Utilizan los mismos ejemplos?</p>
-<p>¿Explican exactamente los mismos conceptos?</p>
-<p>¿Cambian el nivel de detalle o la forma de expresarlos?</p>
-<p>Si las dos respuestas son idénticas, no intentes forzar una diferencia. Anótalo mentalmente y continúa.</p>
-<p>Ese resultado también forma parte del experimento.</p>
-</section>
-<section id="experimenta" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="experimenta"><span class="header-section-number">3.2</span> Experimenta</h2>
-<p>Antes de pasar al siguiente paso puedes repetir la prueba con otra pregunta.</p>
-<p>Elige algo que te interese.</p>
-<p>Haz la misma petición en dos sesiones privadas distintas.</p>
-<p>Prueba dos veces, tres, cinco.</p>
-<p>No busques conseguir un resultado determinado.</p>
-<p>Mira qué ocurre.</p>
-</section>
-</section>
-<section id="paso-2-la-misma-necesidad-distintos-prompts" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Paso 2 — La misma necesidad, distintos prompts</h1>
-<p>Ahora vamos a cambiar deliberadamente una cosa.</p>
-<p>Seguiremos intentando resolver la misma necesidad:</p>
-<blockquote class="blockquote">
-<p>Entender qué es una base de datos relacional.</p>
-</blockquote>
-<p>Abre una nueva navegación privada y escribe:</p>
-<blockquote class="blockquote">
-<p>Explica qué es una base de datos relacional.</p>
-</blockquote>
-<p>Guarda la respuesta.</p>
-<p>Cierra completamente esa navegación privada y abre otra.</p>
-<p>Ahora escribe:</p>
-<blockquote class="blockquote">
-<p>Explica qué es una base de datos relacional usando una biblioteca como analogía.</p>
-</blockquote>
-<section id="observa-1" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="observa-1"><span class="header-section-number">4.1</span> Observa</h2>
-<p>La necesidad de fondo es la misma.</p>
-<p>Lo que hemos cambiado es la forma de expresarla.</p>
-<p>Compara las respuestas.</p>
-<p>¿Explican el mismo concepto?</p>
-<p>¿Qué cambia en la estructura?</p>
-<p>¿Qué ejemplos aparecen?</p>
-<p>¿Qué parte de la segunda respuesta parece consecuencia directa de la instrucción añadida?</p>
-<p>No estamos intentando averiguar qué prompt es mejor.</p>
-<p>Estamos observando cómo una misma necesidad puede producir respuestas distintas cuando cambiamos la información que incluimos en el prompt.</p>
-</section>
-<section id="experimenta-1" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="experimenta-1"><span class="header-section-number">4.2</span> Experimenta</h2>
-<p>Ahora hazlo a tu manera.</p>
-<p>Mantén la misma pregunta y cambia alguna condición del prompt.</p>
-<p>Por ejemplo, puedes pedir:</p>
-<ul>
-<li>una explicación muy breve;</li>
-<li>una explicación para una persona sin conocimientos técnicos;</li>
-<li>una explicación basada en una analogía diferente;</li>
-<li>una explicación con un ejemplo;</li>
-<li>una comparación con otro concepto.</li>
-</ul>
-<p>O inventa tú otra variante.</p>
-<p>Haz varios intentos.</p>
-<p>Observa qué cambia y qué permanece.</p>
-</section>
-</section>
-<section id="paso-3-saca-información-fuera-del-prompt" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Paso 3 — Saca información fuera del prompt</h1>
-<p>Hasta ahora hemos colocado toda la información dentro del propio prompt.</p>
-<p>Vamos a cambiar eso.</p>
-<p>Cierra la navegación privada anterior y abre una nueva.</p>
-<p>Primero escribe:</p>
-<blockquote class="blockquote">
-<p>Durante esta conversación, cuando expliques conceptos técnicos utiliza una biblioteca como analogía siempre que resulte posible.</p>
-</blockquote>
-<p>Espera la respuesta del sistema.</p>
-<p>Después escribe únicamente:</p>
-<blockquote class="blockquote">
-<p>Explica qué es una base de datos relacional.</p>
-</blockquote>
-<section id="observa-2" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="observa-2"><span class="header-section-number">5.1</span> Observa</h2>
-<p>Compara esta respuesta con la obtenida en el paso anterior cuando escribiste:</p>
-<blockquote class="blockquote">
-<p>Explica qué es una base de datos relacional usando una biblioteca como analogía.</p>
-</blockquote>
-<p>La necesidad es la misma.</p>
-<p>La instrucción sobre la biblioteca también existe en ambos casos.</p>
-<p>Pero ahora esa instrucción <strong>no aparece en el último prompt</strong>.</p>
-<p>Ha aparecido antes, dentro de la conversación.</p>
-<p>¿La respuesta sigue utilizando la analogía?</p>
-<p>¿Se parece a la obtenida anteriormente?</p>
-<p>¿Hasta qué punto parece influir algo que ya no está escrito en la petición actual?</p>
-<p>No necesitamos que las respuestas sean idénticas.</p>
-<p>Nos interesa comprobar que el último mensaje no es necesariamente toda la información que participa en la interacción.</p>
-</section>
-<section id="experimenta-2" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="experimenta-2"><span class="header-section-number">5.2</span> Experimenta</h2>
-<p>Cambia la instrucción inicial.</p>
-<p>Por ejemplo:</p>
-<blockquote class="blockquote">
-<p>Durante esta conversación, responde siempre con ejemplos relacionados con cocina.</p>
-</blockquote>
-<p>Después haz varias preguntas breves.</p>
-<p>O establece otra regla que se te ocurra.</p>
-<p>Comprueba cuánto tiempo parece mantenerse.</p>
-<p>Cámbiala a mitad de la conversación.</p>
-<p>Contradícela.</p>
-<p>Haz una excepción.</p>
-<p>No hay un resultado que tengas que conseguir.</p>
-<p>Prueba y observa.</p>
-</section>
-</section>
-<section id="paso-4-cambia-de-sesión" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Paso 4 — Cambia de sesión</h1>
-<p>Mantén abierta la navegación privada del paso anterior.</p>
-<p>Vuelve a escribir:</p>
-<blockquote class="blockquote">
-<p>Explica qué es una base de datos relacional.</p>
-</blockquote>
-<p>Observa si el sistema continúa aplicando la instrucción que habías dado antes.</p>
-<p>Ahora cierra <strong>completamente</strong> esa navegación privada.</p>
+<section id="paso-1-construye-contexto-en-una-conversación" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Paso 1 — Construye contexto en una conversación</h1>
 <p>Abre una nueva navegación privada.</p>
-<p>No vuelvas a proporcionar la instrucción anterior.</p>
-<p>Escribe únicamente:</p>
+<p>Escribe:</p>
 <blockquote class="blockquote">
-<p>Explica qué es una base de datos relacional.</p>
+<p>Estamos trabajando en un proyecto llamado Faro.</p>
+<p>Faro es una aplicación para gestionar bibliotecas municipales.</p>
+<p>Los usuarios pueden buscar libros, reservarlos y consultar sus préstamos.</p>
+<p>Faro no vende libros.</p>
+<p>Cuando hablamos de “usuario” nos referimos al lector de la biblioteca.</p>
 </blockquote>
-<section id="observa-3" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="observa-3"><span class="header-section-number">6.1</span> Observa</h2>
-<p>Compara esta respuesta con la anterior.</p>
-<p>¿Qué información estaba disponible en la sesión anterior?</p>
-<p>¿Qué ocurre ahora?</p>
-<p>¿Sigue apareciendo la instrucción que habías establecido?</p>
-<p>La prueba no pretende demostrar que todos los Sistemas Inteligentes o todas las plataformas gestionen las sesiones de la misma manera.</p>
-<p>Queremos comprobar algo más práctico:</p>
-<p><strong>no debemos dar por supuesto que el contexto creado en una sesión estará disponible automáticamente en otra.</strong></p>
+<p>Después pregunta:</p>
+<blockquote class="blockquote">
+<p>Propón tres funcionalidades nuevas para Faro.</p>
+</blockquote>
+<p>Ahora pregunta:</p>
+<blockquote class="blockquote">
+<p>¿Faro vende libros?</p>
+</blockquote>
+<p>Y después:</p>
+<blockquote class="blockquote">
+<p>¿Quién es el usuario de Faro?</p>
+</blockquote>
+<section id="observa" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="observa"><span class="header-section-number">4.1</span> Observa</h2>
+<p>Las últimas preguntas son muy breves.</p>
+<p>Sin embargo, el Sistema Inteligente dispone de información que apareció antes en la conversación.</p>
+<p>La sesión ha ido acumulando contexto.</p>
+<p>Ahora introduce algo nuevo:</p>
+<blockquote class="blockquote">
+<p>A partir de ahora, cuando hablemos de una sede nos referiremos a una biblioteca municipal concreta.</p>
+</blockquote>
+<p>Después pregunta:</p>
+<blockquote class="blockquote">
+<p>¿Qué significa “sede” en Faro?</p>
+</blockquote>
+<p>Comprueba si el sistema utiliza la definición que acabas de introducir.</p>
 </section>
-<section id="experimenta-3" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="experimenta-3"><span class="header-section-number">6.2</span> Experimenta</h2>
-<p>Haz tus propias pruebas.</p>
-<p>Introduce una palabra inventada y dale un significado dentro de una conversación.</p>
-<p>Define una regla.</p>
-<p>Establece una preferencia.</p>
-<p>Pide al sistema que recuerde algo durante esa sesión.</p>
-<p>Después abre otra navegación privada y comprueba qué ocurre.</p>
-<p>Prueba también a cerrar el navegador y volver a una conversación existente, si la plataforma lo permite.</p>
-<p>Compara situaciones.</p>
-<p>Hazte preguntas.</p>
+<section id="experimenta" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="experimenta"><span class="header-section-number">4.2</span> Experimenta</h2>
+<p>Añade nuevos conceptos.</p>
+<p>Corrige alguno.</p>
+<p>Introduce una decisión.</p>
+<p>Haz una pregunta que dependa de algo dicho varios mensajes antes.</p>
+<p>Observa cómo, a medida que avanza la conversación, el sistema parece ir <strong>aprendiendo a trabajar dentro del contexto que estáis construyendo juntos</strong>.</p>
 </section>
 </section>
-<section id="paso-5-observa" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Paso 5 — Observa</h1>
-<p>Durante el laboratorio hemos partido de necesidades muy sencillas, pero hemos cambiado varias cosas alrededor de ellas.</p>
-<p>Primero repetimos exactamente la misma petición sin esperar que tuviera que ocurrir nada concreto.</p>
-<p>Después mantuvimos la misma necesidad y cambiamos el prompt.</p>
-<p>Más tarde sacamos parte de la información fuera del prompt y la introdujimos previamente en la conversación.</p>
-<p>Finalmente cambiamos de sesión.</p>
-<p>Ahora vuelve sobre lo que has observado.</p>
-<section id="algunas-preguntas" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="algunas-preguntas"><span class="header-section-number">7.1</span> Algunas preguntas</h2>
-<p>No busques una respuesta académica. Intenta responder con tus propias palabras.</p>
+<section id="paso-2-cambia-de-sesión" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Paso 2 — Cambia de sesión</h1>
+<p>Antes de cerrar la sesión anterior, pregunta:</p>
+<blockquote class="blockquote">
+<p>¿Qué significa “sede” en Faro?</p>
+</blockquote>
+<p>Comprueba la respuesta.</p>
+<p>Ahora cierra completamente la navegación privada.</p>
+<p>Abre otra nueva.</p>
+<p>Sin proporcionar ninguna información sobre Faro, pregunta:</p>
+<blockquote class="blockquote">
+<p>¿Qué significa “sede” en Faro?</p>
+</blockquote>
+<p>Después pregunta:</p>
+<blockquote class="blockquote">
+<p>¿Faro vende libros?</p>
+</blockquote>
+<section id="observa-1" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="observa-1"><span class="header-section-number">5.1</span> Observa</h2>
+<p>Compara las respuestas con las de la sesión anterior.</p>
+<p>No esperamos un comportamiento idéntico en todos los Sistemas Inteligentes o plataformas.</p>
+<p>Puede existir memoria persistente, información de proyecto, preferencias u otros mecanismos.</p>
+<p>Lo importante es comprobar algo práctico:</p>
+<p><strong>no podemos asumir que todo lo aprendido durante una sesión seguirá disponible en una sesión nueva.</strong></p>
+<p>Parte puede mantenerse.</p>
+<p>Parte puede desaparecer.</p>
+<p>Parte puede reaparecer por mecanismos distintos al historial de conversación.</p>
+</section>
+<section id="experimenta-1" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="experimenta-1"><span class="header-section-number">5.2</span> Experimenta</h2>
+<p>Introduce en una sesión una palabra inventada.</p>
+<p>Dale un significado.</p>
+<p>Úsala varias veces.</p>
+<p>Después abre una nueva sesión privada y prueba de nuevo.</p>
+<p>Haz lo mismo con una decisión, una restricción o una preferencia.</p>
+<p>Observa qué se conserva y qué no.</p>
+</section>
+</section>
+<section id="paso-3-saca-el-contexto-de-la-conversación" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Paso 3 — Saca el contexto de la conversación</h1>
+<p>Ahora vamos a dejar de depender exclusivamente de lo que la sesión conserve.</p>
+<p>Abre <code>context.md</code>.</p>
+<p>El fichero contiene una descripción de Faro.</p>
+<p>Cierra cualquier navegación privada anterior y abre una nueva.</p>
+<p>Proporciona <code>context.md</code> al Sistema Inteligente y escribe:</p>
+<blockquote class="blockquote">
+<p>Para este ejercicio, utiliza <code>context.md</code> como contexto del proyecto Faro.</p>
+<p>Si una respuesta depende de información que no aparece definida en ese fichero, indícalo en lugar de inventarla.</p>
+</blockquote>
+<p>Después pregunta:</p>
+<blockquote class="blockquote">
+<p>¿Faro vende libros?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>¿Quién es el usuario de Faro?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>¿Qué significa “sede” en Faro?</p>
+</blockquote>
+<section id="observa-2" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="observa-2"><span class="header-section-number">6.1</span> Observa</h2>
+<p>La sesión es nueva.</p>
+<p>No hemos reconstruido Faro mediante una conversación larga.</p>
+<p>Hemos proporcionado explícitamente una parte del conocimiento necesario.</p>
+<p>Ahora ese conocimiento no depende únicamente de que una sesión anterior lo recuerde.</p>
+<p>Podemos llevarlo con nosotros.</p>
+</section>
+</section>
+<section id="paso-4-delimita-el-contexto" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Paso 4 — Delimita el contexto</h1>
+<p>Seguimos utilizando <code>context.md</code>.</p>
+<p>Pregunta:</p>
+<blockquote class="blockquote">
+<p>¿Faro permite reservar salas de estudio?</p>
+</blockquote>
+<p>Después:</p>
+<blockquote class="blockquote">
+<p>¿Qué sistema de base de datos utiliza Faro?</p>
+</blockquote>
+<p>Y finalmente:</p>
+<blockquote class="blockquote">
+<p>¿Cuántas bibliotecas utilizan actualmente Faro?</p>
+</blockquote>
+<p>Busca esas respuestas en <code>context.md</code>.</p>
+<p>No están definidas.</p>
+<section id="observa-3" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="observa-3"><span class="header-section-number">7.1</span> Observa</h2>
+<p>El contexto no solo aporta información.</p>
+<p>También puede establecer una frontera entre lo que hemos definido y lo que todavía no hemos definido.</p>
+<p>Comprueba qué hace el Sistema Inteligente cuando llega a esa frontera.</p>
+<p>¿Reconoce que falta información?</p>
+<p>¿Hace una inferencia?</p>
+<p>¿Propone una posibilidad?</p>
+<p>¿Presenta como cierto algo que el fichero no dice?</p>
+<p>No des por supuesto que el comportamiento será perfecto.</p>
+<p>Eso también forma parte del experimento.</p>
+</section>
+<section id="experimenta-2" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="experimenta-2"><span class="header-section-number">7.2</span> Experimenta</h2>
+<p>Haz preguntas cuya respuesta esté claramente en el fichero.</p>
+<p>Después haz preguntas que solo puedan responderse mediante inferencia.</p>
+<p>Prueba con algo ambiguo.</p>
+<p>Prueba con algo completamente ausente.</p>
+<p>Observa la diferencia entre lo definido, lo inferido, lo propuesto y lo desconocido.</p>
+</section>
+</section>
+<section id="paso-5-modifica-el-contexto" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Paso 5 — Modifica el contexto</h1>
+<p>Abre <code>context.md</code> y añade:</p>
+<blockquote class="blockquote">
+<p>Faro permite reservar salas de estudio.</p>
+</blockquote>
+<p>Guarda el fichero.</p>
+<p>Cierra la navegación privada actual y abre otra nueva.</p>
+<p>Proporciona la nueva versión de <code>context.md</code> y vuelve a indicar:</p>
+<blockquote class="blockquote">
+<p>Utiliza <code>context.md</code> como contexto del proyecto Faro.</p>
+<p>Si una respuesta depende de información no definida en el fichero, indícalo.</p>
+</blockquote>
+<p>Pregunta:</p>
+<blockquote class="blockquote">
+<p>¿Faro permite reservar salas de estudio?</p>
+</blockquote>
+<section id="observa-4" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="observa-4"><span class="header-section-number">8.1</span> Observa</h2>
+<p>La pregunta es la misma que antes.</p>
+<p>Lo que ha cambiado es el contexto.</p>
+<p>Ahora cambia otra cosa.</p>
+<p>Sustituye:</p>
+<blockquote class="blockquote">
+<p>Faro no vende libros.</p>
+</blockquote>
+<p>por:</p>
+<blockquote class="blockquote">
+<p>Faro permite comprar libros retirados del catálogo de la biblioteca.</p>
+</blockquote>
+<p>Repite la prueba en una sesión nueva.</p>
+</section>
+<section id="experimenta-3" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="experimenta-3"><span class="header-section-number">8.2</span> Experimenta</h2>
+<p>Añade una restricción.</p>
+<p>Elimina una definición.</p>
+<p>Haz una frase más precisa.</p>
+<p>Introduce una excepción.</p>
+<p>Cambia únicamente una línea cada vez si quieres aislar mejor el efecto.</p>
+<p>Observa cómo un cambio en el contexto puede modificar el comportamiento sin cambiar la petición final.</p>
+</section>
+</section>
+<section id="paso-6-crea-un-conflicto" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Paso 6 — Crea un conflicto</h1>
+<p>Vamos a provocar un conflicto deliberadamente.</p>
+<p>Deja en <code>context.md</code>:</p>
+<blockquote class="blockquote">
+<p>Faro permite reservar salas de estudio.</p>
+</blockquote>
+<p>Abre una nueva navegación privada.</p>
+<p>Antes de proporcionar el fichero escribe:</p>
+<blockquote class="blockquote">
+<p>En Faro no se pueden reservar salas de estudio.</p>
+</blockquote>
+<p>Ahora proporciona <code>context.md</code>.</p>
+<p>Después indica:</p>
+<blockquote class="blockquote">
+<p>Para este ejercicio, utiliza exclusivamente <code>context.md</code> como fuente de información sobre Faro.</p>
+<p>Si algo dicho anteriormente entra en conflicto con el fichero, utiliza lo definido en <code>context.md</code>.</p>
+</blockquote>
+<p>Pregunta:</p>
+<blockquote class="blockquote">
+<p>¿Faro permite reservar salas de estudio?</p>
+</blockquote>
+<section id="observa-5" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="observa-5"><span class="header-section-number">9.1</span> Observa</h2>
+<p>Tenemos dos informaciones incompatibles.</p>
+<p>Además hemos indicado cuál queremos que tenga prioridad.</p>
+<p>¿Qué hace el sistema?</p>
+<p>¿Respeta la prioridad?</p>
+<p>¿Menciona el conflicto?</p>
+<p>¿Intenta reconciliar ambas versiones?</p>
+<p>¿Se confunde?</p>
+<p>Cuando existen varias fuentes de contexto, puede ser necesario decidir cuál tiene autoridad.</p>
+</section>
+<section id="experimenta-4" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="experimenta-4"><span class="header-section-number">9.2</span> Experimenta</h2>
+<p>Invierte la prioridad.</p>
+<p>Introduce dos ficheros contradictorios.</p>
+<p>Haz que una fuente sea más reciente.</p>
+<p>Prueba una contradicción pequeña y otra muy evidente.</p>
+<p>No protejas al sistema de los casos difíciles.</p>
+<p>Créale problemas y observa cómo intenta resolverlos.</p>
+</section>
+</section>
+<section id="paso-7-conclusiones" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Paso 7 — Conclusiones</h1>
+<p>Durante una sesión, el Sistema Inteligente puede ir adaptando sus respuestas a la información, decisiones, conceptos y significados que vamos introduciendo.</p>
+<p>En un sentido práctico, <strong>va aprendiendo a trabajar con nosotros dentro de esa sesión</strong>.</p>
+<p>Eso no significa necesariamente que el modelo se esté entrenando o modificando internamente.</p>
+<p>Significa que el contexto disponible durante la interacción va creciendo y condicionando las respuestas posteriores.</p>
+<p>Cuando iniciamos una nueva sesión, no podemos asumir que todo ese aprendizaje práctico seguirá disponible.</p>
+<p>Parte puede conservarse mediante otros mecanismos.</p>
+<p>Parte puede desaparecer.</p>
+<p>Y, sobre todo, no debemos depender de que una nueva sesión reconstruya por sí sola todo lo que habíamos establecido antes.</p>
+<p>Al externalizar parte de ese conocimiento en <code>context.md</code>, dejamos de depender exclusivamente de lo que una conversación recuerde o conserve.</p>
+<p>El contexto pasa de ser algo acumulado incidentalmente durante una sesión a convertirse en algo que podemos:</p>
 <ul>
-<li>¿Es lo mismo una pregunta que un prompt?</li>
-<li>¿Dos prompts idénticos tienen que producir necesariamente respuestas distintas?</li>
-<li>¿Dos prompts diferentes pueden intentar resolver exactamente la misma necesidad?</li>
-<li>¿Puede una respuesta depender de información que no aparece en el último mensaje?</li>
-<li>¿Qué ocurre con esa información cuando cambia la sesión?</li>
-<li>¿Qué diferencias has encontrado entre tus propias pruebas?</li>
-<li>¿Qué prueba te ha sorprendido más?</li>
-<li>¿Qué otra cosa te gustaría comprobar?</li>
+<li>conservar;</li>
+<li>revisar;</li>
+<li>modificar;</li>
+<li>reutilizar;</li>
+<li>comparar;</li>
+<li>delimitar;</li>
+<li>controlar.</li>
 </ul>
+<section id="sigue-experimentando" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="sigue-experimentando"><span class="header-section-number">10.1</span> Sigue experimentando</h2>
+<p>Crea otro contexto.</p>
+<p>Hazlo mínimo.</p>
+<p>Hazlo enorme.</p>
+<p>Divídelo en varios ficheros.</p>
+<p>Prueba el mismo contexto con distintos Sistemas Inteligentes.</p>
+<p>Introduce contradicciones.</p>
+<p>Elimina información importante.</p>
+<p>Añade información irrelevante.</p>
+<p>Comprueba qué ocurre.</p>
 </section>
-<section id="sigue-experimentando" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="sigue-experimentando"><span class="header-section-number">7.2</span> Sigue experimentando</h2>
-<p>El laboratorio termina aquí, pero no tienes por qué detener la prueba.</p>
-<p>Cambia las preguntas.</p>
-<p>Cambia el orden.</p>
-<p>Repite un experimento varias veces.</p>
-<p>Introduce instrucciones absurdas o muy específicas.</p>
-<p>Prueba con otra plataforma.</p>
-<p>Compara dos Sistemas Inteligentes.</p>
-<p>Vuelve mañana y repite alguna prueba.</p>
-<p>La intención de estos Labs no es darte una secuencia de instrucciones para que obtengas una respuesta que nosotros ya conocemos.</p>
-<p>Es ofrecerte un entorno sencillo en el que puedas <strong>probar, observar y empezar a construir tu propia intuición</strong> sobre cómo se comportan los Sistemas Inteligentes.</p>
-<p>Más adelante pondremos nombre y estructura a muchas de las cosas que estamos observando.</p>
-<p>Por ahora, experimenta.</p>
+<section id="una-pregunta-para-el-siguiente-laboratorio" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="una-pregunta-para-el-siguiente-laboratorio"><span class="header-section-number">10.2</span> Una pregunta para el siguiente laboratorio</h2>
+<p>Durante todo este laboratorio hemos repetido instrucciones como:</p>
+<blockquote class="blockquote">
+<p>utiliza este fichero como contexto;</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>no inventes información que no esté definida;</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>si hay conflicto, da prioridad a esta fuente.</p>
+</blockquote>
+<p>Hemos externalizado el contexto.</p>
+<p>Pero seguimos escribiendo una y otra vez <strong>las reglas sobre cómo queremos que el Sistema Inteligente trabaje con ese contexto</strong>.</p>
+<p>¿Podemos externalizar también esas reglas?</p>
 
 
 </section>
@@ -844,13 +934,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../index.html" class="pagination-link" aria-label="Labs">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Labs</span></span>
+      <a href="../../labs/01-prompts/index.html" class="pagination-link" aria-label="index.html">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">index.html</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../labs/02-contexto/index.html" class="pagination-link" aria-label="index.html">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">index.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../labs/03-instrucciones/index.html" class="pagination-link" aria-label="index.html">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">index.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

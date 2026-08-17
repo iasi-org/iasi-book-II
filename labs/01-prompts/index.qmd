@@ -4,8 +4,10 @@
 
 {{< include 01-repite.qmd >}}
 
-{{< include 02-cambia-el-contexto.qmd >}}
+{{< include 02-misma-necesidad-distintos-prompts.qmd >}}
 
-{{< include 03-cambia-de-sesion.qmd >}}
+{{< include 03-contexto-fuera-del-prompt.qmd >}}
 
-{{< include 04-observa.qmd >}}
+{{< include 04-cambia-de-sesion.qmd >}}
+
+{{< include 05-observa.qmd >}}

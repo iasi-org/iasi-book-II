@@ -1,0 +1,52 @@
+# Paso 5 — Observa
+
+Durante el laboratorio hemos partido de necesidades muy sencillas, pero hemos cambiado varias cosas alrededor de ellas.
+
+Primero repetimos exactamente la misma petición sin esperar que tuviera que ocurrir nada concreto.
+
+Después mantuvimos la misma necesidad y cambiamos el prompt.
+
+Más tarde sacamos parte de la información fuera del prompt y la introdujimos previamente en la conversación.
+
+Finalmente cambiamos de sesión.
+
+Ahora vuelve sobre lo que has observado.
+
+## Algunas preguntas
+
+No busques una respuesta académica. Intenta responder con tus propias palabras.
+
+- ¿Es lo mismo una pregunta que un prompt?
+- ¿Dos prompts idénticos tienen que producir necesariamente respuestas distintas?
+- ¿Dos prompts diferentes pueden intentar resolver exactamente la misma necesidad?
+- ¿Puede una respuesta depender de información que no aparece en el último mensaje?
+- ¿Qué ocurre con esa información cuando cambia la sesión?
+- ¿Qué diferencias has encontrado entre tus propias pruebas?
+- ¿Qué prueba te ha sorprendido más?
+- ¿Qué otra cosa te gustaría comprobar?
+
+## Sigue experimentando
+
+El laboratorio termina aquí, pero no tienes por qué detener la prueba.
+
+Cambia las preguntas.
+
+Cambia el orden.
+
+Repite un experimento varias veces.
+
+Introduce instrucciones absurdas o muy específicas.
+
+Prueba con otra plataforma.
+
+Compara dos Sistemas Inteligentes.
+
+Vuelve mañana y repite alguna prueba.
+
+La intención de estos Labs no es darte una secuencia de instrucciones para que obtengas una respuesta que nosotros ya conocemos.
+
+Es ofrecerte un entorno sencillo en el que puedas **probar, observar y empezar a construir tu propia intuición** sobre cómo se comportan los Sistemas Inteligentes.
+
+Más adelante pondremos nombre y estructura a muchas de las cosas que estamos observando.
+
+Por ahora, experimenta.

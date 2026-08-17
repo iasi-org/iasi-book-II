@@ -1,41 +1,55 @@
-# "Paso 1 — Repite"
+# Paso 1 — Repite
 
-Vamos a empezar con algo muy simple.
+Vamos a empezar sin cambiar nada.
 
-Abre una conversación nueva con el Sistema Inteligente que hayas elegido.
-
-Haz una pregunta sencilla. No importa demasiado cuál. Elige algo que pueda responder sin necesidad de información adicional.
-
-Por ejemplo:
+Abre una **nueva navegación privada** y escribe:
 
 > Explica qué es una base de datos relacional.
 
-Lee la respuesta.
+Lee la respuesta y consérvala para poder compararla después.
 
-Ahora abre **otra conversación nueva** y escribe exactamente la misma petición.
+Ahora cierra completamente esa navegación privada.
 
-No cambies ninguna palabra.
+Abre una **nueva navegación privada** y escribe exactamente lo mismo:
+
+> Explica qué es una base de datos relacional.
 
 ## Observa
 
-Compara las dos respuestas.
+Compara ambas respuestas.
 
-No busques todavía una explicación. Limítate a mirar.
+Pueden ser diferentes.
 
-¿Son idénticas?
+Pueden ser muy parecidas.
 
-¿La estructura es la misma?
+Pueden incluso ser idénticas.
 
-¿Utiliza los mismos ejemplos?
+No esperamos un resultado concreto.
 
-¿Da exactamente la misma cantidad de información?
+Fíjate simplemente en lo que ha ocurrido.
 
-Puede que las diferencias sean pequeñas. Puede que sean muy visibles. También puede ocurrir que, en tu prueba concreta, las respuestas sean bastante parecidas.
+¿Mantienen la misma estructura?
 
-Todo eso sirve.
+¿Utilizan los mismos ejemplos?
 
-Lo importante en este primer paso es comprobar qué ocurre cuando repetimos exactamente la misma petición.
+¿Explican exactamente los mismos conceptos?
 
-Cuando hayas terminado, continúa sin cerrar las conversaciones si quieres conservarlas para comparar después.
+¿Cambian el nivel de detalle o la forma de expresarlos?
 
-[← Volver al inicio](00-index.qmd) · [Siguiente: cambia el contexto →](02-cambia-el-contexto.qmd)
+Si las dos respuestas son idénticas, no intentes forzar una diferencia. Anótalo mentalmente y continúa.
+
+Ese resultado también forma parte del experimento.
+
+## Experimenta
+
+Antes de pasar al siguiente paso puedes repetir la prueba con otra pregunta.
+
+Elige algo que te interese.
+
+Haz la misma petición en dos sesiones privadas distintas.
+
+Prueba dos veces, tres, cinco.
+
+No busques conseguir un resultado determinado.
+
+Mira qué ocurre.

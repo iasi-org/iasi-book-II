@@ -1,0 +1,51 @@
+# Paso 2 — Cambia de sesión
+
+Antes de cerrar la sesión anterior, pregunta:
+
+> ¿Qué significa "sede" en Faro?
+
+Comprueba la respuesta.
+
+Ahora cierra completamente la navegación privada.
+
+Abre otra nueva.
+
+Sin proporcionar ninguna información sobre Faro, pregunta:
+
+> ¿Qué significa "sede" en Faro?
+
+Después pregunta:
+
+> ¿Faro vende libros?
+
+## Observa
+
+Compara las respuestas con las de la sesión anterior.
+
+No esperamos un comportamiento idéntico en todos los Sistemas Inteligentes o plataformas.
+
+Puede existir memoria persistente, información de proyecto, preferencias u otros mecanismos.
+
+Lo importante es comprobar algo práctico:
+
+**no podemos asumir que todo lo aprendido durante una sesión seguirá disponible en una sesión nueva.**
+
+Parte puede mantenerse.
+
+Parte puede desaparecer.
+
+Parte puede reaparecer por mecanismos distintos al historial de conversación.
+
+## Experimenta
+
+Introduce en una sesión una palabra inventada.
+
+Dale un significado.
+
+Úsala varias veces.
+
+Después abre una nueva sesión privada y prueba de nuevo.
+
+Haz lo mismo con una decisión, una restricción o una preferencia.
+
+Observa qué se conserva y qué no.

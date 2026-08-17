@@ -1,0 +1,55 @@
+# Paso 4 — Cambia de sesión
+
+Mantén abierta la navegación privada del paso anterior.
+
+Vuelve a escribir:
+
+> Explica qué es una base de datos relacional.
+
+Observa si el sistema continúa aplicando la instrucción que habías dado antes.
+
+Ahora cierra **completamente** esa navegación privada.
+
+Abre una nueva navegación privada.
+
+No vuelvas a proporcionar la instrucción anterior.
+
+Escribe únicamente:
+
+> Explica qué es una base de datos relacional.
+
+## Observa
+
+Compara esta respuesta con la anterior.
+
+¿Qué información estaba disponible en la sesión anterior?
+
+¿Qué ocurre ahora?
+
+¿Sigue apareciendo la instrucción que habías establecido?
+
+La prueba no pretende demostrar que todos los Sistemas Inteligentes o todas las plataformas gestionen las sesiones de la misma manera.
+
+Queremos comprobar algo más práctico:
+
+**no debemos dar por supuesto que el contexto creado en una sesión estará disponible automáticamente en otra.**
+
+## Experimenta
+
+Haz tus propias pruebas.
+
+Introduce una palabra inventada y dale un significado dentro de una conversación.
+
+Define una regla.
+
+Establece una preferencia.
+
+Pide al sistema que recuerde algo durante esa sesión.
+
+Después abre otra navegación privada y comprueba qué ocurre.
+
+Prueba también a cerrar el navegador y volver a una conversación existente, si la plataforma lo permite.
+
+Compara situaciones.
+
+Hazte preguntas.

@@ -1,0 +1,51 @@
+# Paso 5 — Modifica el contexto
+
+Abre `context.md` y añade:
+
+> Faro permite reservar salas de estudio.
+
+Guarda el fichero.
+
+Cierra la navegación privada actual y abre otra nueva.
+
+Proporciona la nueva versión de `context.md` y vuelve a indicar:
+
+> Utiliza `context.md` como contexto del proyecto Faro.
+>
+> Si una respuesta depende de información no definida en el fichero, indícalo.
+
+Pregunta:
+
+> ¿Faro permite reservar salas de estudio?
+
+## Observa
+
+La pregunta es la misma que antes.
+
+Lo que ha cambiado es el contexto.
+
+Ahora cambia otra cosa.
+
+Sustituye:
+
+> Faro no vende libros.
+
+por:
+
+> Faro permite comprar libros retirados del catálogo de la biblioteca.
+
+Repite la prueba en una sesión nueva.
+
+## Experimenta
+
+Añade una restricción.
+
+Elimina una definición.
+
+Haz una frase más precisa.
+
+Introduce una excepción.
+
+Cambia únicamente una línea cada vez si quieres aislar mejor el efecto.
+
+Observa cómo un cambio en el contexto puede modificar el comportamiento sin cambiar la petición final.

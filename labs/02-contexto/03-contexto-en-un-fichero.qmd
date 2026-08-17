@@ -1,0 +1,35 @@
+# Paso 3 — Saca el contexto de la conversación
+
+Ahora vamos a dejar de depender exclusivamente de lo que la sesión conserve.
+
+Abre `context.md`.
+
+El fichero contiene una descripción de Faro.
+
+Cierra cualquier navegación privada anterior y abre una nueva.
+
+Proporciona `context.md` al Sistema Inteligente y escribe:
+
+> Para este ejercicio, utiliza `context.md` como contexto del proyecto Faro.
+>
+> Si una respuesta depende de información que no aparece definida en ese fichero, indícalo en lugar de inventarla.
+
+Después pregunta:
+
+> ¿Faro vende libros?
+
+> ¿Quién es el usuario de Faro?
+
+> ¿Qué significa "sede" en Faro?
+
+## Observa
+
+La sesión es nueva.
+
+No hemos reconstruido Faro mediante una conversación larga.
+
+Hemos proporcionado explícitamente una parte del conocimiento necesario.
+
+Ahora ese conocimiento no depende únicamente de que una sesión anterior lo recuerde.
+
+Podemos llevarlo con nosotros.

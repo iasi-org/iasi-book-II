@@ -1,0 +1,36 @@
+# Paso 3 — Saca las instrucciones del prompt
+
+Ahora abre `instructions.md`.
+
+Contiene las reglas que acabamos de escribir dentro del prompt.
+
+Cierra la sesión anterior y abre una nueva navegación privada.
+
+Proporciona:
+
+- `context.md`;
+- `instructions.md`.
+
+Escribe únicamente:
+
+> Trabaja con los ficheros proporcionados.
+
+Después pregunta:
+
+> ¿Faro permite reservar salas de estudio?
+
+Y:
+
+> Propón tres mejoras para Faro.
+
+## Observa
+
+Ya no hemos escrito todas las reglas dentro del prompt.
+
+Las hemos convertido en un artefacto separado.
+
+Compara las respuestas con las del paso anterior.
+
+No tienen por qué ser idénticas.
+
+Lo importante es comprobar si podemos reutilizar las mismas reglas de trabajo sin volver a redactarlas en cada petición.

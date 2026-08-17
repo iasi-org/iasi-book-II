@@ -1,0 +1,51 @@
+# Paso 4 — Delimita el contexto
+
+Seguimos utilizando `context.md`.
+
+Pregunta:
+
+> ¿Faro permite reservar salas de estudio?
+
+Después:
+
+> ¿Qué sistema de base de datos utiliza Faro?
+
+Y finalmente:
+
+> ¿Cuántas bibliotecas utilizan actualmente Faro?
+
+Busca esas respuestas en `context.md`.
+
+No están definidas.
+
+## Observa
+
+El contexto no solo aporta información.
+
+También puede establecer una frontera entre lo que hemos definido y lo que todavía no hemos definido.
+
+Comprueba qué hace el Sistema Inteligente cuando llega a esa frontera.
+
+¿Reconoce que falta información?
+
+¿Hace una inferencia?
+
+¿Propone una posibilidad?
+
+¿Presenta como cierto algo que el fichero no dice?
+
+No des por supuesto que el comportamiento será perfecto.
+
+Eso también forma parte del experimento.
+
+## Experimenta
+
+Haz preguntas cuya respuesta esté claramente en el fichero.
+
+Después haz preguntas que solo puedan responderse mediante inferencia.
+
+Prueba con algo ambiguo.
+
+Prueba con algo completamente ausente.
+
+Observa la diferencia entre lo definido, lo inferido, lo propuesto y lo desconocido.

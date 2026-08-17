@@ -2,42 +2,44 @@ En este primer laboratorio no vamos a estudiar cómo funciona internamente un Si
 
 Vamos a utilizarlo.
 
-La propuesta es sencilla: hacer unas pruebas, cambiar pequeñas cosas entre una interacción y la siguiente y observar qué ocurre. No buscamos una respuesta concreta ni demostrar una teoría. Queremos empezar a desarrollar una habilidad que será importante durante todo el recorrido: observar cómo se comporta un Sistema Inteligente mientras trabajamos con él.
+La idea es hacer pruebas muy sencillas, observar qué ocurre y empezar a desarrollar intuición sobre cómo se comporta un Sistema Inteligente cuando cambian las condiciones de una interacción.
+
+No buscamos demostrar que tenga que aparecer una respuesta concreta. De hecho, en algunas pruebas puede que no observes ninguna diferencia apreciable.
+
+Eso también es un resultado.
+
+Para reducir el contexto previo, utilizaremos navegaciones privadas o de incógnito y, cuando queramos empezar desde cero, cerraremos completamente la sesión privada antes de abrir otra.
 
 ## Qué vamos a hacer
 
-Vamos a trabajar con una misma idea de varias formas.
+Durante el laboratorio vamos a:
 
-Primero repetiremos una petición. Después introduciremos contexto antes de repetirla. Más adelante daremos al sistema una información que solo existe dentro de una conversación y comprobaremos qué sucede cuando cambiamos de sesión.
+- repetir exactamente la misma petición en dos sesiones separadas;
+- expresar una misma necesidad mediante prompts diferentes;
+- sacar parte de la información fuera del prompt y colocarla en el contexto de la conversación;
+- cambiar de sesión y observar qué ocurre con ese contexto;
+- realizar nuestras propias variaciones sobre los experimentos.
 
-No hace falta intentar explicar todavía por qué ocurre cada cosa.
+No hace falta intentar explicar todavía por qué sucede cada cosa.
 
-Primero, prueba.
-
-Después, observa.
+Primero vamos a probar.
 
 ## Qué necesitas
 
-Solo necesitas acceso a un Sistema Inteligente con interfaz conversacional.
+Solo necesitas:
 
-Puede ser ChatGPT, Claude, Gemini, Copilot Chat u otro sistema similar.
-
-Necesitas poder:
-
-- mantener una conversación con varios mensajes;
-- abrir una conversación nueva;
-- volver a una conversación anterior.
+- un navegador con modo privado o de incógnito;
+- acceso a un Sistema Inteligente con interfaz conversacional;
+- poder cerrar completamente una sesión privada y abrir otra nueva.
 
 No necesitas instalar nada ni escribir código.
 
 ## Qué aprenderás
 
-Al terminar el laboratorio habrás experimentado directamente que una interacción con un Sistema Inteligente no depende únicamente del texto que acabas de escribir.
+Al terminar el laboratorio habrás experimentado que una interacción con un Sistema Inteligente no depende únicamente de la última frase que escribes.
 
-Verás que lo ocurrido anteriormente en una conversación puede influir en las respuestas posteriores y que abrir una nueva conversación cambia las condiciones de partida.
+También habrás empezado a distinguir entre la necesidad que quieres resolver, el prompt con el que la expresas, el contexto acumulado durante una conversación y la sesión en la que todo ello ocurre.
 
-Todavía no vamos a entrar en conceptos técnicos. Ese lenguaje vendrá después.
+Pero el objetivo principal no es memorizar esos conceptos.
 
-Por ahora nos interesa una sola cosa: empezar a distinguir entre **lo que escribes ahora** y **el contexto en el que lo escribes**.
-
-[Empezar el laboratorio →](01-repite.qmd)
+Es empezar a experimentar.

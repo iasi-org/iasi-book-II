@@ -11,3 +11,34 @@ profile:
 
 metadata-files:
   - _book-structure.yml
+  
+lang: es
+
+book:
+  title: "Ingeniería asistida por sistemas inteligentes"
+  author: "Javier G. Grandez"
+  output-file: "iasi-book-II"
+  
+  announcement:
+    dismissable: false
+    content: "![](/resources/images/ants.png){.iasi-ants-image}"
+    type: light
+    position: above-navbar
+
+copyright:
+  holder: "Javier G. Grandez"
+  year: 2026
+
+license: "CC BY"
+
+filters:
+  - iasi-plantuml
+
+filter-options:
+  plantuml:
+    enabled: true
+    server: http://localhost:10025
+    cache: true
+    styles:
+      - resources/plantuml/iasi.puml
+

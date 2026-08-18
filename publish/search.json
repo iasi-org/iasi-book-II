@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Labs",
+    "title": "Ingeniería asistida por sistemas inteligentes",
     "section": "",
     "text": "Esta sección reúne los laboratorios prácticos disponibles.\n\n\n\nLab\nTítulo\nDescripción\n\n\n\n\nLAB-001\nPrompts, contexto y sesiones\nExperimenta cómo cambian las respuestas cuando repites una petición, modificas el prompt, introduces contexto o cambias de sesión.\n\n\nLAB-002\nContexto\nExperimenta cómo construir, externalizar, delimitar, modificar y controlar el contexto que utiliza un Sistema Inteligente.\n\n\nLAB-003\nInstrucciones\nExperimenta cómo separar las reglas de trabajo del contexto y reutilizarlas de forma explícita entre sesiones.",
     "crumbs": [

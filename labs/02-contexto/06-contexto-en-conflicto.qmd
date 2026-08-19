@@ -1,4 +1,4 @@
-# Paso 6 — Crea un conflicto
+## Paso 6 — Crea un conflicto
 
 Vamos a provocar un conflicto deliberadamente.
 
@@ -24,7 +24,7 @@ Pregunta:
 
 > ¿Faro permite reservar salas de estudio?
 
-## Observa
+### Observa
 
 Tenemos dos informaciones incompatibles.
 
@@ -42,7 +42,7 @@ Además hemos indicado cuál queremos que tenga prioridad.
 
 Cuando existen varias fuentes de contexto, puede ser necesario decidir cuál tiene autoridad.
 
-## Experimenta
+### Experimenta
 
 Invierte la prioridad.
 

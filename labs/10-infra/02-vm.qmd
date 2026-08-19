@@ -1,0 +1,76 @@
+## Máquina virtual
+
+Los laboratorios que requieren infraestructura se ejecutarán en una máquina virtual independiente de la máquina utilizada para crear y desarrollar IASI.
+
+La máquina virtual constituye la frontera del entorno de labs: podemos instalar herramientas, ejecutar servicios, modificar configuraciones y volver a un estado conocido sin contaminar el equipo anfitrión ni `iasi-dev`.
+
+### Configuración de referencia
+
+| | 🖥️ Sin IA local | 🧠 Con IA local |
+|---|---:|---:|
+| ⚙️ **CPU** | 4 vCPU | 8 vCPU |
+| 🧮 **Memoria** | 16 GB RAM | 32 GB RAM |
+| 💾 **Disco** | 150 GB | 250 GB |
+| 📦 **Tipo de disco** | Dinámico | Dinámico |
+| 🪟 **Sistema operativo** | Windows 11 Pro | Windows 11 Pro |
+| 🌐 **Red** | Acceso a Internet | Acceso a Internet |
+| 🖥️ **Resolución** | 1920 × 1080 | 1920 × 1080 |
+
+Estas cifras son puntos de partida, no requisitos rígidos.
+
+### Hyper-V
+
+Para Windows 11 utilizaremos una máquina **Generación 2**, con Secure Boot y TPM virtual habilitados.
+
+La ISO oficial de Windows se monta como primer DVD virtual.
+
+El archivo `Autounattend.xml` se distribuye en una segunda ISO independiente, montada como segundo DVD virtual. No se modifica la ISO oficial de Windows.
+
+```text
+DVD 1
+└── Windows 11 ISO
+
+DVD 2
+└── IASI Labs unattended ISO
+    └── Autounattend.xml
+```
+
+### Instalación desatendida
+
+Las versiones actuales de Windows 11 ya no permiten basar una instalación reproducible en el antiguo truco `OOBE\\BYPASSNRO`.
+
+En su lugar utilizamos un archivo de respuesta `Autounattend.xml`.
+
+El archivo utilizado por este lab se encuentra en:
+
+```text
+resources/Autounattend.xml
+```
+
+La primera versión del archivo automatiza únicamente lo que necesitamos para construir una máquina de labs repetible: configuración regional, OOBE y creación del usuario local.
+
+No intentamos ocultar toda la instalación. La selección de edición y disco puede seguir siendo interactiva mientras desarrollamos el lab.
+
+### Checkpoints
+
+Los checkpoints forman parte del ciclo de experimentación, no sustituyen a la automatización.
+
+Crearemos al menos estos hitos:
+
+::: {.lab-checkpoint}
+**Checkpoints de referencia**
+
+```text
+00-windows-installed
+01-windows-updated
+02-iasi-labs-ready
+```
+:::
+
+`00-windows-installed` representa Windows recién instalado.
+
+`01-windows-updated` representa el sistema actualizado y estable.
+
+`02-iasi-labs-ready` representa la máquina preparada para ejecutar los laboratorios posteriores.
+
+El objetivo final es poder reconstruir `02-iasi-labs-ready` desde una instalación limpia, no depender permanentemente del checkpoint.

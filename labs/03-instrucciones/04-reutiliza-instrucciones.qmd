@@ -1,4 +1,4 @@
-# Paso 4 — Reutiliza las instrucciones
+## Paso 4 — Reutiliza las instrucciones
 
 Cierra completamente la navegación privada.
 
@@ -17,7 +17,7 @@ Después pregunta:
 
 > ¿La reserva de salas ya forma parte de Faro?
 
-## Observa
+### Observa
 
 Las instrucciones son las mismas.
 

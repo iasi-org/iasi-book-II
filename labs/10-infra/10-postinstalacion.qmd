@@ -1,0 +1,90 @@
+## Postinstalación
+
+La postinstalación conecta las piezas de la máquina y comprueba que pueden utilizarse conjuntamente.
+
+La secuencia inicial es:
+
+```text
+Windows preparado
+↓
+software base
+↓
+desarrollo
+↓
+Docker y servicios
+↓
+IASI
+↓
+productos IASI
+↓
+validación
+↓
+checkpoint 02-iasi-labs-ready
+```
+
+### Productos
+
+Verificar `iasi.quarto`:
+
+```r
+library(iasi.quarto)
+packageVersion("iasi.quarto")
+```
+
+Verificar las extensiones Quarto desde un proyecto que las utilice:
+
+```bash
+quarto list extensions
+```
+
+### GitHub
+
+La máquina debe disponer de Git y GitHub CLI correctamente configurados.
+
+Verificar:
+
+```bash
+git --version
+gh --version
+gh auth status
+```
+
+### Servicios
+
+Arrancar la composición de labs:
+
+```bash
+docker compose up -d
+```
+
+Verificar:
+
+```bash
+docker compose ps
+```
+
+### Resultado
+
+La máquina deja de ser una instalación genérica de Windows y se convierte en el entorno de ejecución de IASI Labs:
+
+```text
+IASI Labs
+├── herramientas generales
+├── herramientas de desarrollo
+├── servicios Docker
+├── ejecutable IASI
+├── productos IASI instalados
+└── repositorio de labs
+```
+
+::: {.lab-result}
+**Resultado del Lab 10**
+
+Cuando todas las validaciones sean correctas se crea:
+
+```text
+02-iasi-labs-ready
+```
+
+A partir de este punto, los laboratorios posteriores pueden asumir esta infraestructura como base.
+:::

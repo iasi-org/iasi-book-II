@@ -6,6 +6,6 @@ format:
     include-before-body: resources/html/banner.html
     theme: cosmo
     toc: true
-    css: 
-       -resoures/css/iasi.scss
-       -resources/css/book.scss
+    css:
+      - resources/css/iasi.scss
+      - resources/css/labs.scss

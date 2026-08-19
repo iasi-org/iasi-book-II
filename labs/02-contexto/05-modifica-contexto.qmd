@@ -1,4 +1,4 @@
-# Paso 5 — Modifica el contexto
+## Paso 5 — Modifica el contexto
 
 Abre `context.md` y añade:
 
@@ -18,7 +18,7 @@ Pregunta:
 
 > ¿Faro permite reservar salas de estudio?
 
-## Observa
+### Observa
 
 La pregunta es la misma que antes.
 
@@ -36,7 +36,7 @@ por:
 
 Repite la prueba en una sesión nueva.
 
-## Experimenta
+### Experimenta
 
 Añade una restricción.
 

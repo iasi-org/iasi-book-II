@@ -1,4 +1,4 @@
-# Paso 7 — Conclusiones
+## Paso 7 — Conclusiones
 
 En el laboratorio anterior externalizamos el conocimiento sobre Faro.
 
@@ -28,7 +28,7 @@ El contexto y las instrucciones pueden viajar juntos entre sesiones, pero cumple
 
 Y ambos pueden convertirse en artefactos explícitos, revisables y versionables.
 
-## Sigue experimentando
+### Sigue experimentando
 
 Prueba las mismas instrucciones con otro contexto.
 
@@ -42,7 +42,7 @@ Simplifícalas hasta quedarte con lo imprescindible.
 
 Comprueba qué instrucciones necesitas repetir realmente y cuáles pueden establecerse una sola vez.
 
-## Lo que empieza a aparecer
+### Lo que empieza a aparecer
 
 Ya no estamos trabajando únicamente con un prompt.
 

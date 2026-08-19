@@ -1,4 +1,4 @@
-# Paso 6 — Crea un conflicto entre instrucciones
+## Paso 6 — Crea un conflicto entre instrucciones
 
 Deja en `instructions.md` esta regla:
 
@@ -14,7 +14,7 @@ Después pregunta:
 
 > ¿Qué base de datos utiliza Faro?
 
-## Observa
+### Observa
 
 Has creado un conflicto entre dos instrucciones.
 
@@ -32,7 +32,7 @@ Este experimento empieza a revelar un problema que aparecerá constantemente cua
 
 **no basta con tener instrucciones; también importa cómo se relacionan entre sí y qué prioridad tienen.**
 
-## Experimenta
+### Experimenta
 
 Invierte el orden.
 

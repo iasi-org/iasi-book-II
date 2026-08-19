@@ -1,0 +1,37 @@
+## IASI
+
+Con la máquina base, las herramientas de desarrollo y los servicios preparados, instalamos **IASI**.
+
+En este punto hablamos únicamente del ejecutable `iasi`. Los productos del ecosistema se instalarán después y no forman parte de este paso.
+
+```text
+Infraestructura
+↓
+Desarrollo
+↓
+Docker y servicios
+↓
+IASI
+↓
+Productos IASI
+```
+
+### Instalación
+
+El ejecutable `iasi` debe instalarse mediante su mecanismo de distribución, sin clonar los repositorios fuente utilizados para desarrollarlo.
+
+El mecanismo definitivo de instalación se documentará aquí cuando quede estabilizado.
+
+Una vez instalado, debe poder verificarse desde cualquier terminal:
+
+```powershell
+iasi --version
+```
+
+### Reinstalación
+
+La instalación de `iasi` debe quedar automatizada de forma que podamos reinstalar el ejecutable cuando queramos, sin reconstruir manualmente su entorno ni descargar su código fuente.
+
+El comando definitivo de reinstalación se fijará junto con el mecanismo de distribución del ejecutable.
+
+A partir de este punto asumimos que `iasi` está disponible en el `PATH` y puede utilizarse para instalar y mantener los productos IASI que necesiten los laboratorios.

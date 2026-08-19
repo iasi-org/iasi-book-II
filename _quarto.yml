@@ -2,7 +2,7 @@ project:
   type: book
 
   pre-render:
-    - Rscript R/create-labs-index.R
+    - R/create-labs-index.R
 
 profile:
   default: html
@@ -14,8 +14,12 @@ metadata-files:
   
 lang: es
 
+language:
+  crossref-ch-prefix: "Lab"
+
 book:
   title: "Ingeniería asistida por sistemas inteligentes"
+  subtitle: "Volumen II · Labs"
   author: "Javier G. Grandez"
   output-file: "iasi-book-II"
   

@@ -1,4 +1,4 @@
-# Paso 1 — Repite
+## Paso 1 — Repite
 
 Vamos a empezar sin cambiar nada.
 
@@ -14,7 +14,7 @@ Abre una **nueva navegación privada** y escribe exactamente lo mismo:
 
 > Explica qué es una base de datos relacional.
 
-## Observa
+### Observa
 
 Compara ambas respuestas.
 
@@ -40,7 +40,7 @@ Si las dos respuestas son idénticas, no intentes forzar una diferencia. Anótal
 
 Ese resultado también forma parte del experimento.
 
-## Experimenta
+### Experimenta
 
 Antes de pasar al siguiente paso puedes repetir la prueba con otra pregunta.
 

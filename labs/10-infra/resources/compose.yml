@@ -1,0 +1,44 @@
+services:
+
+  plantuml:
+    image: plantuml/plantuml-server:jetty
+    container_name: plantuml-server
+    ports:
+      - "20025:8080"
+    networks:
+      - iasi-labs
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "20434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    networks:
+      - iasi-labs
+    restart: unless-stopped
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    depends_on:
+      - ollama
+    ports:
+      - "20300:8080"
+    environment:
+      OLLAMA_BASE_URL: http://ollama:11434
+    volumes:
+      - open-webui:/app/backend/data
+    networks:
+      - iasi-labs
+    restart: unless-stopped
+
+networks:
+  iasi-labs:
+    name: iasi-labs
+
+volumes:
+  ollama:
+  open-webui:

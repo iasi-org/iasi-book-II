@@ -1,4 +1,4 @@
-# Paso 3 — Saca el contexto de la conversación
+## Paso 3 — Saca el contexto de la conversación
 
 Ahora vamos a dejar de depender exclusivamente de lo que la sesión conserve.
 
@@ -22,7 +22,7 @@ Después pregunta:
 
 > ¿Qué significa "sede" en Faro?
 
-## Observa
+### Observa
 
 La sesión es nueva.
 

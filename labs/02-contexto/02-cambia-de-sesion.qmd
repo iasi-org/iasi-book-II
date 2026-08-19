@@ -1,4 +1,4 @@
-# Paso 2 — Cambia de sesión
+## Paso 2 — Cambia de sesión
 
 Antes de cerrar la sesión anterior, pregunta:
 
@@ -18,7 +18,7 @@ Después pregunta:
 
 > ¿Faro vende libros?
 
-## Observa
+### Observa
 
 Compara las respuestas con las de la sesión anterior.
 
@@ -36,7 +36,7 @@ Parte puede desaparecer.
 
 Parte puede reaparecer por mecanismos distintos al historial de conversación.
 
-## Experimenta
+### Experimenta
 
 Introduce en una sesión una palabra inventada.
 

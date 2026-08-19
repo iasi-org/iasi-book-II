@@ -1,4 +1,4 @@
-# Paso 3 — Saca información fuera del prompt
+## Paso 3 — Saca información fuera del prompt
 
 Hasta ahora hemos colocado toda la información dentro del propio prompt.
 
@@ -16,7 +16,7 @@ Después escribe únicamente:
 
 > Explica qué es una base de datos relacional.
 
-## Observa
+### Observa
 
 Compara esta respuesta con la obtenida en el paso anterior cuando escribiste:
 
@@ -40,7 +40,7 @@ No necesitamos que las respuestas sean idénticas.
 
 Nos interesa comprobar que el último mensaje no es necesariamente toda la información que participa en la interacción.
 
-## Experimenta
+### Experimenta
 
 Cambia la instrucción inicial.
 

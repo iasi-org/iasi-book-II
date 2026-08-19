@@ -1,0 +1,2 @@
+title: "Montando la infraestructura"
+description: "Construye una máquina Windows aislada y reproducible para ejecutar los laboratorios posteriores, instalando software base, desarrollo, Docker, IASI y sus productos."

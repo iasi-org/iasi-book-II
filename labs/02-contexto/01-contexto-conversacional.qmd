@@ -1,4 +1,4 @@
-# Paso 1 — Construye contexto en una conversación
+## Paso 1 — Construye contexto en una conversación
 
 Abre una nueva navegación privada.
 
@@ -26,7 +26,7 @@ Y después:
 
 > ¿Quién es el usuario de Faro?
 
-## Observa
+### Observa
 
 Las últimas preguntas son muy breves.
 
@@ -44,7 +44,7 @@ Después pregunta:
 
 Comprueba si el sistema utiliza la definición que acabas de introducir.
 
-## Experimenta
+### Experimenta
 
 Añade nuevos conceptos.
 

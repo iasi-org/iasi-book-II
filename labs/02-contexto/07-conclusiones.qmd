@@ -1,4 +1,4 @@
-# Paso 7 — Conclusiones
+## Paso 7 — Conclusiones
 
 Durante una sesión, el Sistema Inteligente puede ir adaptando sus respuestas a la información, decisiones, conceptos y significados que vamos introduciendo.
 
@@ -28,7 +28,7 @@ El contexto pasa de ser algo acumulado incidentalmente durante una sesión a con
 - delimitar;
 - controlar.
 
-## Sigue experimentando
+### Sigue experimentando
 
 Crea otro contexto.
 
@@ -48,7 +48,7 @@ Añade información irrelevante.
 
 Comprueba qué ocurre.
 
-## Una pregunta para el siguiente laboratorio
+### Una pregunta para el siguiente laboratorio
 
 Durante todo este laboratorio hemos repetido instrucciones como:
 

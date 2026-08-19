@@ -1,4 +1,4 @@
-# Paso 4 — Cambia de sesión
+## Paso 4 — Cambia de sesión
 
 Mantén abierta la navegación privada del paso anterior.
 
@@ -18,7 +18,7 @@ Escribe únicamente:
 
 > Explica qué es una base de datos relacional.
 
-## Observa
+### Observa
 
 Compara esta respuesta con la anterior.
 
@@ -34,7 +34,7 @@ Queremos comprobar algo más práctico:
 
 **no debemos dar por supuesto que el contexto creado en una sesión estará disponible automáticamente en otra.**
 
-## Experimenta
+### Experimenta
 
 Haz tus propias pruebas.
 

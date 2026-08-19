@@ -1,0 +1,52 @@
+Hasta ahora los laboratorios pueden realizarse prácticamente desde cualquier entorno con acceso a un Sistema Inteligente.
+
+A partir de este punto necesitamos algo diferente: **un entorno de trabajo controlado, reproducible y preparado para ejecutar los siguientes labs**.
+
+Este laboratorio construye esa infraestructura.
+
+::: {.lab-objective}
+**Objetivo del lab**
+
+Partir de una máquina Windows limpia y construir un entorno IASI Labs reproducible, separado de `iasi-dev` y preparado para los laboratorios posteriores.
+:::
+
+La referencia de partida es `iasi-infra`, pero el objetivo es distinto. `iasi-infra` prepara la máquina utilizada para desarrollar IASI desde sus repositorios fuente. Este laboratorio prepara una máquina para **utilizar IASI**.
+
+La diferencia es deliberada:
+
+```text
+iasi-dev
+└── desarrolla IASI
+    └── trabaja con repositorios fuente
+
+iasi-labs
+└── utiliza IASI
+    └── instala productos publicados
+```
+
+Por tanto, en esta máquina no clonaremos `iasi.quarto`, `iasi-lua` ni el resto de productos IASI para trabajar sobre su código. Los instalaremos mediante sus mecanismos de distribución.
+
+El resultado será una máquina Windows aislada y reproducible sobre la que ejecutar los laboratorios posteriores.
+
+
+## La frontera del Lab 10
+
+Los laboratorios `0x-*` anteriores no dependen de esta infraestructura. Son laboratorios de toma de contacto y pueden realizarse desde prácticamente cualquier entorno adecuado.
+
+`10-infra` marca la frontera a partir de la cual los laboratorios pueden asumir una máquina preparada específicamente para IASI Labs.
+
+La construcción sigue este orden:
+
+```text
+Software base
+↓
+Desarrollo
+↓
+Docker y servicios
+↓
+IASI
+↓
+Productos IASI
+```
+
+Primero construimos la máquina. Después instalamos IASI. Por último utilizamos IASI y los mecanismos de distribución de cada componente para incorporar sus productos, sin convertir la máquina de labs en una copia de `iasi-dev`.

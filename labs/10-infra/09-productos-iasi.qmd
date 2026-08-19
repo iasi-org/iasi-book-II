@@ -1,0 +1,62 @@
+## Productos IASI
+
+Con el ejecutable `iasi` ya instalado, incorporamos los productos IASI necesarios para ejecutar los labs.
+
+`iasi` es el punto de entrada para instalar, actualizar y reconstruir estos componentes sin necesidad de descargar sus repositorios fuente.
+
+Esta es una diferencia fundamental respecto a `iasi-infra`.
+
+En la máquina de desarrollo de IASI existen los repositorios fuente porque necesitamos modificarlos, probarlos y publicarlos.
+
+En la máquina de labs **no descargamos los repositorios fuente de los productos IASI**.
+
+```text
+NO
+├── git clone iasi.quarto
+├── git clone iasi-lua
+└── git clone ...
+
+SÍ
+├── instalar iasi.quarto
+├── instalar extensiones de iasi-lua
+└── instalar los productos IASI requeridos
+```
+
+### iasi.quarto
+
+`iasi.quarto` debe instalarse desde una distribución publicada del paquete, no mediante `remotes::install_local()` sobre un repositorio clonado.
+
+El mecanismo definitivo de distribución se documentará aquí cuando quede estabilizado.
+
+Después de la instalación debe poder verificarse desde R:
+
+```r
+library(iasi.quarto)
+packageVersion("iasi.quarto")
+```
+
+### iasi-lua
+
+Las extensiones Quarto se instalarán mediante el mecanismo de distribución de Quarto, sin necesidad de mantener el repositorio `iasi-lua` en la máquina.
+
+Cada proyecto materializará en `_extensions/` las extensiones que necesite.
+
+La instalación debe poder comprobarse con:
+
+```bash
+quarto list extensions
+```
+
+### Repositorio de labs
+
+`iasi-org/iasi-labs` es el repositorio canónico de los laboratorios.
+
+El usuario puede trabajar directamente con una copia local para seguir el material o crear, cuando el lab lo requiera, su propio repositorio de trabajo en su cuenta de GitHub.
+
+El repositorio canónico está protegido frente a escritura para los participantes.
+
+### Regla
+
+Una dependencia IASI utilizada por los labs debe poder instalarse como producto.
+
+Si para utilizar un componente necesitamos clonar su repositorio fuente y conocer su estructura interna, ese componente todavía no está suficientemente empaquetado para este entorno.

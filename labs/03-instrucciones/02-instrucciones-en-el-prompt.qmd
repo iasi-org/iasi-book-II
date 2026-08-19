@@ -1,4 +1,4 @@
-# Paso 2 — Añade instrucciones al prompt
+## Paso 2 — Añade instrucciones al prompt
 
 Cierra la navegación privada anterior y abre una nueva.
 
@@ -22,7 +22,7 @@ Y:
 
 > Propón tres mejoras para Faro.
 
-## Observa
+### Observa
 
 El contexto no ha cambiado.
 
@@ -38,7 +38,7 @@ Compara con el paso anterior.
 
 ¿Cambia la estructura de la respuesta?
 
-## Experimenta
+### Experimenta
 
 Cambia una instrucción.
 

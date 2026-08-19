@@ -1,4 +1,4 @@
-# Paso 4 — Delimita el contexto
+## Paso 4 — Delimita el contexto
 
 Seguimos utilizando `context.md`.
 
@@ -18,7 +18,7 @@ Busca esas respuestas en `context.md`.
 
 No están definidas.
 
-## Observa
+### Observa
 
 El contexto no solo aporta información.
 
@@ -38,7 +38,7 @@ No des por supuesto que el comportamiento será perfecto.
 
 Eso también forma parte del experimento.
 
-## Experimenta
+### Experimenta
 
 Haz preguntas cuya respuesta esté claramente en el fichero.
 

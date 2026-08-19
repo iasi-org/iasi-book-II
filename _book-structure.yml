@@ -4,3 +4,4 @@ book:
     - "labs/01-prompts/index.qmd"
     - "labs/02-contexto/index.qmd"
     - "labs/03-instrucciones/index.qmd"
+    - "labs/10-infra/index.qmd"

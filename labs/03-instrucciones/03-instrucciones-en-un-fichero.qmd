@@ -1,4 +1,4 @@
-# Paso 3 — Saca las instrucciones del prompt
+## Paso 3 — Saca las instrucciones del prompt
 
 Ahora abre `instructions.md`.
 
@@ -23,7 +23,7 @@ Y:
 
 > Propón tres mejoras para Faro.
 
-## Observa
+### Observa
 
 Ya no hemos escrito todas las reglas dentro del prompt.
 

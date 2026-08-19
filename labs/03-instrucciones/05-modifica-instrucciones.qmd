@@ -1,4 +1,4 @@
-# Paso 5 — Modifica las instrucciones
+## Paso 5 — Modifica las instrucciones
 
 Abre `instructions.md`.
 
@@ -16,7 +16,7 @@ Pregunta:
 
 > Resume el proyecto Faro.
 
-## Observa
+### Observa
 
 El contexto sigue siendo exactamente el mismo.
 
@@ -30,7 +30,7 @@ Ahora elimina esa regla y añade otra:
 
 Repite alguna petición anterior.
 
-## Experimenta
+### Experimenta
 
 Introduce reglas de formato.
 

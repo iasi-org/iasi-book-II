@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; La frontera del Lab 10 – Ingeniería asistida por sistemas inteligentes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../labs/03-instrucciones/index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../resources/css/iasi.scss">
+<link rel="stylesheet" href="../../resources/css/labs.scss">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../labs/10-infra/index.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">index.html</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Ingeniería asistida por sistemas inteligentes</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratorios</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../labs/01-prompts/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../labs/02-contexto/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../labs/03-instrucciones/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../labs/10-infra/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#aislamiento" id="toc-aislamiento" class="nav-link active" data-scroll-target="#aislamiento"><span class="header-section-number">4.1</span> Aislamiento</a>
+  <ul class="collapse">
+  <li><a href="#el-ordenador-no-es-el-proyecto" id="toc-el-ordenador-no-es-el-proyecto" class="nav-link" data-scroll-target="#el-ordenador-no-es-el-proyecto"><span class="header-section-number">4.1.1</span> El ordenador no es el proyecto</a></li>
+  <li><a href="#el-principio-de-isolation" id="toc-el-principio-de-isolation" class="nav-link" data-scroll-target="#el-principio-de-isolation"><span class="header-section-number">4.1.2</span> El principio de <em>isolation</em></a></li>
+  <li><a href="#cliente-y-proyecto-como-frontera" id="toc-cliente-y-proyecto-como-frontera" class="nav-link" data-scroll-target="#cliente-y-proyecto-como-frontera"><span class="header-section-number">4.1.3</span> Cliente y proyecto como frontera</a></li>
+  <li><a href="#la-infraestructura-del-cliente-no-sustituye-al-aislamiento" id="toc-la-infraestructura-del-cliente-no-sustituye-al-aislamiento" class="nav-link" data-scroll-target="#la-infraestructura-del-cliente-no-sustituye-al-aislamiento"><span class="header-section-number">4.1.4</span> La infraestructura del cliente no sustituye al aislamiento</a></li>
+  <li><a href="#una-máquina-virtual-no-es-un-contenedor" id="toc-una-máquina-virtual-no-es-un-contenedor" class="nav-link" data-scroll-target="#una-máquina-virtual-no-es-un-contenedor"><span class="header-section-number">4.1.5</span> Una máquina virtual no es un contenedor</a></li>
+  <li><a href="#un-modelo-probado-en-la-práctica" id="toc-un-modelo-probado-en-la-práctica" class="nav-link" data-scroll-target="#un-modelo-probado-en-la-práctica"><span class="header-section-number">4.1.6</span> Un modelo probado en la práctica</a></li>
+  <li><a href="#aislar-también-permite-cambiar-de-ordenador" id="toc-aislar-también-permite-cambiar-de-ordenador" class="nav-link" data-scroll-target="#aislar-también-permite-cambiar-de-ordenador"><span class="header-section-number">4.1.7</span> Aislar también permite cambiar de ordenador</a></li>
+  <li><a href="#el-punto-de-partida-de-iasi-infra" id="toc-el-punto-de-partida-de-iasi-infra" class="nav-link" data-scroll-target="#el-punto-de-partida-de-iasi-infra"><span class="header-section-number">4.1.8</span> El punto de partida de IASI Infra</a></li>
+  <li><a href="#principio-de-rebuildability" id="toc-principio-de-rebuildability" class="nav-link" data-scroll-target="#principio-de-rebuildability"><span class="header-section-number">4.1.9</span> Principio de <em>rebuildability</em></a></li>
+  </ul></li>
+  <li><a href="#máquina-virtual" id="toc-máquina-virtual" class="nav-link" data-scroll-target="#máquina-virtual"><span class="header-section-number">4.2</span> Máquina virtual</a>
+  <ul class="collapse">
+  <li><a href="#configuración-de-referencia" id="toc-configuración-de-referencia" class="nav-link" data-scroll-target="#configuración-de-referencia"><span class="header-section-number">4.2.1</span> Configuración de referencia</a></li>
+  <li><a href="#hyper-v" id="toc-hyper-v" class="nav-link" data-scroll-target="#hyper-v"><span class="header-section-number">4.2.2</span> Hyper-V</a></li>
+  <li><a href="#instalación-desatendida" id="toc-instalación-desatendida" class="nav-link" data-scroll-target="#instalación-desatendida"><span class="header-section-number">4.2.3</span> Instalación desatendida</a></li>
+  <li><a href="#checkpoints" id="toc-checkpoints" class="nav-link" data-scroll-target="#checkpoints"><span class="header-section-number">4.2.4</span> Checkpoints</a></li>
+  </ul></li>
+  <li><a href="#sistema-operativo-base" id="toc-sistema-operativo-base" class="nav-link" data-scroll-target="#sistema-operativo-base"><span class="header-section-number">4.3</span> Sistema operativo base</a>
+  <ul class="collapse">
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows"><span class="header-section-number">4.3.1</span> Windows</a></li>
+  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux"><span class="header-section-number">4.3.2</span> Linux</a></li>
+  </ul></li>
+  <li><a href="#documentación" id="toc-documentación" class="nav-link" data-scroll-target="#documentación"><span class="header-section-number">4.4</span> Documentación</a>
+  <ul class="collapse">
+  <li><a href="#por-qué" id="toc-por-qué" class="nav-link" data-scroll-target="#por-qué"><span class="header-section-number">4.4.1</span> ¿Por qué?</a></li>
+  <li><a href="#instalacion-1" id="toc-instalacion-1" class="nav-link" data-scroll-target="#instalacion-1"><span class="header-section-number">4.4.2</span> Instalacion</a></li>
+  <li><a href="#configuracion-1" id="toc-configuracion-1" class="nav-link" data-scroll-target="#configuracion-1"><span class="header-section-number">4.4.3</span> Configuracion</a></li>
+  </ul></li>
+  <li><a href="#desarrollo" id="toc-desarrollo" class="nav-link" data-scroll-target="#desarrollo"><span class="header-section-number">4.5</span> Desarrollo</a>
+  <ul class="collapse">
+  <li><a href="#visual-studio-code" id="toc-visual-studio-code" class="nav-link" data-scroll-target="#visual-studio-code"><span class="header-section-number">4.5.1</span> Visual Studio Code</a></li>
+  <li><a href="#node.js" id="toc-node.js" class="nav-link" data-scroll-target="#node.js"><span class="header-section-number">4.5.2</span> Node.js</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">4.5.3</span> Python</a></li>
+  <li><a href="#java" id="toc-java" class="nav-link" data-scroll-target="#java"><span class="header-section-number">4.5.4</span> Java</a></li>
+  <li><a href="#apache-maven" id="toc-apache-maven" class="nav-link" data-scroll-target="#apache-maven"><span class="header-section-number">4.5.5</span> Apache Maven</a></li>
+  <li><a href="#c-y-c" id="toc-c-y-c" class="nav-link" data-scroll-target="#c-y-c"><span class="header-section-number">4.5.6</span> C y C++</a></li>
+  <li><a href="#go" id="toc-go" class="nav-link" data-scroll-target="#go"><span class="header-section-number">4.5.7</span> Go</a></li>
+  <li><a href="#dbeaver" id="toc-dbeaver" class="nav-link" data-scroll-target="#dbeaver"><span class="header-section-number">4.5.8</span> DBeaver</a></li>
+  <li><a href="#resultado" id="toc-resultado" class="nav-link" data-scroll-target="#resultado"><span class="header-section-number">4.5.9</span> Resultado</a></li>
+  </ul></li>
+  <li><a href="#docker-y-servicios" id="toc-docker-y-servicios" class="nav-link" data-scroll-target="#docker-y-servicios"><span class="header-section-number">4.6</span> Docker y servicios</a>
+  <ul class="collapse">
+  <li><a href="#instalación" id="toc-instalación" class="nav-link" data-scroll-target="#instalación"><span class="header-section-number">4.6.1</span> Instalación</a></li>
+  <li><a href="#servicios-iasi-labs" id="toc-servicios-iasi-labs" class="nav-link" data-scroll-target="#servicios-iasi-labs"><span class="header-section-number">4.6.2</span> Servicios IASI Labs</a></li>
+  <li><a href="#red-iasi-labs" id="toc-red-iasi-labs" class="nav-link" data-scroll-target="#red-iasi-labs"><span class="header-section-number">4.6.3</span> Red IASI Labs</a></li>
+  <li><a href="#convención-de-puertos" id="toc-convención-de-puertos" class="nav-link" data-scroll-target="#convención-de-puertos"><span class="header-section-number">4.6.4</span> Convención de puertos</a></li>
+  <li><a href="#compose.yml" id="toc-compose.yml" class="nav-link" data-scroll-target="#compose.yml"><span class="header-section-number">4.6.5</span> compose.yml</a></li>
+  <li><a href="#modelos-ollama" id="toc-modelos-ollama" class="nav-link" data-scroll-target="#modelos-ollama"><span class="header-section-number">4.6.6</span> Modelos Ollama</a></li>
+  <li><a href="#comunicación-interna" id="toc-comunicación-interna" class="nav-link" data-scroll-target="#comunicación-interna"><span class="header-section-number">4.6.7</span> Comunicación interna</a></li>
+  <li><a href="#acceso-desde-la-máquina-iasi" id="toc-acceso-desde-la-máquina-iasi" class="nav-link" data-scroll-target="#acceso-desde-la-máquina-iasi"><span class="header-section-number">4.6.8</span> Acceso desde la máquina IASI</a></li>
+  <li><a href="#acceso-desde-otra-máquina" id="toc-acceso-desde-otra-máquina" class="nav-link" data-scroll-target="#acceso-desde-otra-máquina"><span class="header-section-number">4.6.9</span> Acceso desde otra máquina</a></li>
+  <li><a href="#arranque" id="toc-arranque" class="nav-link" data-scroll-target="#arranque"><span class="header-section-number">4.6.10</span> Arranque</a></li>
+  <li><a href="#persistencia" id="toc-persistencia" class="nav-link" data-scroll-target="#persistencia"><span class="header-section-number">4.6.11</span> Persistencia</a></li>
+  <li><a href="#actualización" id="toc-actualización" class="nav-link" data-scroll-target="#actualización"><span class="header-section-number">4.6.12</span> Actualización</a></li>
+  <li><a href="#verificación" id="toc-verificación" class="nav-link" data-scroll-target="#verificación"><span class="header-section-number">4.6.13</span> Verificación</a></li>
+  <li><a href="#resultado-1" id="toc-resultado-1" class="nav-link" data-scroll-target="#resultado-1"><span class="header-section-number">4.6.14</span> Resultado</a></li>
+  </ul></li>
+  <li><a href="#sistemas-inteligentes" id="toc-sistemas-inteligentes" class="nav-link" data-scroll-target="#sistemas-inteligentes"><span class="header-section-number">4.7</span> Sistemas inteligentes</a>
+  <ul class="collapse">
+  <li><a href="#chatgpt" id="toc-chatgpt" class="nav-link" data-scroll-target="#chatgpt"><span class="header-section-number">4.7.1</span> ChatGPT</a></li>
+  <li><a href="#github-copilot" id="toc-github-copilot" class="nav-link" data-scroll-target="#github-copilot"><span class="header-section-number">4.7.2</span> GitHub Copilot</a></li>
+  <li><a href="#openspec" id="toc-openspec" class="nav-link" data-scroll-target="#openspec"><span class="header-section-number">4.7.3</span> OpenSpec</a></li>
+  <li><a href="#trabajo-con-varias-ia" id="toc-trabajo-con-varias-ia" class="nav-link" data-scroll-target="#trabajo-con-varias-ia"><span class="header-section-number">4.7.4</span> Trabajo con varias IA</a></li>
+  <li><a href="#ollama-1" id="toc-ollama-1" class="nav-link" data-scroll-target="#ollama-1"><span class="header-section-number">4.7.5</span> Ollama</a></li>
+  <li><a href="#open-webui-1" id="toc-open-webui-1" class="nav-link" data-scroll-target="#open-webui-1"><span class="header-section-number">4.7.6</span> Open WebUI</a></li>
+  <li><a href="#separación-entre-sistema-y-modelo" id="toc-separación-entre-sistema-y-modelo" class="nav-link" data-scroll-target="#separación-entre-sistema-y-modelo"><span class="header-section-number">4.7.7</span> Separación entre sistema y modelo</a></li>
+  <li><a href="#resultado-2" id="toc-resultado-2" class="nav-link" data-scroll-target="#resultado-2"><span class="header-section-number">4.7.8</span> Resultado</a></li>
+  </ul></li>
+  <li><a href="#iasi" id="toc-iasi" class="nav-link" data-scroll-target="#iasi"><span class="header-section-number">4.8</span> IASI</a>
+  <ul class="collapse">
+  <li><a href="#instalación-1" id="toc-instalación-1" class="nav-link" data-scroll-target="#instalación-1"><span class="header-section-number">4.8.1</span> Instalación</a></li>
+  <li><a href="#reinstalación" id="toc-reinstalación" class="nav-link" data-scroll-target="#reinstalación"><span class="header-section-number">4.8.2</span> Reinstalación</a></li>
+  </ul></li>
+  <li><a href="#productos-iasi" id="toc-productos-iasi" class="nav-link" data-scroll-target="#productos-iasi"><span class="header-section-number">4.9</span> Productos IASI</a>
+  <ul class="collapse">
+  <li><a href="#iasi.quarto" id="toc-iasi.quarto" class="nav-link" data-scroll-target="#iasi.quarto"><span class="header-section-number">4.9.1</span> iasi.quarto</a></li>
+  <li><a href="#iasi-lua" id="toc-iasi-lua" class="nav-link" data-scroll-target="#iasi-lua"><span class="header-section-number">4.9.2</span> iasi-lua</a></li>
+  <li><a href="#repositorio-de-labs" id="toc-repositorio-de-labs" class="nav-link" data-scroll-target="#repositorio-de-labs"><span class="header-section-number">4.9.3</span> Repositorio de labs</a></li>
+  <li><a href="#regla" id="toc-regla" class="nav-link" data-scroll-target="#regla"><span class="header-section-number">4.9.4</span> Regla</a></li>
+  </ul></li>
+  <li><a href="#postinstalación" id="toc-postinstalación" class="nav-link" data-scroll-target="#postinstalación"><span class="header-section-number">4.10</span> Postinstalación</a>
+  <ul class="collapse">
+  <li><a href="#productos" id="toc-productos" class="nav-link" data-scroll-target="#productos"><span class="header-section-number">4.10.1</span> Productos</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github"><span class="header-section-number">4.10.2</span> GitHub</a></li>
+  <li><a href="#servicios" id="toc-servicios" class="nav-link" data-scroll-target="#servicios"><span class="header-section-number">4.10.3</span> Servicios</a></li>
+  <li><a href="#resultado-3" id="toc-resultado-3" class="nav-link" data-scroll-target="#resultado-3"><span class="header-section-number">4.10.4</span> Resultado</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<div class="iasi-corporate-banner">
+
+  <img src="../../resources/images/ants.png" alt="IASI">
+
+</div>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">La frontera del Lab 10</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>title: “Montando la infraestructura” description: “Construye una máquina Windows aislada y reproducible para ejecutar los laboratorios posteriores, instalando software base, desarrollo, Docker, IASI y sus productos.”</p>
+<!-- Generated by iasi.quarto. Do not edit. -->
+<p>Hasta ahora los laboratorios pueden realizarse prácticamente desde cualquier entorno con acceso a un Sistema Inteligente.</p>
+<p>A partir de este punto necesitamos algo diferente: <strong>un entorno de trabajo controlado, reproducible y preparado para ejecutar los siguientes labs</strong>.</p>
+<p>Este laboratorio construye esa infraestructura.</p>
+<div class="lab-objective">
+<p><strong>Objetivo del lab</strong></p>
+<p>Partir de una máquina Windows limpia y construir un entorno IASI Labs reproducible, separado de <code>iasi-dev</code> y preparado para los laboratorios posteriores.</p>
+</div>
+<p>La referencia de partida es <code>iasi-infra</code>, pero el objetivo es distinto. <code>iasi-infra</code> prepara la máquina utilizada para desarrollar IASI desde sus repositorios fuente. Este laboratorio prepara una máquina para <strong>utilizar IASI</strong>.</p>
+<p>La diferencia es deliberada:</p>
+<pre class="text"><code>iasi-dev
+└── desarrolla IASI
+    └── trabaja con repositorios fuente
+
+iasi-labs
+└── utiliza IASI
+    └── instala productos publicados</code></pre>
+<p>Por tanto, en esta máquina no clonaremos <code>iasi.quarto</code>, <code>iasi-lua</code> ni el resto de productos IASI para trabajar sobre su código. Los instalaremos mediante sus mecanismos de distribución.</p>
+<p>El resultado será una máquina Windows aislada y reproducible sobre la que ejecutar los laboratorios posteriores.</p>
+<p>Los laboratorios <code>0x-*</code> anteriores no dependen de esta infraestructura. Son laboratorios de toma de contacto y pueden realizarse desde prácticamente cualquier entorno adecuado.</p>
+<p><code>10-infra</code> marca la frontera a partir de la cual los laboratorios pueden asumir una máquina preparada específicamente para IASI Labs.</p>
+<p>La construcción sigue este orden:</p>
+<pre class="text"><code>Software base
+↓
+Desarrollo
+↓
+Docker y servicios
+↓
+IASI
+↓
+Productos IASI</code></pre>
+<p>Primero construimos la máquina. Después instalamos IASI. Por último utilizamos IASI y los mecanismos de distribución de cada componente para incorporar sus productos, sin convertir la máquina de labs en una copia de <code>iasi-dev</code>.</p>
+<section id="aislamiento" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="aislamiento"><span class="header-section-number">4.1</span> Aislamiento</h2>
+<p>En un entorno profesional es habitual trabajar para uno o varios clientes y participar, simultánea o sucesivamente, en distintos proyectos.</p>
+<p>Durante años fue frecuente que cada empresa proporcionara a sus profesionales un ordenador corporativo completamente gestionado por ella. En determinados entornos de consultoría podía incluso ocurrir que una misma persona dispusiera de varios equipos: uno perteneciente a su empresa y otros entregados por diferentes clientes, ese modelo sigue existiendo, aunque hoy es menos habitual.</p>
+<p>Actualmente es frecuente trabajar desde un único ordenador corporativo, o incluso desde un ordenador personal, y acceder a los entornos de los clientes mediante mecanismos como <em>VPN</em>, <em>Citrix</em>, escritorios remotos o infraestructuras <em>VDI</em>.</p>
+<p>Estos mecanismos resuelven el acceso al entorno del cliente, pero no resuelven necesariamente un problema distinto: <strong>cómo protegemos nuestro propio entorno de trabajo de las necesidades particulares de cada proyecto</strong>.</p>
+<ul>
+<li>Una VPN para un cliente.</li>
+<li>Un certificado para otro.</li>
+<li>Una determinada versión de Java.</li>
+<li>Un <em>runtime</em> específico.</li>
+<li>Variables de entorno.</li>
+<li>Clientes corporativos.</li>
+<li>Configuraciones de red.</li>
+<li>Credenciales.</li>
+<li>Extensiones.</li>
+<li>SDK.</li>
+<li>Herramientas de seguridad.</li>
+<li>Configuraciones particulares de Git.</li>
+<li>…</li>
+</ul>
+<p>Con el tiempo, el ordenador desde el que trabajamos puede terminar convertido en la suma histórica de todos los proyectos en los que hemos participado. IASI evita deliberadamente ese modelo.</p>
+<section id="el-ordenador-no-es-el-proyecto" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="el-ordenador-no-es-el-proyecto"><span class="header-section-number">4.1.1</span> El ordenador no es el proyecto</h3>
+<p>El ordenador personal o corporativo desde el que trabajamos debería mantenerse, en la medida de lo posible, estable y limpio y dedicado a su función corporativa.</p>
+<p>Su función no es absorber las herramientas, dependencias y configuraciones particulares de todos nuestros clientes.</p>
+<p>Cuando cada nuevo proyecto instala directamente sobre el ordenador todo aquello que necesita, terminamos construyendo algo parecido a esto:</p>
+<p>Después de suficiente tiempo resulta difícil determinar qué pertenece realmente al entorno base y qué fue incorporado únicamente porque un proyecto concreto lo necesitaba, y el problema no es solo el desorden.</p>
+<p>Los proyectos empiezan a contaminarse entre sí, una actualización necesaria para un proyecto puede romper otro. Una nueva versión de una herramienta puede modificar un comportamiento anterior. Una VPN puede alterar rutas de red. Una variable de entorno puede afectar a programas aparentemente independientes. Una configuración realizada meses atrás puede seguir actuando cuando ya hemos olvidado por qué estaba allí.</p>
+<p>También desaparece la reproducibilidad, si un proyecto funciona porque nuestro ordenador ha acumulado durante años pequeñas modificaciones cuyo origen ya no conocemos, entonces no tenemos realmente un entorno definido.</p>
+<p>Tenemos una máquina que funciona por acumulación histórica.</p>
+</section>
+<section id="el-principio-de-isolation" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="el-principio-de-isolation"><span class="header-section-number">4.1.2</span> El principio de <em>isolation</em></h3>
+<p>IASI aplica por tanto un principio sencillo:</p>
+<blockquote class="blockquote">
+<p><strong>Cada proyecto, y cada cliente cuando constituya un contexto independiente, vive en su propia máquina virtual.</strong></p>
+</blockquote>
+<p>La máquina virtual constituye la frontera principal de aislamiento.</p>
+<pre class="text"><code>Ordenador personal o corporativo
+│
+├── Máquina virtual · Cliente A / Proyecto A
+├── Máquina virtual · Cliente A / Proyecto B
+├── Máquina virtual · Cliente B / Proyecto C
+└── Máquina virtual · IASI</code></pre>
+<p>Cada entorno dispone de sus propias herramientas, versiones, configuraciones, certificados, credenciales y mecanismos de acceso, una <em>VPN</em> necesaria para el cliente A se instala en la máquina virtual correspondiente al cliente A, una versión determinada de Java necesaria para el proyecto B pertenece a la máquina virtual del proyecto B, una configuración particular de Git pertenece a ese entorno, una herramienta que queremos evaluar para IASI se instala en el entorno IASI.</p>
+<p>El ordenador físico queda fuera de esas decisiones, su función es proporcionar los recursos necesarios para ejecutar las máquinas virtuales, no convertirse en el recipiente de todas ellas.</p>
+<p>Podemos resumirlo así:</p>
+<blockquote class="blockquote">
+<p><strong>El ordenador físico no es el entorno de trabajo. Es la infraestructura que aloja los entornos de trabajo.</strong></p>
+</blockquote>
+</section>
+<section id="cliente-y-proyecto-como-frontera" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="cliente-y-proyecto-como-frontera"><span class="header-section-number">4.1.3</span> Cliente y proyecto como frontera</h3>
+<p>La expresión «una máquina virtual por proyecto» debe entenderse como una regla de aislamiento, no como una obligación administrativa rígida, en algunos clientes varios proyectos pueden compartir exactamente el mismo contexto, las mismas herramientas y las mismas restricciones. En ese caso puede resultar razonable que compartan también una máquina virtual, en otros casos, dos proyectos del mismo cliente pueden tener requisitos suficientemente diferentes como para necesitar entornos independientes.</p>
+<p>La pregunta relevante es:</p>
+<blockquote class="blockquote">
+<p><strong>¿Puede un cambio necesario para este trabajo afectar a otro trabajo distinto?</strong></p>
+</blockquote>
+<p>Si la respuesta es sí, existe una frontera que debemos aislar, cuando necesitemos un contexto de trabajo independiente creamos una maquina virtual, la cual contendrá uno o varios proyectos. Lo importante no es su denominación, sino que sus decisiones técnicas no se propaguen accidentalmente fuera de él.</p>
+</section>
+<section id="la-infraestructura-del-cliente-no-sustituye-al-aislamiento" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="la-infraestructura-del-cliente-no-sustituye-al-aislamiento"><span class="header-section-number">4.1.4</span> La infraestructura del cliente no sustituye al aislamiento</h3>
+<p>Muchos clientes proporcionan ya mecanismos de acceso o aislamiento, Una <em>VDI</em> puede ofrecer un escritorio completamente gestionado por el cliente, <em>Citrix</em> puede permitir trabajar dentro de una infraestructura remota, una VPN puede establecer una conexión segura con la red corporativa, e incluso un ordenador corporativo entregado por el propio cliente constituye un entorno físico independiente. Todo ello es compatible con el principio de <em>isolation</em>.</p>
+<p>Pero son fronteras con responsabilidades diferentes, la infraestructura proporcionada por el cliente protege y organiza <strong>su entorno</strong>, la máquina virtual que utilizamos nosotros protege y organiza <strong>nuestro contexto de trabajo</strong>. La existencia de una <em>VDI</em>*_ al otro lado de una conexión no implica que queramos instalar directamente sobre nuestro ordenador físico la VPN, los certificados, las configuraciones de red y cualquier otra dependencia necesaria para alcanzarla, todo ese contexto debe permanecer dentro de la máquina virtual asociada al cliente. Cuando dejamos de trabajar con él, podemos apagarla, archivarla o eliminarla, nuestro ordenador permanece esencialmente igual que antes.</p>
+</section>
+<section id="una-máquina-virtual-no-es-un-contenedor" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="una-máquina-virtual-no-es-un-contenedor"><span class="header-section-number">4.1.5</span> Una máquina virtual no es un contenedor</h3>
+<p>IASI utiliza deliberadamente una <strong>máquina virtual</strong> como unidad principal de aislamiento del entorno de trabajo. No utilizamos un <em>container</em> para resolver este problema, los contenedores son una tecnología muy útil, pero están orientados a una frontera diferente: aplicaciones, servicios, procesos o componentes desplegables. Aquí queremos aislar algo mayor:</p>
+<p><strong>el puesto de trabajo completo asociado a un contexto profesional.</strong></p>
+<p>Queremos incluir dentro de esa frontera el sistema operativo, las herramientas de desarrollo, los <em>runtimes</em>, los navegadores, los clientes VPN, los certificados, las herramientas gráficas, las configuraciones del usuario y cualquier otro elemento necesario para desarrollar el trabajo.</p>
+<p>Ambos mecanismos pueden coexistir perfectamente, el <em>container</em>*_ parte del entorno pero no sustituye al entorno. La máquina virtual establece la frontera del proyecto. Los contenedores, cuando sean necesarios, establecen fronteras internas dentro de ella.</p>
+</section>
+<section id="un-modelo-probado-en-la-práctica" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6" class="anchored" data-anchor-id="un-modelo-probado-en-la-práctica"><span class="header-section-number">4.1.6</span> Un modelo probado en la práctica</h3>
+<p>Este enfoque no es únicamente una construcción teórica, es el modelo de trabajo utilizado por el autor durante años en proyectos reales y ha demostrado ser extraordinariamente operativo. Las máquinas virtuales no tienen por qué residir permanentemente en el disco interno del ordenador, principalmente cuando tus clientes se acumulan. Ademas de tu ordenador corporativo tienes un almacenamiento externo donde almacenas tus VM, cuando necesitas una, la copias a tu disco interno (por temas de rendimiento) y cuando ya no es necesaria, la copias al almacenamiento externo.</p>
+</section>
+<section id="aislar-también-permite-cambiar-de-ordenador" class="level3" data-number="4.1.7">
+<h3 data-number="4.1.7" class="anchored" data-anchor-id="aislar-también-permite-cambiar-de-ordenador"><span class="header-section-number">4.1.7</span> Aislar también permite cambiar de ordenador</h3>
+<p>Este modelo modifica nuestra relación con el equipo físico, el ordenador deja de ser el lugar donde reside nuestra historia profesional y pasa a ser la plataforma sobre la que ejecutamos temporalmente el entorno que necesitamos. Esto permite cambiar de ordenador sin tener que reconstruir durante días todos los contextos anteriores, permite conservar proyectos antiguos sin mantener instaladas sus herramientas y permite volver a un proyecto tiempo después recuperando su máquina.</p>
+</section>
+<section id="el-punto-de-partida-de-iasi-infra" class="level3" data-number="4.1.8">
+<h3 data-number="4.1.8" class="anchored" data-anchor-id="el-punto-de-partida-de-iasi-infra"><span class="header-section-number">4.1.8</span> El punto de partida de IASI Infra</h3>
+<p>El principio de <em>isolation</em> tiene una consecuencia fundamental para todo lo que sigue en este documento.</p>
+<p><strong>A partir de este punto asumimos siempre que partimos de una máquina virtual limpia.</strong></p>
+<p>No intentaremos adaptar una estación de trabajo que lleva años acumulando programas, versiones y configuraciones, no intentaremos descubrir qué dependencias preexistentes pueden aprovecharse, no daremos por hecho que existe ninguna herramienta instalada salvo aquellas que formen parte de la instalación base del sistema operativo.</p>
+<p>Nuestro punto cero es:</p>
+<blockquote class="blockquote">
+<p><strong>Una máquina virtual limpia con un sistema operativo base recién instalado.</strong></p>
+</blockquote>
+<p>Esta premisa simplifica radicalmente la documentación.Cuando indiquemos que necesitamos Git, Java, R, Quarto, Docker o cualquier otra herramienta, estaremos describiendo qué se necesita incorporar a un entorno limpio para convertirse en un entorno IASI, no estaremos documentando cómo reparar, adaptar o reconciliar una máquina preexistente. Ese problema queda fuera de alcance.</p>
+<p>Esto proporciona además una referencia inequívoca para la reproducibilidad: si el procedimiento funciona partiendo de una máquina limpia con el sistema operativo base, entonces conocemos realmente las dependencias del entorno.</p>
+</section>
+<section id="principio-de-rebuildability" class="level3" data-number="4.1.9">
+<h3 data-number="4.1.9" class="anchored" data-anchor-id="principio-de-rebuildability"><span class="header-section-number">4.1.9</span> Principio de <em>rebuildability</em></h3>
+<p>Existe una propiedad especialmente valiosa de este modelo.</p>
+<p>Si un entorno está correctamente aislado y definido, dejar de necesitarlo o que simplemente se “corrompa” no debería plantear ningún problema, la máquina virtual puede eliminarse. Ese gesto constituye una buena prueba de arquitectura.</p>
+<p>Si eliminar o que falle una máquina virtual nos preocupa porque contiene algo que no sabemos reconstruir, entonces parte del conocimiento del proyecto continúa encerrado dentro de ella, si podemos destruirla sabiendo que somos capaces de crear otra equivalente desde una máquina limpia, entonces el entorno está realmente bajo nuestro control.</p>
+<p>Por eso el principio de <strong><em>isolation</em></strong> está estrechamente relacionado con el de <strong><em>rebuildability</em></strong>. Un proyecto tiene básicamente dos patas: El software y herramientas que le dan soporte, y los artifactos construidos. Partimos de la base esencial de que los artefactos mantienen una copia de seguridad actualizada en la nube, por ejemplo <em>github</em> o, segun la confidencialidad, en algún otro dispositivo no público.</p>
+<p>A partir de ahi, recrear la maquina virtual es tan simple como crear una nueva de acuerdo con su manual de instalación, y recuperar los artefactos de su lugar de almacenamiento.</p>
+</section>
+</section>
+<section id="máquina-virtual" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="máquina-virtual"><span class="header-section-number">4.2</span> Máquina virtual</h2>
+<p>Los laboratorios que requieren infraestructura se ejecutarán en una máquina virtual independiente de la máquina utilizada para crear y desarrollar IASI.</p>
+<p>La máquina virtual constituye la frontera del entorno de labs: podemos instalar herramientas, ejecutar servicios, modificar configuraciones y volver a un estado conocido sin contaminar el equipo anfitrión ni <code>iasi-dev</code>.</p>
+<section id="configuración-de-referencia" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="configuración-de-referencia"><span class="header-section-number">4.2.1</span> Configuración de referencia</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">🖥️ Sin IA local</th>
+<th style="text-align: right;">🧠 Con IA local</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>⚙️ <strong>CPU</strong></td>
+<td style="text-align: right;">4 vCPU</td>
+<td style="text-align: right;">8 vCPU</td>
+</tr>
+<tr class="even">
+<td>🧮 <strong>Memoria</strong></td>
+<td style="text-align: right;">16 GB RAM</td>
+<td style="text-align: right;">32 GB RAM</td>
+</tr>
+<tr class="odd">
+<td>💾 <strong>Disco</strong></td>
+<td style="text-align: right;">150 GB</td>
+<td style="text-align: right;">250 GB</td>
+</tr>
+<tr class="even">
+<td>📦 <strong>Tipo de disco</strong></td>
+<td style="text-align: right;">Dinámico</td>
+<td style="text-align: right;">Dinámico</td>
+</tr>
+<tr class="odd">
+<td>🪟 <strong>Sistema operativo</strong></td>
+<td style="text-align: right;">Windows 11 Pro</td>
+<td style="text-align: right;">Windows 11 Pro</td>
+</tr>
+<tr class="even">
+<td>🌐 <strong>Red</strong></td>
+<td style="text-align: right;">Acceso a Internet</td>
+<td style="text-align: right;">Acceso a Internet</td>
+</tr>
+<tr class="odd">
+<td>🖥️ <strong>Resolución</strong></td>
+<td style="text-align: right;">1920 × 1080</td>
+<td style="text-align: right;">1920 × 1080</td>
+</tr>
+</tbody>
+</table>
+<p>Estas cifras son puntos de partida, no requisitos rígidos.</p>
+</section>
+<section id="hyper-v" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="hyper-v"><span class="header-section-number">4.2.2</span> Hyper-V</h3>
+<p>Para Windows 11 utilizaremos una máquina <strong>Generación 2</strong>, con Secure Boot y TPM virtual habilitados.</p>
+<p>La ISO oficial de Windows se monta como primer DVD virtual.</p>
+<p>El archivo <code>Autounattend.xml</code> se distribuye en una segunda ISO independiente, montada como segundo DVD virtual. No se modifica la ISO oficial de Windows.</p>
+<pre class="text"><code>DVD 1
+└── Windows 11 ISO
+
+DVD 2
+└── IASI Labs unattended ISO
+    └── Autounattend.xml</code></pre>
+</section>
+<section id="instalación-desatendida" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="instalación-desatendida"><span class="header-section-number">4.2.3</span> Instalación desatendida</h3>
+<p>Las versiones actuales de Windows 11 ya no permiten basar una instalación reproducible en el antiguo truco <code>OOBE\\BYPASSNRO</code>.</p>
+<p>En su lugar utilizamos un archivo de respuesta <code>Autounattend.xml</code>.</p>
+<p>El archivo utilizado por este lab se encuentra en:</p>
+<pre class="text"><code>resources/Autounattend.xml</code></pre>
+<p>La primera versión del archivo automatiza únicamente lo que necesitamos para construir una máquina de labs repetible: configuración regional, OOBE y creación del usuario local.</p>
+<p>No intentamos ocultar toda la instalación. La selección de edición y disco puede seguir siendo interactiva mientras desarrollamos el lab.</p>
+</section>
+<section id="checkpoints" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="checkpoints"><span class="header-section-number">4.2.4</span> Checkpoints</h3>
+<p>Los checkpoints forman parte del ciclo de experimentación, no sustituyen a la automatización.</p>
+<p>Crearemos al menos estos hitos:</p>
+<div class="lab-checkpoint">
+<p><strong>Checkpoints de referencia</strong></p>
+<pre class="text"><code>00-windows-installed
+01-windows-updated
+02-iasi-labs-ready</code></pre>
+</div>
+<p><code>00-windows-installed</code> representa Windows recién instalado.</p>
+<p><code>01-windows-updated</code> representa el sistema actualizado y estable.</p>
+<p><code>02-iasi-labs-ready</code> representa la máquina preparada para ejecutar los laboratorios posteriores.</p>
+<p>El objetivo final es poder reconstruir <code>02-iasi-labs-ready</code> desde una instalación limpia, no depender permanentemente del checkpoint.</p>
+</section>
+</section>
+<section id="sistema-operativo-base" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sistema-operativo-base"><span class="header-section-number">4.3</span> Sistema operativo base</h2>
+<p>Una vez creada la máquina virtual, el siguiente objetivo es dejar disponible un sistema operativo base, limpio y mínimamente preparado. Tenemos dos “sabores”: Windows y Linux</p>
+<section id="windows" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="windows"><span class="header-section-number">4.3.1</span> Windows</h3>
+<p><strong>Asumimos que existe WinGet</strong>, si no habria que instalarlo.</p>
+<p>Necesitamos los siguientes paquetes:</p>
+<ul>
+<li>Git</li>
+<li>Github CLI</li>
+<li>Notepad++</li>
+<li>Adobe Acrobat Reader</li>
+</ul>
+<p>Además, puede instalarse opcionalmente un navegador web adicional, a elección del usuario. Windows ya incorpora Microsoft Edge, por lo que IASI no impone un navegador concreto.</p>
+<p><strong>Se recomienda ejecutar los comandos como Administrador</strong></p>
+<section id="instalacion" class="level4" data-number="4.3.1.1">
+<h4 data-number="4.3.1.1" class="anchored" data-anchor-id="instalacion"><span class="header-section-number">4.3.1.1</span> Instalacion</h4>
+<section id="git" class="level5" data-number="4.3.1.1.1">
+<h5 data-number="4.3.1.1.1" class="anchored" data-anchor-id="git"><span class="header-section-number">4.3.1.1.1</span> Git</h5>
+<p>Programa de control de versiones</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id Git<span class="op">.</span><span class="fu">Git</span> <span class="op">-</span>e</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="github-cli" class="level5" data-number="4.3.1.1.2">
+<h5 data-number="4.3.1.1.2" class="anchored" data-anchor-id="github-cli"><span class="header-section-number">4.3.1.1.2</span> GitHub CLI</h5>
+<p>GitHub CLI (<code>gh</code>) permite utilizar GitHub desde la línea de comandos y automatizar operaciones sobre repositorios y organizaciones.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id GitHub<span class="op">.</span><span class="fu">cli</span> <span class="op">-</span>e</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="notepad" class="level5" data-number="4.3.1.1.3">
+<h5 data-number="4.3.1.1.3" class="anchored" data-anchor-id="notepad"><span class="header-section-number">4.3.1.1.3</span> Notepad++</h5>
+<p>Un editor de textos que siempre viene bien</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id Notepad<span class="op">++.</span><span class="fu">Notepad</span><span class="op">++</span> <span class="op">-</span>e</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="navegador-web-opcional" class="level5" data-number="4.3.1.1.4">
+<h5 data-number="4.3.1.1.4" class="anchored" data-anchor-id="navegador-web-opcional"><span class="header-section-number">4.3.1.1.4</span> Navegador web (opcional)</h5>
+<p>Windows incorpora Microsoft Edge, por lo que la máquina ya dispone de un navegador desde la instalación base.</p>
+<p>El usuario puede instalar opcionalmente el navegador de su preferencia. IASI no establece un navegador concreto como requisito.</p>
+</section>
+<section id="adobe-acrobat-reader" class="level5" data-number="4.3.1.1.5">
+<h5 data-number="4.3.1.1.5" class="anchored" data-anchor-id="adobe-acrobat-reader"><span class="header-section-number">4.3.1.1.5</span> Adobe Acrobat Reader</h5>
+<p>Aunque los navegadores modernos permiten visualizar documentos PDF, recomendamos Adobe Acrobat Reader como lector PDF de referencia.</p>
+<p>Puede instalarse con WinGet:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id Adobe<span class="op">.</span><span class="fu">Acrobat</span><span class="op">.</span><span class="fu">Reader</span><span class="op">.</span><span class="dv">64</span><span class="op">-</span>bit <span class="op">-</span>e</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Referencia:</p>
+<p><a href="https://www.adobe.com/es/acrobat/pdf-reader.html">Adobe Acrobat Reader</a></p>
+</section>
+<section id="openssh-client" class="level5" data-number="4.3.1.1.6">
+<h5 data-number="4.3.1.1.6" class="anchored" data-anchor-id="openssh-client"><span class="header-section-number">4.3.1.1.6</span> OpenSSH Client</h5>
+<p>Un cliente <em>shell</em> seguro</p>
+<p>Primero comprobar si está disponible:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Get-WindowsCapability <span class="op">-</span>Online <span class="op">|</span> <span class="fu">Where-Object</span> Name <span class="op">-like</span> <span class="st">'OpenSSH.Client*'</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Si no está instalado:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Add-WindowsCapability <span class="op">-</span>Online <span class="op">-</span>Name OpenSSH<span class="op">.</span><span class="fu">Client</span><span class="op">~~~~</span><span class="dv">0.0</span><span class="op">.</span><span class="dv">1.0</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="verfificacion" class="level4" data-number="4.3.1.2">
+<h4 data-number="4.3.1.2" class="anchored" data-anchor-id="verfificacion"><span class="header-section-number">4.3.1.2</span> Verfificacion</h4>
+<p>Ejecutar lo siguiente</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">"Verificando Git..."</span> <span class="op">-</span>NoNewline</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span><span class="fu">Get-Command</span> git <span class="op">-</span>ErrorAction SilentlyContinue<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Host</span> <span class="st">" OK"</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Host</span> <span class="st">" KO"</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">"Verificando Notepad++..."</span> <span class="op">-</span>NoNewline</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span><span class="fu">Get-Command</span> notepad<span class="op">++</span> <span class="op">-</span>ErrorAction SilentlyContinue<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Host</span> <span class="st">" OK"</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Host</span> <span class="st">" KO"</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">"Verificando PowerShell 7..."</span> <span class="op">-</span>NoNewline</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span><span class="fu">Get-Command</span> pwsh <span class="op">-</span>ErrorAction SilentlyContinue<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    <span class="va">$version</span> <span class="op">=</span> <span class="op">&amp;</span> pwsh <span class="op">-</span>NoProfile <span class="op">-</span>Command <span class="st">'$PSVersionTable.PSVersion.Major'</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="va">$version</span> <span class="op">-ge</span> <span class="dv">7</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Write-Host</span> <span class="st">" OK"</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Write-Host</span> <span class="st">" KO"</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Host</span> <span class="st">" KO"</span></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Además de estas comprobaciones, debe verificarse manualmente que:</p>
+<ul>
+<li>puede abrirse una página web con el navegador seleccionado;</li>
+<li>puede abrirse un documento PDF con Adobe Acrobat Reader.</li>
+</ul>
+</section>
+<section id="configuracion" class="level4" data-number="4.3.1.3">
+<h4 data-number="4.3.1.3" class="anchored" data-anchor-id="configuracion"><span class="header-section-number">4.3.1.3</span> Configuracion</h4>
+<section id="git-1" class="level5" data-number="4.3.1.3.1">
+<h5 data-number="4.3.1.3.1" class="anchored" data-anchor-id="git-1"><span class="header-section-number">4.3.1.3.1</span> Git</h5>
+<p>Una vez todo instalado, git debe ser configurado y conectado a GitHub. Actualmente recomendamos SSH, mientras GitHub no exija 2FC. La configuración de Git se hace en tres pasos:</p>
+<p>Desde git bash, que estara disponible</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Tu Nombre"</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"tu@email.com"</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"tu@email.com"</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">"</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">"</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Y copiamos la clave publica que empezara por ssh-ed25519 al portapapeles.</p>
+<p>Nos conectamos a Github, Settings de usuario (El icono del usuario) | SSH and GPG Keys</p>
+<p>Creamos una nueva clave SSH:</p>
+<ul>
+<li>Le damos un nombre descriptivo</li>
+<li>Pegamos la clave que hemos obtenido de la maquina virtual</li>
+</ul>
+<p>En git bash ejecutamos</p>
+<pre><code>ssh -T git@github.com</code></pre>
+<p>La primera vez preguntará si se confia en esa clave: Yes</p>
+</section>
+</section>
+</section>
+<section id="linux" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="linux"><span class="header-section-number">4.3.2</span> Linux</h3>
+<p>TODO Pendiente de escribir</p>
+<p>No deberia requerir nada especial salvo instalaciones minimas</p>
+</section>
+</section>
+<section id="documentación" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="documentación"><span class="header-section-number">4.4</span> Documentación</h2>
+<p>IASI considera la documentación como una parte del propio proceso de ingeniería, no se trata únicamente de escribir textos, sino de disponer de un entorno capaz de producir documentación estructurada, reproducible y publicable en distintos formatos.</p>
+<section id="por-qué" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="por-qué"><span class="header-section-number">4.4.1</span> ¿Por qué?</h3>
+<p>Para esta función se han elegido dos herramientas principales:</p>
+<ul>
+<li><strong>RStudio</strong>, como entorno de trabajo para la creación y mantenimiento de la documentación.</li>
+<li><strong>Quarto</strong>, como sistema de publicación y generación de los distintos formatos finales.</li>
+</ul>
+<section id="rstudio" class="level4" data-number="4.4.1.1">
+<h4 data-number="4.4.1.1" class="anchored" data-anchor-id="rstudio"><span class="header-section-number">4.4.1.1</span> RStudio</h4>
+<p>RStudio proporciona el entorno de trabajo desde el que se redactan, organizan, revisan y generan los documentos, aunque RStudio está estrechamente ligado a R, y este esta estrechamente ligado al análisis de datos, en IASI su utilización se emplea también como entorno cómodo para trabajar con proyectos documentales basados en Quarto, como herramienta óptima para publicar.</p>
+<p>La instalación de R es, por tanto, un requisito previo de esta capa.</p>
+</section>
+<section id="quarto" class="level4" data-number="4.4.1.2">
+<h4 data-number="4.4.1.2" class="anchored" data-anchor-id="quarto"><span class="header-section-number">4.4.1.2</span> Quarto</h4>
+<p>Quarto es el sistema de publicación utilizado por IASI, a partir de una misma fuente permite generar diferentes artefactos, entre ellos HTML,PDF,eBook, Gitdoc, etc, manteniendo una estructura común y separando el contenido de su presentación.</p>
+<p>Quarto incorpora además Pandoc, por lo que no es necesario instalarlo de forma independiente.</p>
+<p>La generación de PDF requiere una distribución TeX. En IASI utilizaremos TinyTeX, instalada y gestionada desde Quarto.</p>
+</section>
+</section>
+<section id="instalacion-1" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="instalacion-1"><span class="header-section-number">4.4.2</span> Instalacion</h3>
+<section id="rrstudio" class="level4" data-number="4.4.2.1">
+<h4 data-number="4.4.2.1" class="anchored" data-anchor-id="rrstudio"><span class="header-section-number">4.4.2.1</span> R/RStudio</h4>
+<p>RStudio es el IDE de R, por lo que primero es necesario instalar R:</p>
+<p><a href="https://cran.r-project.org/bin/windows/base/">CRAN - R for Windows</a>.</p>
+<p>En los entornos IASI se recomienda <strong>no instalar R en <code>C:\Program Files</code></strong>. Aunque esa es una ubicación válida para una instalación convencional, Windows protege el directorio y puede exigir permisos de administrador cuando herramientas y automatizaciones intentan instalar paquetes en la biblioteca incluida con R.</p>
+<p>Se recomienda utilizar una ubicación dedicada al SDK, por ejemplo:</p>
+<pre class="text"><code>C:\SDK\R\R-4.6.1</code></pre>
+<p>Los paquetes instalados por el usuario deben mantenerse en una biblioteca separada, por ejemplo:</p>
+<pre class="text"><code>C:\SDK\R\library</code></pre>
+<p>Esta biblioteca puede definirse mediante la variable de entorno <code>R_LIBS_USER</code>. La separación evita modificar la instalación base de R y facilita actualizar o sustituir una versión sin perder los paquetes del usuario.</p>
+<p>Después de actualizar R, deben revisarse los paquetes de esta biblioteca y reinstalarse los que hayan sido construidos con una versión anterior:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">update.packages</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">lib.loc =</span> <span class="st">"C:/SDK/R/library"</span>,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ask =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">checkBuilt =</span> <span class="cn">TRUE</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Mantener una ruta estable para la biblioteca evita tener que cambiar <code>R_LIBS_USER</code> con cada versión de R. Algunos paquetes, especialmente los que contienen código compilado, pueden necesitar ser reconstruidos durante la actualización.</p>
+<p>Durante la instalación, cambiar por tanto el directorio de destino propuesto por el instalador. Después, añadir el subdirectorio <code>bin</code> de R al <code>PATH</code>; para el ejemplo anterior:</p>
+<pre class="text"><code>C:\SDK\R\R-4.6.1\bin</code></pre>
+<p>Verificar en un terminal:</p>
+<pre><code>R --version</code></pre>
+<p>Desde R puede comprobarse la biblioteca activa con:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">"R_LIBS_USER"</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.libPaths</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Una vez instalado R, descargar RStudio Desktop desde la página oficial de Posit:</p>
+<p><a href="https://posit.co/download/rstudio-desktop/">Posit - RStudio Desktop</a>.</p>
+<p>Al iniciarse, RStudio utilizará normalmente la versión actual de R instalada en el sistema.</p>
+<p>En Windows tambien es necesario instalar una <em>toolchain</em>:</p>
+<p><a href="https://cran.r-project.org/bin/windows/Rtools/">RTools</a></p>
+</section>
+</section>
+<section id="configuracion-1" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="configuracion-1"><span class="header-section-number">4.4.3</span> Configuracion</h3>
+<p>Una vez instalado el software, se necesitan los paquetes de R y las herramientas para genera PDF.</p>
+<p>Iniciamos RStudio, y en la ventana de <strong>consola</strong> ejecutamos:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown"</span>,</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"remotes"</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"quarto"</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>), <span class="at">dependencies=</span><span class="cn">TRUE</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Y por ultimo desde la ventana <strong>Terminal</strong></p>
+<pre><code>quarto install tinytex</code></pre>
+</section>
+</section>
+<section id="desarrollo" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="desarrollo"><span class="header-section-number">4.5</span> Desarrollo</h2>
+<p>La capa de desarrollo proporciona las herramientas generales necesarias para trabajar con proyectos de software en IASI.</p>
+<p>El objetivo no es instalar todas las tecnologías que un proyecto pueda llegar a utilizar, sino disponer de una base suficientemente completa sobre la que cada proyecto pueda añadir después sus dependencias específicas.</p>
+<p>En esta capa se han elegido las siguientes herramientas:</p>
+<ul>
+<li>Visual Studio Code</li>
+<li>Node.js</li>
+<li>Python</li>
+<li>Eclipse Temurin <em>JDK</em> 21</li>
+<li>Apache Maven</li>
+<li>Microsoft C/C++ Build Tools</li>
+<li>Go</li>
+<li>DBeaver Community</li>
+</ul>
+<p>Git y PowerShell ya forman parte de la base del sistema. R y RStudio pertenecen a la capa de documentación y no se instalan de nuevo aquí. Docker se incorpora en la siguiente capa, junto con los servicios de infraestructura.</p>
+<section id="visual-studio-code" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="visual-studio-code"><span class="header-section-number">4.5.1</span> Visual Studio Code</h3>
+<p>Visual Studio Code es el entorno principal de desarrollo utilizado por IASI.</p>
+<p>Descargar Visual Studio Code para Windows desde <a href="https://code.visualstudio.com/download">Visual Studio Code - Download</a>.</p>
+<p>También puede instalarse mediante <em>WinGet</em>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id Microsoft<span class="op">.</span><span class="fu">VisualStudioCode</span> <span class="op">-</span>e</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Verificar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>code <span class="op">--</span>version</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La instalación de extensiones, GitHub Copilot y la configuración específica de lenguajes se realizará posteriormente.</p>
+</section>
+<section id="node.js" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="node.js"><span class="header-section-number">4.5.2</span> Node.js</h3>
+<p>Node.js proporciona el <em>runtime</em> JavaScript utilizado por numerosas herramientas de desarrollo y automatización.</p>
+<p>IASI utilizará una versión <em>LTS</em>.</p>
+<p>Descargar Node.js desde <a href="https://nodejs.org/en/download">Node.js - Download</a>.</p>
+<p>También puede instalarse mediante <em>WinGet</em>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">-</span>e <span class="op">--</span>id OpenJS<span class="op">.</span><span class="fu">NodeJS</span><span class="op">.</span><span class="fu">LTS</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La instalación incluye <code>npm</code>.</p>
+<p>Verificar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>node <span class="op">--</span>version</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>npm <span class="op">--</span>version</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="python" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="python"><span class="header-section-number">4.5.3</span> Python</h3>
+<p>Python se incorpora como lenguaje general para automatización, utilidades, integración y herramientas que puedan necesitarlo.</p>
+<p>En Windows se utilizará el Python Install Manager recomendado por la documentación oficial de Python.</p>
+<p>Referencia oficial:</p>
+<p><a href="https://docs.python.org/3/using/windows.html">Python - Using Python on Windows</a></p>
+<p>Instalar el Python Install Manager mediante <em>WinGet</em>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>winget install 9NQ7512CXL7T <span class="op">-</span>e <span class="op">--</span>accept-package-agreements <span class="op">--</span>disable-interactivity</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Instalar el <em>runtime</em> estable predeterminado:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>py install default</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Verificar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>python <span class="op">--</span>version</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>python <span class="op">-</span>m pip <span class="op">--</span>version</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Las dependencias Python específicas deberán instalarse dentro de entornos virtuales del proyecto, evitando paquetes globales innecesarios.</p>
+</section>
+<section id="java" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="java"><span class="header-section-number">4.5.4</span> Java</h3>
+<p>Para desarrollo Java se utilizará Eclipse Temurin <em>JDK</em> 21.</p>
+<p>La elección de una versión <em>LTS</em> proporciona una base estable y ampliamente compatible para proyectos Java.</p>
+<p>Referencia oficial:</p>
+<p><a href="https://adoptium.net/temurin/">Adoptium - Eclipse Temurin</a></p>
+<p>Instalar mediante <em>WinGet</em>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>winget install EclipseAdoptium<span class="op">.</span><span class="fu">Temurin</span><span class="op">.</span><span class="dv">21.</span><span class="dt">JDK</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Verificar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>java <span class="op">-</span>version</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>javac <span class="op">-</span>version</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="apache-maven" class="level3" data-number="4.5.5">
+<h3 data-number="4.5.5" class="anchored" data-anchor-id="apache-maven"><span class="header-section-number">4.5.5</span> Apache Maven</h3>
+<p>Apache Maven se utilizará como herramienta de <em>build</em> y gestión de dependencias para proyectos Java.</p>
+<p>Descargar la distribución binaria desde la fuente oficial:</p>
+<p><a href="https://maven.apache.org/download.cgi">Apache Maven - Download</a></p>
+<p>En Windows:</p>
+<ol type="1">
+<li>Descargar el archivo binario ZIP.</li>
+<li>Descomprimirlo en una ubicación estable.</li>
+<li>Definir <code>MAVEN_HOME</code> apuntando al directorio de Maven.</li>
+<li>Añadir <code>%MAVEN_HOME%\bin</code> al <code>PATH</code>.</li>
+</ol>
+<p>Verificar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>mvn <span class="op">-</span>version</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La salida debe mostrar tanto la versión de Maven como el <em>JDK</em> utilizado.</p>
+</section>
+<section id="c-y-c" class="level3" data-number="4.5.6">
+<h3 data-number="4.5.6" class="anchored" data-anchor-id="c-y-c"><span class="header-section-number">4.5.6</span> C y C++</h3>
+<p>Para disponer de compilador, <em>linker</em>, cabeceras, librerías y herramientas de compilación nativa se utilizarán Microsoft C++ Build Tools.</p>
+<p>No es necesario instalar el <em>IDE</em> completo de Visual Studio.</p>
+<p>Descargar las herramientas desde <a href="https://visualstudio.microsoft.com/downloads/">Microsoft - Visual Studio Downloads</a>.</p>
+<p>En el instalador seleccionar la carga de trabajo:</p>
+<blockquote class="blockquote">
+<p><strong>Desktop development with C++</strong></p>
+</blockquote>
+<p>Esta carga instala el conjunto de herramientas MSVC y los componentes necesarios para compilar aplicaciones C y C++ en Windows.</p>
+<p>Referencia técnica:</p>
+<p><a href="https://learn.microsoft.com/en-us/cpp/overview/acquire-msvc">Microsoft Learn - Install the Microsoft C++ Build Tools</a></p>
+<p>Para verificar la instalación, abrir <strong>Developer Command Prompt for Visual Studio</strong> y ejecutar:</p>
+<pre class="text"><code>cl</code></pre>
+<p>El compilador debe mostrar su versión y la ayuda básica de uso.</p>
+</section>
+<section id="go" class="level3" data-number="4.5.7">
+<h3 data-number="4.5.7" class="anchored" data-anchor-id="go"><span class="header-section-number">4.5.7</span> Go</h3>
+<p>Go se incorpora como lenguaje compilado de propósito general y como base para herramientas que utilizaremos en laboratorios posteriores.</p>
+<p>Puede instalarse mediante <em>WinGet</em>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id GoLang<span class="op">.</span><span class="fu">Go</span> <span class="op">-</span>e</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Verificar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>go version</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="dbeaver" class="level3" data-number="4.5.8">
+<h3 data-number="4.5.8" class="anchored" data-anchor-id="dbeaver"><span class="header-section-number">4.5.8</span> DBeaver</h3>
+<p>DBeaver Community se utilizará como cliente general para trabajar con bases de datos.</p>
+<p>Descargar el instalador para Windows desde <a href="https://dbeaver.io/download/">DBeaver Community - Download</a>.</p>
+<p>Ejecutar el instalador estándar para Windows.</p>
+<p>DBeaver incluye su propio OpenJDK para ejecutar la aplicación. Esto es independiente del <em>JDK</em> instalado anteriormente, que se mantiene como parte del entorno general de desarrollo Java.</p>
+</section>
+<section id="resultado" class="level3" data-number="4.5.9">
+<h3 data-number="4.5.9" class="anchored" data-anchor-id="resultado"><span class="header-section-number">4.5.9</span> Resultado</h3>
+<p>Una vez completada esta capa, la máquina dispone de una base de desarrollo general:</p>
+<pre class="text"><code>Visual Studio Code
+├── Node.js + npm
+├── Python + pip
+├── Java JDK 21
+│   └── Maven
+├── C/C++ Build Tools
+├── Go
+└── DBeaver</code></pre>
+<p>Las extensiones de Visual Studio Code, GitHub Copilot, configuraciones de lenguajes, paquetes y herramientas específicas de cada proyecto se incorporarán en la fase de configuración o dentro del propio proyecto.</p>
+</section>
+</section>
+<section id="docker-y-servicios" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="docker-y-servicios"><span class="header-section-number">4.6</span> Docker y servicios</h2>
+<p>IASI Labs utiliza Docker para ejecutar determinados servicios de infraestructura sin incorporarlos directamente a la instalación de la máquina.</p>
+<p>Este capítulo no pretende enseñar Docker ni Docker Compose. Su objetivo es definir la convención utilizada por IASI para ejecutar, agrupar y publicar sus servicios.</p>
+<p>Para aprender Docker desde cero se recomienda utilizar la documentación oficial:</p>
+<ul>
+<li><a href="https://docs.docker.com/get-started/">Docker - Get started</a></li>
+<li><a href="https://docs.docker.com/compose/gettingstarted/">Docker Compose - Quickstart</a></li>
+</ul>
+<section id="instalación" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="instalación"><span class="header-section-number">4.6.1</span> Instalación</h3>
+<p>En Windows utilizamos Docker Desktop, que proporciona Docker Engine y Docker Compose.</p>
+<p>Puede instalarse mediante <em>WinGet</em>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id Docker<span class="op">.</span><span class="fu">DockerDesktop</span> <span class="op">-</span>e</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Después de la instalación puede ser necesario reiniciar la máquina.</p>
+<p>Verificar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>docker <span class="op">--</span>version</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>docker compose version</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A partir de este punto asumimos que ambos comandos funcionan correctamente.</p>
+</section>
+<section id="servicios-iasi-labs" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="servicios-iasi-labs"><span class="header-section-number">4.6.2</span> Servicios IASI Labs</h3>
+<p>La infraestructura de labs utiliza Docker Compose para ejecutar tres servicios:</p>
+<pre class="text"><code>Docker Compose
+├── PlantUML Server
+├── Ollama
+└── Open WebUI</code></pre>
+<p>Cada servicio conserva una responsabilidad distinta:</p>
+<ul>
+<li><strong>PlantUML Server</strong> genera los diagramas utilizados por las publicaciones.</li>
+<li><strong>Ollama</strong> proporciona el <em>runtime</em> local de modelos.</li>
+<li><strong>Open WebUI</strong> proporciona la interfaz web para utilizar esos modelos.</li>
+</ul>
+</section>
+<section id="red-iasi-labs" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="red-iasi-labs"><span class="header-section-number">4.6.3</span> Red IASI Labs</h3>
+<p>Todos los contenedores de la infraestructura se incorporan a una red Docker común denominada:</p>
+<pre class="text"><code>iasi-labs</code></pre>
+<p>Dentro de esa red, los servicios se localizan mediante su nombre y su puerto interno.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>http://ollama:11434
+http://plantuml:8080
+http://open-webui:8080</code></pre>
+<p>Esta red pertenece al ámbito interno de Docker.</p>
+<p>Desde fuera de Docker no es necesario conocerla. El acceso se realiza mediante los puertos publicados por la máquina anfitriona.</p>
+</section>
+<section id="convención-de-puertos" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="convención-de-puertos"><span class="header-section-number">4.6.4</span> Convención de puertos</h3>
+<p>IASI Labs reserva el rango:</p>
+<pre class="text"><code>20000-20999</code></pre>
+<p>para los servicios publicados por su infraestructura local.</p>
+<p>Esta reserva permite reconocer inmediatamente que un puerto pertenece a IASI Labs.</p>
+<p>Siempre que sea posible, los tres últimos dígitos del puerto IASI reproducen los tres últimos dígitos del puerto característico del servicio.</p>
+<p>Por ejemplo, Ollama utiliza normalmente:</p>
+<pre class="text"><code>11434</code></pre>
+<p>y en IASI se publica como:</p>
+<pre class="text"><code>20434</code></pre>
+<p>De este modo, el puerto informa simultáneamente de dos cosas:</p>
+<pre class="text"><code>20434
+│ └── 434  referencia al puerto característico del servicio
+└──── 20   rango reservado para IASI Labs</code></pre>
+<p>Los puertos genéricos como <code>80</code>, <code>443</code> o <code>8080</code> no proporcionan información suficiente para aplicar esta regla. En esos casos se asigna un puerto IASI específico.</p>
+<p>También deberá utilizarse otro puerto cuando exista una colisión dentro del rango reservado.</p>
+<p>La asignación inicial es:</p>
+<pre class="text"><code>Servicio          Puerto interno   Puerto IASI
+------------------------------------------------
+PlantUML Server    8080            20025
+Open WebUI         8080            20300
+Ollama            11434            20434</code></pre>
+</section>
+<section id="compose.yml" class="level3" data-number="4.6.5">
+<h3 data-number="4.6.5" class="anchored" data-anchor-id="compose.yml"><span class="header-section-number">4.6.5</span> compose.yml</h3>
+<p>La composición inicial es:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">plantuml</span><span class="kw">:</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> plantuml/plantuml-server:jetty</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> plantuml-server</span></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"20025:8080"</span></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> iasi-labs</span></span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">ollama</span><span class="kw">:</span></span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> ollama/ollama</span></span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> ollama</span></span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"20434:11434"</span></span>
+<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ollama:/root/.ollama</span></span>
+<span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb48-20"><a href="#cb48-20" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> iasi-labs</span></span>
+<span id="cb48-21"><a href="#cb48-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span>
+<span id="cb48-22"><a href="#cb48-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-23"><a href="#cb48-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">open-webui</span><span class="kw">:</span></span>
+<span id="cb48-24"><a href="#cb48-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> ghcr.io/open-webui/open-webui:main</span></span>
+<span id="cb48-25"><a href="#cb48-25" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> open-webui</span></span>
+<span id="cb48-26"><a href="#cb48-26" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">depends_on</span><span class="kw">:</span></span>
+<span id="cb48-27"><a href="#cb48-27" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ollama</span></span>
+<span id="cb48-28"><a href="#cb48-28" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb48-29"><a href="#cb48-29" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"20300:8080"</span></span>
+<span id="cb48-30"><a href="#cb48-30" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb48-31"><a href="#cb48-31" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">OLLAMA_BASE_URL</span><span class="kw">:</span><span class="at"> http://ollama:11434</span></span>
+<span id="cb48-32"><a href="#cb48-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb48-33"><a href="#cb48-33" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> open-webui:/app/backend/data</span></span>
+<span id="cb48-34"><a href="#cb48-34" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb48-35"><a href="#cb48-35" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> iasi-labs</span></span>
+<span id="cb48-36"><a href="#cb48-36" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> unless-stopped</span></span>
+<span id="cb48-37"><a href="#cb48-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-38"><a href="#cb48-38" aria-hidden="true" tabindex="-1"></a><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb48-39"><a href="#cb48-39" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">iasi-labs</span><span class="kw">:</span></span>
+<span id="cb48-40"><a href="#cb48-40" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> iasi-labs</span></span>
+<span id="cb48-41"><a href="#cb48-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-42"><a href="#cb48-42" aria-hidden="true" tabindex="-1"></a><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb48-43"><a href="#cb48-43" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">ollama</span><span class="kw">:</span></span>
+<span id="cb48-44"><a href="#cb48-44" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">open-webui</span><span class="kw">:</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La red <code>iasi-labs</code> es explícita para que forme parte de la definición de la infraestructura y no dependa del nombre generado automáticamente por Docker Compose.</p>
+</section>
+<section id="modelos-ollama" class="level3" data-number="4.6.6">
+<h3 data-number="4.6.6" class="anchored" data-anchor-id="modelos-ollama"><span class="header-section-number">4.6.6</span> Modelos Ollama</h3>
+<p>Llama, Qwen y DeepSeek no constituyen servicios Docker independientes.</p>
+<p>Son modelos gestionados por Ollama y, por tanto, comparten el mismo contenedor, la misma <em>API</em> y el mismo puerto publicado:</p>
+<pre class="text"><code>Ollama
+└── 20434 -&gt; 11434
+    ├── Llama
+    ├── Qwen
+    └── DeepSeek</code></pre>
+<p>Una vez arrancado Ollama, los modelos pueden incorporarse desde la máquina IASI.</p>
+<p>Por ejemplo:</p>
+<pre><code>docker exec -it ollama ollama pull llama3.2
+docker exec -it ollama ollama pull qwen3
+docker exec -it ollama ollama pull deepseek-r1</code></pre>
+<p>Las variantes concretas deberán seleccionarse en función de los recursos disponibles y de las necesidades del entorno.</p>
+<p>Añadir, sustituir o eliminar un modelo no modifica la topología Docker ni requiere reservar un nuevo puerto IASI.</p>
+</section>
+<section id="comunicación-interna" class="level3" data-number="4.6.7">
+<h3 data-number="4.6.7" class="anchored" data-anchor-id="comunicación-interna"><span class="header-section-number">4.6.7</span> Comunicación interna</h3>
+<p>Los contenedores conectados a la red <code>iasi-labs</code> se comunican mediante sus nombres de servicio.</p>
+<p>Open WebUI utiliza:</p>
+<pre class="text"><code>http://ollama:11434</code></pre>
+<p>No utiliza:</p>
+<pre class="text"><code>http://localhost:20434</code></pre>
+<p>porque <code>localhost</code>, dentro del contenedor de Open WebUI, representa al propio contenedor.</p>
+<p>La comunicación interna utiliza el puerto nativo del servicio.</p>
+<pre class="text"><code>Open WebUI
+    |
+    | http://ollama:11434
+    v
+Ollama</code></pre>
+<p>Los puertos <code>20xxx</code> se utilizan para acceder a los servicios desde fuera de Docker.</p>
+</section>
+<section id="acceso-desde-la-máquina-iasi" class="level3" data-number="4.6.8">
+<h3 data-number="4.6.8" class="anchored" data-anchor-id="acceso-desde-la-máquina-iasi"><span class="header-section-number">4.6.8</span> Acceso desde la máquina IASI</h3>
+<p>Cuando Docker se ejecuta en la propia máquina IASI, los servicios quedan disponibles mediante:</p>
+<pre class="text"><code>PlantUML Server   http://localhost:20025
+Ollama API        http://localhost:20434
+Open WebUI        http://localhost:20300</code></pre>
+<p>Por ejemplo, la configuración de PlantUML utilizará:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter-options</span><span class="kw">:</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">plantuml</span><span class="kw">:</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">server</span><span class="kw">:</span><span class="at"> http://localhost:20025</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="acceso-desde-otra-máquina" class="level3" data-number="4.6.9">
+<h3 data-number="4.6.9" class="anchored" data-anchor-id="acceso-desde-otra-máquina"><span class="header-section-number">4.6.9</span> Acceso desde otra máquina</h3>
+<p><code>localhost</code> significa siempre la máquina desde la que se realiza la conexión.</p>
+<p>La documentación común de IASI supone una instalación local y utiliza <code>localhost</code> como referencia.</p>
+<p>Si los servicios Docker se ejecutan en otra máquina virtual, otro equipo o un servidor compartido, las URL deberán adaptarse a la topología real.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>http://localhost:20025</code></pre>
+<p>podría convertirse en:</p>
+<pre class="text"><code>http://&lt;host-servicios&gt;:20025</code></pre>
+<p>La misma regla se aplica al resto de servicios.</p>
+<p>Por tanto:</p>
+<pre class="text"><code>misma máquina
+    -&gt; localhost:20xxx
+
+otra máquina
+    -&gt; host-servicios:20xxx</code></pre>
+<p>La red Docker <code>iasi</code> sigue siendo interna a la máquina que ejecuta los contenedores y no modifica esta regla.</p>
+</section>
+<section id="arranque" class="level3" data-number="4.6.10">
+<h3 data-number="4.6.10" class="anchored" data-anchor-id="arranque"><span class="header-section-number">4.6.10</span> Arranque</h3>
+<p>Desde el directorio que contiene <code>compose.yml</code>:</p>
+<pre><code>docker compose up -d</code></pre>
+<p>Verificar el estado:</p>
+<pre><code>docker compose ps</code></pre>
+<p>Consultar los mensajes:</p>
+<pre><code>docker compose logs</code></pre>
+<p>Seguirlos mientras se producen:</p>
+<pre><code>docker compose logs -f</code></pre>
+<p>Detener y retirar los contenedores:</p>
+<pre><code>docker compose down</code></pre>
+<p>Los volúmenes persistentes no se eliminan con este comando.</p>
+</section>
+<section id="persistencia" class="level3" data-number="4.6.11">
+<h3 data-number="4.6.11" class="anchored" data-anchor-id="persistencia"><span class="header-section-number">4.6.11</span> Persistencia</h3>
+<p>La composición define dos volúmenes:</p>
+<pre class="text"><code>ollama
+open-webui</code></pre>
+<p>El primero conserva los modelos y datos gestionados por Ollama.</p>
+<p>El segundo conserva la configuración y los datos de Open WebUI.</p>
+<p>PlantUML Server no necesita persistencia para la configuración inicial.</p>
+<p>Esto permite destruir y recrear los contenedores sin perder los datos que deben sobrevivir a su ciclo de vida.</p>
+</section>
+<section id="actualización" class="level3" data-number="4.6.12">
+<h3 data-number="4.6.12" class="anchored" data-anchor-id="actualización"><span class="header-section-number">4.6.12</span> Actualización</h3>
+<p>Las imágenes pueden actualizarse mediante:</p>
+<pre><code>docker compose pull
+docker compose up -d</code></pre>
+<p>Durante el desarrollo pueden utilizarse las etiquetas indicadas en la composición.</p>
+<p>Para una versión cerrada y reproducible de la infraestructura deberán fijarse versiones concretas de las imágenes utilizadas.</p>
+</section>
+<section id="verificación" class="level3" data-number="4.6.13">
+<h3 data-number="4.6.13" class="anchored" data-anchor-id="verificación"><span class="header-section-number">4.6.13</span> Verificación</h3>
+<section id="plantuml" class="level4" data-number="4.6.13.1">
+<h4 data-number="4.6.13.1" class="anchored" data-anchor-id="plantuml"><span class="header-section-number">4.6.13.1</span> PlantUML</h4>
+<pre><code>curl http://localhost:20025</code></pre>
+</section>
+<section id="ollama" class="level4" data-number="4.6.13.2">
+<h4 data-number="4.6.13.2" class="anchored" data-anchor-id="ollama"><span class="header-section-number">4.6.13.2</span> Ollama</h4>
+<pre><code>curl http://localhost:20434</code></pre>
+</section>
+<section id="open-webui" class="level4" data-number="4.6.13.3">
+<h4 data-number="4.6.13.3" class="anchored" data-anchor-id="open-webui"><span class="header-section-number">4.6.13.3</span> Open WebUI</h4>
+<p>Abrir en el navegador:</p>
+<pre class="text"><code>http://localhost:20300</code></pre>
+</section>
+</section>
+<section id="resultado-1" class="level3" data-number="4.6.14">
+<h3 data-number="4.6.14" class="anchored" data-anchor-id="resultado-1"><span class="header-section-number">4.6.14</span> Resultado</h3>
+<p>Al finalizar esta etapa, la máquina dispone de una capa de servicios identificable y reproducible:</p>
+<pre class="text"><code>Máquina IASI
+│
+├── puertos IASI 20000-20999
+│
+└── Docker
+    │
+    └── red iasi
+        ├── PlantUML Server
+        │   └── 20025 -&gt; 8080
+        │
+        ├── Ollama
+        │   ├── 20434 -&gt; 11434
+        │   ├── volumen ollama
+        │   └── modelos
+        │       ├── Llama
+        │       ├── Qwen
+        │       └── DeepSeek
+        │
+        └── Open WebUI
+            ├── 20300 -&gt; 8080
+            └── volumen open-webui</code></pre>
+<p>La convención distingue claramente tres niveles:</p>
+<pre class="text"><code>nombre del servicio   -&gt; comunicación dentro de Docker
+puerto interno        -&gt; contrato del contenedor
+puerto 20xxx          -&gt; publicación IASI hacia el exterior</code></pre>
+<p>La definición pertenece a la infraestructura.</p>
+<p>La ubicación física puede cambiar.</p>
+<p>Las direcciones utilizadas por cada consumidor deben reflejar siempre la topología real del entorno.</p>
+</section>
+</section>
+<section id="sistemas-inteligentes" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="sistemas-inteligentes"><span class="header-section-number">4.7</span> Sistemas inteligentes</h2>
+<p>IASI no plantea el trabajo asistido por inteligencia artificial como la utilización de un único asistente.</p>
+<p>El entorno se prepara para trabajar con <strong>varios sistemas inteligentes</strong>, cada uno con capacidades, contexto y formas de interacción diferentes.</p>
+<p>La primera configuración de referencia utiliza:</p>
+<ul>
+<li>ChatGPT, como asistente general de razonamiento, análisis, diseño y elaboración.</li>
+<li>GitHub Copilot, integrado directamente en Visual Studio Code y orientado al trabajo sobre el código y el proyecto.</li>
+<li>Ollama, de forma opcional, como <em>runtime</em> para modelos locales o para servicios de modelos disponibles dentro de la infraestructura.</li>
+</ul>
+<p>La capa incorpora además herramientas que permiten estructurar el trabajo y acceder a estos sistemas:</p>
+<ul>
+<li>OpenSpec, para mantener especificaciones persistentes que puedan ser utilizadas por distintos asistentes de desarrollo.</li>
+<li>Open WebUI, como interfaz web para trabajar con Ollama y otros proveedores compatibles.</li>
+</ul>
+<p>La idea no es acumular modelos. El objetivo es disponer de <strong>varios sistemas que puedan participar en el mismo proceso de ingeniería</strong>, apoyados por una infraestructura común.</p>
+<section id="chatgpt" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="chatgpt"><span class="header-section-number">4.7.1</span> ChatGPT</h3>
+<p>ChatGPT se utiliza como asistente general dentro del proceso IASI.</p>
+<p>Puede utilizarse directamente desde la web o mediante la aplicación oficial para Windows.</p>
+<p>Referencia oficial:</p>
+<p><a href="https://help.openai.com/es-es/articles/9982051-using-the-chatgpt-windows-app">OpenAI - ChatGPT para Windows</a></p>
+<p>La aplicación para Windows puede instalarse desde Microsoft Store.</p>
+<p>No existe una dependencia técnica entre ChatGPT y el entorno de desarrollo. Su papel es acompañar el trabajo de análisis, diseño, documentación, revisión y construcción del proyecto.</p>
+</section>
+<section id="github-copilot" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="github-copilot"><span class="header-section-number">4.7.2</span> GitHub Copilot</h3>
+<p>GitHub Copilot se integra en Visual Studio Code, instalado previamente en la capa de desarrollo.</p>
+<p>Referencia oficial:</p>
+<p><a href="https://docs.github.com/en/copilot/get-started/quickstart?tool=vscode">GitHub - GitHub Copilot en Visual Studio Code</a></p>
+<p>Para utilizarlo:</p>
+<ol type="1">
+<li>Abrir Visual Studio Code.</li>
+<li>Iniciar sesión con la cuenta de GitHub.</li>
+<li>Configurar GitHub Copilot desde el propio entorno.</li>
+</ol>
+<p>La configuración inicial de Copilot en Visual Studio Code instala automáticamente las extensiones necesarias.</p>
+<p>GitHub Copilot aporta asistencia directamente sobre el proyecto abierto en el editor: código, archivos, diagnósticos y contexto de trabajo.</p>
+</section>
+<section id="openspec" class="level3" data-number="4.7.3">
+<h3 data-number="4.7.3" class="anchored" data-anchor-id="openspec"><span class="header-section-number">4.7.3</span> OpenSpec</h3>
+<p>OpenSpec no es un sistema inteligente ni un modelo. Es una herramienta de desarrollo dirigido por especificaciones (<em>Spec-Driven Development</em>, SDD) que permite mantener especificaciones y cambios persistentes para que puedan ser utilizados por distintos asistentes de programación.</p>
+<p>Referencia oficial:</p>
+<p><a href="https://github.com/Fission-AI/OpenSpec/blob/main/docs/installation.md">OpenSpec - Installation</a></p>
+<p>En IASI, OpenSpec se instala como una <strong>herramienta global del entorno de desarrollo</strong>. La inicialización y configuración de OpenSpec dentro de cada proyecto pertenece al uso de la metodología y no a la preparación de la infraestructura.</p>
+<p>OpenSpec requiere Node.js 20.19.0 o superior.</p>
+<p>Comprobar la versión instalada:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb71"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>node <span class="op">--</span>version</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Instalar OpenSpec globalmente mediante <code>npm</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>npm install <span class="op">-</span>g @fission-ai<span class="op">/</span>openspec@latest <span class="op">--</span>allow-scripts<span class="op">=</span>@fission-ai<span class="op">/</span>openspec</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Verificar la instalación:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>openspec <span class="op">--</span>version</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Si Node.js se gestiona mediante <code>nvm</code>, los paquetes globales se instalan dentro del entorno del usuario y no es necesario utilizar <code>sudo</code>.</p>
+<p>La instalación de infraestructura termina en este punto. Comandos como <code>openspec init</code> actúan sobre un proyecto concreto y forman parte del flujo de trabajo de IASI.</p>
+</section>
+<section id="trabajo-con-varias-ia" class="level3" data-number="4.7.4">
+<h3 data-number="4.7.4" class="anchored" data-anchor-id="trabajo-con-varias-ia"><span class="header-section-number">4.7.4</span> Trabajo con varias IA</h3>
+<p>IASI considera especialmente valioso que distintos sistemas inteligentes puedan trabajar sobre un mismo problema.</p>
+<pre class="text"><code>Ingeniero
+├── ChatGPT
+│   └── análisis, diseño, razonamiento, documentación
+│
+└── GitHub Copilot
+    └── código, proyecto, editor, implementación</code></pre>
+<p>No se trata de sustituir un sistema por otro.</p>
+<p>Cada sistema observa el problema desde un contexto diferente. La interacción entre ellos permite contrastar decisiones, repartir tareas y utilizar la herramienta más adecuada en cada momento.</p>
+<p>El ingeniero mantiene la dirección del trabajo, decide qué contexto recibe cada sistema y evalúa las propuestas obtenidas.</p>
+</section>
+<section id="ollama-1" class="level3" data-number="4.7.5">
+<h3 data-number="4.7.5" class="anchored" data-anchor-id="ollama-1"><span class="header-section-number">4.7.5</span> Ollama</h3>
+<p>Cuando se necesite ejecutar modelos localmente, IASI Labs utiliza Ollama como <em>runtime</em> de modelos.</p>
+<p>En esta infraestructura Ollama se ejecuta como servicio Docker y se publica en:</p>
+<pre class="text"><code>http://localhost:20434</code></pre>
+<p>La descarga de modelos no forma parte de la instalación base. Los modelos concretos dependerán del propósito del entorno y de los recursos disponibles.</p>
+</section>
+<section id="open-webui-1" class="level3" data-number="4.7.6">
+<h3 data-number="4.7.6" class="anchored" data-anchor-id="open-webui-1"><span class="header-section-number">4.7.6</span> Open WebUI</h3>
+<p>Open WebUI proporciona la interfaz web para trabajar con Ollama y otros proveedores compatibles.</p>
+<p>En esta infraestructura se ejecuta mediante la composición Docker definida en el capítulo anterior y queda disponible en:</p>
+<pre class="text"><code>http://localhost:20300</code></pre>
+<p>La comunicación entre Open WebUI y Ollama utiliza la red Docker <code>iasi-labs</code>; no requiere una segunda instalación de ninguno de los dos productos.</p>
+</section>
+<section id="separación-entre-sistema-y-modelo" class="level3" data-number="4.7.7">
+<h3 data-number="4.7.7" class="anchored" data-anchor-id="separación-entre-sistema-y-modelo"><span class="header-section-number">4.7.7</span> Separación entre sistema y modelo</h3>
+<p>IASI distingue entre el <strong>sistema inteligente</strong> con el que se trabaja y el <strong>modelo</strong> que ese sistema pueda utilizar.</p>
+<p>Por ejemplo, ChatGPT o GitHub Copilot pueden ofrecer distintos modelos sin dejar de ser sistemas de trabajo diferentes.</p>
+<p>Esta distinción es importante porque IASI pretende trabajar con varias IA, no simplemente cambiar de modelo dentro de una misma herramienta.</p>
+</section>
+<section id="resultado-2" class="level3" data-number="4.7.8">
+<h3 data-number="4.7.8" class="anchored" data-anchor-id="resultado-2"><span class="header-section-number">4.7.8</span> Resultado</h3>
+<p>La capa inicial queda organizada en dos grupos:</p>
+<pre class="text"><code>Sistemas inteligentes
+├── ChatGPT
+├── GitHub Copilot
+└── Ollama
+    └── modelos locales, cuando sean necesarios
+
+Herramientas de apoyo
+├── OpenSpec
+│   └── especificaciones persistentes y flujo de trabajo
+└── Open WebUI
+    └── interfaz para Ollama y otros proveedores compatibles</code></pre>
+<p>ChatGPT y GitHub Copilot constituyen la configuración inicial de trabajo asistido por varias IA.</p>
+<p>Ollama proporciona una vía adicional para incorporar modelos locales o servicios propios cuando el proyecto lo requiera. Open WebUI ofrece una interfaz común para trabajar con ellos, mientras que OpenSpec aporta la capa de especificación persistente que puede ser compartida por los distintos asistentes de desarrollo.</p>
+</section>
+</section>
+<section id="iasi" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="iasi"><span class="header-section-number">4.8</span> IASI</h2>
+<p>Con la máquina base, las herramientas de desarrollo y los servicios preparados, instalamos <strong>IASI</strong>.</p>
+<p>En este punto hablamos únicamente del ejecutable <code>iasi</code>. Los productos del ecosistema se instalarán después y no forman parte de este paso.</p>
+<pre class="text"><code>Infraestructura
+↓
+Desarrollo
+↓
+Docker y servicios
+↓
+IASI
+↓
+Productos IASI</code></pre>
+<section id="instalación-1" class="level3" data-number="4.8.1">
+<h3 data-number="4.8.1" class="anchored" data-anchor-id="instalación-1"><span class="header-section-number">4.8.1</span> Instalación</h3>
+<p>El ejecutable <code>iasi</code> debe instalarse mediante su mecanismo de distribución, sin clonar los repositorios fuente utilizados para desarrollarlo.</p>
+<p>El mecanismo definitivo de instalación se documentará aquí cuando quede estabilizado.</p>
+<p>Una vez instalado, debe poder verificarse desde cualquier terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>iasi <span class="op">--</span>version</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="reinstalación" class="level3" data-number="4.8.2">
+<h3 data-number="4.8.2" class="anchored" data-anchor-id="reinstalación"><span class="header-section-number">4.8.2</span> Reinstalación</h3>
+<p>La instalación de <code>iasi</code> debe quedar automatizada de forma que podamos reinstalar el ejecutable cuando queramos, sin reconstruir manualmente su entorno ni descargar su código fuente.</p>
+<p>El comando definitivo de reinstalación se fijará junto con el mecanismo de distribución del ejecutable.</p>
+<p>A partir de este punto asumimos que <code>iasi</code> está disponible en el <code>PATH</code> y puede utilizarse para instalar y mantener los productos IASI que necesiten los laboratorios.</p>
+</section>
+</section>
+<section id="productos-iasi" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="productos-iasi"><span class="header-section-number">4.9</span> Productos IASI</h2>
+<p>Con el ejecutable <code>iasi</code> ya instalado, incorporamos los productos IASI necesarios para ejecutar los labs.</p>
+<p><code>iasi</code> es el punto de entrada para instalar, actualizar y reconstruir estos componentes sin necesidad de descargar sus repositorios fuente.</p>
+<p>Esta es una diferencia fundamental respecto a <code>iasi-infra</code>.</p>
+<p>En la máquina de desarrollo de IASI existen los repositorios fuente porque necesitamos modificarlos, probarlos y publicarlos.</p>
+<p>En la máquina de labs <strong>no descargamos los repositorios fuente de los productos IASI</strong>.</p>
+<pre class="text"><code>NO
+├── git clone iasi.quarto
+├── git clone iasi-lua
+└── git clone ...
+
+SÍ
+├── instalar iasi.quarto
+├── instalar extensiones de iasi-lua
+└── instalar los productos IASI requeridos</code></pre>
+<section id="iasi.quarto" class="level3" data-number="4.9.1">
+<h3 data-number="4.9.1" class="anchored" data-anchor-id="iasi.quarto"><span class="header-section-number">4.9.1</span> iasi.quarto</h3>
+<p><code>iasi.quarto</code> debe instalarse desde una distribución publicada del paquete, no mediante <code>remotes::install_local()</code> sobre un repositorio clonado.</p>
+<p>El mecanismo definitivo de distribución se documentará aquí cuando quede estabilizado.</p>
+<p>Después de la instalación debe poder verificarse desde R:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(iasi.quarto)</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">"iasi.quarto"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="iasi-lua" class="level3" data-number="4.9.2">
+<h3 data-number="4.9.2" class="anchored" data-anchor-id="iasi-lua"><span class="header-section-number">4.9.2</span> iasi-lua</h3>
+<p>Las extensiones Quarto se instalarán mediante el mecanismo de distribución de Quarto, sin necesidad de mantener el repositorio <code>iasi-lua</code> en la máquina.</p>
+<p>Cada proyecto materializará en <code>_extensions/</code> las extensiones que necesite.</p>
+<p>La instalación debe poder comprobarse con:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb82"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> list extensions</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="repositorio-de-labs" class="level3" data-number="4.9.3">
+<h3 data-number="4.9.3" class="anchored" data-anchor-id="repositorio-de-labs"><span class="header-section-number">4.9.3</span> Repositorio de labs</h3>
+<p><code>iasi-org/iasi-labs</code> es el repositorio canónico de los laboratorios.</p>
+<p>El usuario puede trabajar directamente con una copia local para seguir el material o crear, cuando el lab lo requiera, su propio repositorio de trabajo en su cuenta de GitHub.</p>
+<p>El repositorio canónico está protegido frente a escritura para los participantes.</p>
+</section>
+<section id="regla" class="level3" data-number="4.9.4">
+<h3 data-number="4.9.4" class="anchored" data-anchor-id="regla"><span class="header-section-number">4.9.4</span> Regla</h3>
+<p>Una dependencia IASI utilizada por los labs debe poder instalarse como producto.</p>
+<p>Si para utilizar un componente necesitamos clonar su repositorio fuente y conocer su estructura interna, ese componente todavía no está suficientemente empaquetado para este entorno.</p>
+</section>
+</section>
+<section id="postinstalación" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="postinstalación"><span class="header-section-number">4.10</span> Postinstalación</h2>
+<p>La postinstalación conecta las piezas de la máquina y comprueba que pueden utilizarse conjuntamente.</p>
+<p>La secuencia inicial es:</p>
+<pre class="text"><code>Windows preparado
+↓
+software base
+↓
+desarrollo
+↓
+Docker y servicios
+↓
+IASI
+↓
+productos IASI
+↓
+validación
+↓
+checkpoint 02-iasi-labs-ready</code></pre>
+<section id="productos" class="level3" data-number="4.10.1">
+<h3 data-number="4.10.1" class="anchored" data-anchor-id="productos"><span class="header-section-number">4.10.1</span> Productos</h3>
+<p>Verificar <code>iasi.quarto</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(iasi.quarto)</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">"iasi.quarto"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Verificar las extensiones Quarto desde un proyecto que las utilice:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb85"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> list extensions</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="github" class="level3" data-number="4.10.2">
+<h3 data-number="4.10.2" class="anchored" data-anchor-id="github"><span class="header-section-number">4.10.2</span> GitHub</h3>
+<p>La máquina debe disponer de Git y GitHub CLI correctamente configurados.</p>
+<p>Verificar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb86"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> <span class="at">--version</span></span>
+<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth status</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="servicios" class="level3" data-number="4.10.3">
+<h3 data-number="4.10.3" class="anchored" data-anchor-id="servicios"><span class="header-section-number">4.10.3</span> Servicios</h3>
+<p>Arrancar la composición de labs:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb87"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose up <span class="at">-d</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Verificar:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb88"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose ps</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="resultado-3" class="level3" data-number="4.10.4">
+<h3 data-number="4.10.4" class="anchored" data-anchor-id="resultado-3"><span class="header-section-number">4.10.4</span> Resultado</h3>
+<p>La máquina deja de ser una instalación genérica de Windows y se convierte en el entorno de ejecución de IASI Labs:</p>
+<pre class="text"><code>IASI Labs
+├── herramientas generales
+├── herramientas de desarrollo
+├── servicios Docker
+├── ejecutable IASI
+├── productos IASI instalados
+└── repositorio de labs</code></pre>
+<div class="lab-result">
+<p><strong>Resultado del Lab 10</strong></p>
+<p>Cuando todas las validaciones sean correctas se crea:</p>
+<pre class="text"><code>02-iasi-labs-ready</code></pre>
+<p>A partir de este punto, los laboratorios posteriores pueden asumir esta infraestructura como base.</p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../labs/03-instrucciones/index.html" class="pagination-link" aria-label="index.html">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">index.html</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

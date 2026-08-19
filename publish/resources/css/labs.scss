@@ -1,0 +1,42 @@
+/* IASI Labs
+   -------------------------------------------------------------------------- */
+
+/*
+ * Estilos específicos de laboratorios.
+ * La identidad corporativa común vive en iasi.scss.
+ */
+
+/* Componentes específicos de los laboratorios. */
+
+.lab-objective,
+.lab-checkpoint,
+.lab-result {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 0.25rem solid var(--bs-border-color);
+  background: var(--bs-tertiary-bg);
+}
+
+.lab-objective > :first-child,
+.lab-checkpoint > :first-child,
+.lab-result > :first-child {
+  margin-top: 0;
+}
+
+.lab-objective > :last-child,
+.lab-checkpoint > :last-child,
+.lab-result > :last-child {
+  margin-bottom: 0;
+}
+
+.lab-objective {
+  border-left-color: var(--bs-primary);
+}
+
+.lab-checkpoint {
+  border-left-color: var(--bs-warning);
+}
+
+.lab-result {
+  border-left-color: var(--bs-success);
+}

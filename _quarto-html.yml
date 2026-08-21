@@ -1,11 +1,47 @@
 project:
   output-dir: _outputs/html
 
+website:
+  announcement:
+     content: |
+        ![](resources/images/ants.png){.iasi-ants-image}
+     position: above-navbar
+     dismissable: false
+    
+book:
+  page-footer:
+    left: "© 2026 Javier G. Grandez"
+    right:
+      - text: "Licencias"
+        href: 903-licenses.qmd
+
+  sidebar:
+     collapse-level: 1
+    
+  navbar:
+    title: "IASI VOL. II"
+    background: primary
+    pinned: true
+
+    right:
+      - icon: box-arrow-up-right
+        href: "#iasi-open-external"
+        aria-label: "Abrir en una pestaña nueva"
+
+  search:
+    location: navbar
+    type: overlay
+
 format:
   html:
-    include-before-body: resources/html/banner.html
-    theme: cosmo
-    toc: true
-    css:
+    pagetitle: "IASI Vol. II"
+    title-prefix: ""
+    include-in-header:
+      - resources/html/banner.html
+    theme: 
+      - cosmo
       - resources/css/iasi.scss
+      - resources/css/book.scss
       - resources/css/labs.scss
+    toc: true
+

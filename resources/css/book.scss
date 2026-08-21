@@ -17,3 +17,13 @@
  .quarto-title-meta {
   display: none !important;
 }
+
+.nav-footer {
+  background: var(--bs-tertiary-bg);
+  border-top: 1px solid var(--bs-border-color);
+}
+
+#iasi-publish-date {
+  color: var(--bs-primary);
+  font-weight: 600;
+}

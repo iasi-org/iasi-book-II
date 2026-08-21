@@ -5,3 +5,4 @@ book:
     - "labs/02-contexto/index.qmd"
     - "labs/03-instrucciones/index.qmd"
     - "labs/10-infra/index.qmd"
+    - "903-licenses.qmd"

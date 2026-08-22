@@ -25,7 +25,8 @@ book:
     pinned: true
 
     right:
-      - text: "Guardar ..."
+      - icon: download
+        text: "Guardar ..."
         menu: 
            - text: "Guardar ..."
              href: "#iasi-exports"    

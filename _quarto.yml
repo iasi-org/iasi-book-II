@@ -21,7 +21,7 @@ language:
   crossref-ch-prefix: "Lab"
 
 book:
-  title: "Ingeniería asistida por sistemas inteligentes"
+  title: "Ingeniería aumentada por sistemas inteligentes"
   author: "Javier G. Grandez"
   output-file: "iasi-book-II"
 

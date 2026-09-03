@@ -1,0 +1,6 @@
+{
+  "exports": [
+    {"profile": "pdf", "text": "PDF", "icon": "file-earmark-pdf", "href": "../pdf/IASI Vol-II.pdf"},
+    {"profile": "epub", "text": "eBook", "icon": "book", "href": "../epub/iasi-book-II.epub"}
+  ]
+}

@@ -1,3 +1,4 @@
+type: book
 publication:
   strategy: regular
   content-dir: labs

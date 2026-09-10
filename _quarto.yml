@@ -1,0 +1,45 @@
+project:
+  type: book
+  output-dir: _outputs
+
+  resources:
+    - LICENSES/*.txt
+
+profile:
+  default: html
+  group:
+    - [html, pdf, epub]
+
+metadata-files:
+  - _book-structure.yml
+
+lang: es
+
+language:
+  crossref-ch-prefix: "Lab"
+
+resource-path:
+  - resources
+
+book:
+  title: "Ingeniería aumentada con sistemas inteligentes"
+  author: "Javier G. Grandez"
+  output-file: "iasi-book-II"
+
+copyright:
+  holder: "Javier G. Grandez"
+  year: 2026
+
+license: "CC BY"
+
+filters:
+  - iasi-plantuml
+  - resources/lua/iasi-js.lua
+
+filter-options:
+  plantuml:
+    enabled: true
+    server: http://localhost:10025
+    cache: true
+    styles:
+      - resources/plantuml/iasi.puml

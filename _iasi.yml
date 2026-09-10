@@ -1,0 +1,10 @@
+type: book
+
+publication:
+  strategy: parted
+  content-dir: chapters
+  numbered: true
+
+paths:
+  outputs: _outputs
+  release: release

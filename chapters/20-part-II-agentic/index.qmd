@@ -1,0 +1,15 @@
+---
+title: "Agentic Systems Labs"
+navbar-title: "Agentic Systems"
+---
+
+# Agentic Systems Labs
+
+![](../../resources/images/banner_under_construction_en.png){width=100%}
+
+
+Esta parte agrupa los laboratorios dedicados a la evolución desde la interacción conversacional hacia Sistemas Inteligentes que utilizan herramientas, recursos y mecanismos de integración.
+
+Aquí tendrán cabida experimentos con **MCP, commands, tools, skills, workflows y otros componentes agentic**.
+
+Los laboratorios de esta parte se incorporarán a medida que los experimentos queden consolidados.

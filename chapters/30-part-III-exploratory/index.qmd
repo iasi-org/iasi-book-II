@@ -1,0 +1,13 @@
+---
+title: "Exploratory Labs"
+navbar-title: "Exploratory Labs"
+---
+
+# Exploratory Labs
+
+![](../../resources/images/banner_under_construction_en.png){width=100%}
+
+
+No toda experimentación necesita pertenecer a una secuencia principal.
+
+Esta parte queda reservada para laboratorios que exploren tecnologías, técnicas, hipótesis o combinaciones útiles para IASI y para la Ingeniería Aumentada, aunque no formen parte directamente de los recorridos anteriores.

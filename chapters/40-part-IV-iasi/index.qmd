@@ -1,0 +1,14 @@
+---
+title: "IASI Labs"
+navbar-title: "IASI Labs"
+---
+
+
+![](../../resources/images/banner_under_construction_en.png){width=100%}
+
+
+Esta parte está dedicada a los laboratorios propios de IASI.
+
+Aquí se recogerán experimentos realizados sobre el propio ecosistema: herramientas, automatización, documentación, workflows, artefactos, repositorios y prácticas de ingeniería en las que humanos y Sistemas Inteligentes participan conjuntamente.
+
+A diferencia de las partes anteriores, su contenido crecerá junto con la propia evolución de IASI.

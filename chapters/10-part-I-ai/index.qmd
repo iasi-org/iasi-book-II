@@ -1,0 +1,11 @@
+---
+title: "AI Labs"
+navbar-title: "AI Labs"
+---
+
+![](../../resources/images/banner_under_construction_en.png){width=100%}
+
+
+Esta parte reúne los laboratorios de base sobre el trabajo con Sistemas Inteligentes: prompts, contexto, instrucciones y preparación del entorno de experimentación.
+
+Su objetivo es proporcionar una base práctica común. Quien ya domine estos fundamentos puede utilizar esta parte como referencia o pasar directamente a **Agentic Systems Labs**.

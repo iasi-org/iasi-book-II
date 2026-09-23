@@ -1,0 +1,52 @@
+---
+title: "Prompts, contexto y sesiones"
+navbar-title: "Prompts"
+description: "Experimenta cómo cambian las respuestas cuando repites una petición, modificas el prompt, introduces contexto o cambias de sesión."
+---
+
+![](../../../resources/images/banner_under_construction_en.png){width=100%}
+
+
+En este primer laboratorio no vamos a estudiar cómo funciona internamente un Sistema Inteligente. Vamos a utilizarlo.
+
+La idea es hacer pruebas muy sencillas, observar qué ocurre y empezar a desarrollar intuición sobre cómo se comporta un Sistema Inteligente cuando cambian las condiciones de una interacción.
+
+No buscamos demostrar que tenga que aparecer una respuesta concreta. De hecho, en algunas pruebas puede que no observes ninguna diferencia apreciable.
+
+Eso también es un resultado.
+
+Para reducir el contexto previo, utilizaremos navegaciones privadas o de incógnito y, cuando queramos empezar desde cero, cerraremos completamente la sesión privada antes de abrir otra.
+
+## Qué vamos a hacer
+
+Durante el laboratorio vamos a:
+
+- repetir exactamente la misma petición en dos sesiones separadas;
+- expresar una misma necesidad mediante prompts diferentes;
+- sacar parte de la información fuera del prompt y colocarla en el contexto de la conversación;
+- cambiar de sesión y observar qué ocurre con ese contexto;
+- realizar nuestras propias variaciones sobre los experimentos.
+
+No hace falta intentar explicar todavía por qué sucede cada cosa.
+
+Primero vamos a probar.
+
+## Qué necesitas
+
+Solo necesitas:
+
+- un navegador con modo privado o de incógnito;
+- acceso a un Sistema Inteligente con interfaz conversacional;
+- poder cerrar completamente una sesión privada y abrir otra nueva.
+
+No necesitas instalar nada ni escribir código.
+
+## Qué aprenderás
+
+Al terminar el laboratorio habrás experimentado que una interacción con un Sistema Inteligente no depende únicamente de la última frase que escribes.
+
+También habrás empezado a distinguir entre la necesidad que quieres resolver, el prompt con el que la expresas, el contexto acumulado durante una conversación y la sesión en la que todo ello ocurre.
+
+Pero el objetivo principal no es memorizar esos conceptos.
+
+Es empezar a experimentar.

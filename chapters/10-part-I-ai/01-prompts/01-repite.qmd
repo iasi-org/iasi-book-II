@@ -1,0 +1,55 @@
+### Paso 1 — Repite
+
+Vamos a empezar sin cambiar nada.
+
+Abre una **nueva navegación privada** y escribe:
+
+> Explica qué es una base de datos relacional.
+
+Lee la respuesta y consérvala para poder compararla después.
+
+Ahora cierra completamente esa navegación privada.
+
+Abre una **nueva navegación privada** y escribe exactamente lo mismo:
+
+> Explica qué es una base de datos relacional.
+
+#### Observa
+
+Compara ambas respuestas.
+
+Pueden ser diferentes.
+
+Pueden ser muy parecidas.
+
+Pueden incluso ser idénticas.
+
+No esperamos un resultado concreto.
+
+Fíjate simplemente en lo que ha ocurrido.
+
+¿Mantienen la misma estructura?
+
+¿Utilizan los mismos ejemplos?
+
+¿Explican exactamente los mismos conceptos?
+
+¿Cambian el nivel de detalle o la forma de expresarlos?
+
+Si las dos respuestas son idénticas, no intentes forzar una diferencia. Anótalo mentalmente y continúa.
+
+Ese resultado también forma parte del experimento.
+
+#### Experimenta
+
+Antes de pasar al siguiente paso puedes repetir la prueba con otra pregunta.
+
+Elige algo que te interese.
+
+Haz la misma petición en dos sesiones privadas distintas.
+
+Prueba dos veces, tres, cinco.
+
+No busques conseguir un resultado determinado.
+
+Mira qué ocurre.

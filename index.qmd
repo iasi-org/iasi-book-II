@@ -1,0 +1,37 @@
+---
+title: "Laboratorios"
+---
+
+![](resources/images/banner_under_construction_en.png){width=100%}
+
+# Laboratorios {.unnumbered}
+
+Este volumen reúne laboratorios prácticos organizados por áreas de experimentación. No es necesario recorrerlo de forma lineal: cada parte constituye una puerta de entrada distinta y puede abordarse según la experiencia previa del lector.
+
+## Part I · AI Labs
+
+Laboratorios sobre interacción con Sistemas Inteligentes, prompts, contexto, instrucciones e infraestructura básica.
+
+Si estos fundamentos ya forman parte de tu práctica habitual, puedes pasar directamente a la Parte II.
+
+[Ir a Part I · AI Labs](chapters/10-part-I-ai/index.qmd)
+
+## Part II · Agentic Systems Labs
+
+Laboratorios orientados a Sistemas Inteligentes capaces de utilizar herramientas y participar activamente en flujos de trabajo: MCP, commands, tools, skills y mecanismos relacionados.
+
+Si ya trabajas con estos componentes y sus patrones de integración, puedes continuar en las partes siguientes.
+
+[Ir a Part II · Agentic Systems Labs](chapters/20-part-II-agentic/index.qmd)
+
+## Part III · Exploratory Labs
+
+Laboratorios experimentales que exploran tecnologías, ideas o combinaciones que no necesitan formar parte de un recorrido único.
+
+[Ir a Part III · Exploratory Labs](chapters/30-part-III-exploratory/index.qmd)
+
+## Part IV · IASI Labs
+
+Laboratorios propios de IASI: experimentos sobre herramientas, procesos, artefactos y prácticas de Ingeniería Aumentada desarrollados dentro del propio ecosistema IASI.
+
+[Ir a Part IV · IASI Labs](chapters/40-part-IV-iasi/index.qmd)
